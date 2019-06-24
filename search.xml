@@ -4,11 +4,24 @@
   
     
     <entry>
-      <title>将个人博客从WordPress迁移到Hexo(上）</title>
-      <link href="/2019/06/%E5%B0%86%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E4%BB%8EWordPress%E8%BF%81%E7%A7%BB%E5%88%B0Hexo-%E4%B8%8A%EF%BC%89/"/>
-      <url>/2019/06/%E5%B0%86%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E4%BB%8EWordPress%E8%BF%81%E7%A7%BB%E5%88%B0Hexo-%E4%B8%8A%EF%BC%89/</url>
+      <title>讲讲小熊用过的服务器</title>
+      <link href="/2019/06/%E8%AE%B2%E8%AE%B2%E5%B0%8F%E7%86%8A%E7%94%A8%E8%BF%87%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+      <url>/2019/06/%E8%AE%B2%E8%AE%B2%E5%B0%8F%E7%86%8A%E7%94%A8%E8%BF%87%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8/</url>
       
-        <content type="html"><![CDATA[<h2 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h2><p>前几天正逢高考大事件，国内各种互联网公司都进入了自我阉割式的狂欢，防火墙也接连发威。后果就是，我坚挺了一年半的Gigs的美西服务器没能幸免于难，被照顾了。在此之前，我有HK和LAX两台服务器。两台服务器都有代理服务以外，在HK上面还运行着我的个人博客（WordPress），在LAX上面跑着一个小网盘，方便自己下载一些文件和小工具什么的。除此之外，我自己写的Telegram的bot也运行在LAX的机器上面。但是，HK服务器的配置本来并不是很高，再之流量也很少（一个月只有300G，这也是我把bot和网盘放在LAX的原因，LAX有1T的流量）。随着时间的推移，HK的速度越来越不尽人意，我准备将HK的个人博客迁移到LAX的服务器上面，可是…</p><h2 id="小插曲"><a href="#小插曲" class="headerlink" title="小插曲"></a>小插曲</h2><p>因为LAX的CN2 GIA线路还是挺好的（虽说有的时候会抽风），我打算把LAX的服务器进行升级，以应对网盘＋bot＋博客的压力。于是，我将服务器配置升级，同时为了减少开销，将付费周期从月付调整为了季付。然而，高考来临，大事不妙，为了不更改ip地址（为了Twitter登陆），我只好套了个CDN苟且偷生…</p><h2 id="未来服务器的计划"><a href="#未来服务器的计划" class="headerlink" title="未来服务器的计划"></a>未来服务器的计划</h2><p>考虑到节约成本，同时增加服务器的稳定性（因为Gigs确实有的时候不太稳，我很怕他跑路）。我打算将Gigs在这个季度的付费周期到期以后，丢弃这台服务器，转投别的IDC。除了节约成本，当然也要增加稳定性。所以我在寻找一家比较老牌的IDC，线路不需要特别好（反正套了CDN，智能减速器，啥线路都一样的），性能适中就可以（毕竟要搭建网盘和bot），稳定性是第一位的，预算大概10刀一个月。如果有推荐的IDC请tg联系我推荐给我谢谢。</p>]]></content>
+        <content type="html"><![CDATA[<h2 id="Linode"><a href="#Linode" class="headerlink" title="Linode"></a>Linode</h2><p>老牌IDC了，需要信用卡才能付款。开了好几台都被墙了，人品太差，放弃。</p><p>当时用的时候，面板非常简陋。听说最近有升级，不知道怎么样。</p><h2 id="ConoHa"><a href="#ConoHa" class="headerlink" title="ConoHa"></a>ConoHa</h2><p>这是我用的第一家VPS，当时价格在50RMB/mo左右，看中他的是支持支付宝付款。当时还是懵懂的萌新，还不知道测试线路什么的，具体配置怎么样也早就忘记了，就记得他不限流量。但是如果你流量使用过多，就会被封机器。当时每个月用的心惊胆战的，其实后来才知道，用的那一点流量算不了什么。</p><p>最近听说ConoHa出了个什么ConoHa娘，感觉挺有意思的233</p><h2 id="Vultr"><a href="#Vultr" class="headerlink" title="Vultr"></a>Vultr</h2><p>相信这家大家都不陌生了，算是个大牌IDC吧，机房遍布全球各地。最便宜的有2.5USD/mo的日本纯ipv6的机器，贵的有400USD/mo的，按照需求来买吧。这家按照小时计费，开机就算1hr，关机同样也计费，直到这台VPS被你destroy才会停止计费。在vu你还可以赊账，不过也就一点点。</p><p>我原来用过一会200USD那个价位的机器，带宽给的很足，拉GitHub的源码非常快。</p><p>面板也很人性化。</p><p>另外，按小时计费还有一个好处，就是如果你开到了被墙的ip。<strong>可以再开一个机器，然后把原来的机器删除。</strong>看清顺序！先开机器再删除原来的，否则新开的机器可能还是原来的ip…</p><p>不过这家的线路对中国不算特别友好，他的ip段也快被墙光了，所以按需入手吧。</p><h2 id="AlphaRacks"><a href="#AlphaRacks" class="headerlink" title="AlphaRacks"></a>AlphaRacks</h2><p>注意：这家已经<strong>凉了</strong></p><p>这家是别人送我的，本来是2020年7月份到期，结果他夭折（其实就是跑路）了。</p><p>他家的面板贼难用，面板不方便重装系统。唯一的优点可能就是便宜吧。没有测试线路和速度怎么样，反正ssh非常卡。原来在这个机器上跑bot，做一些实验，没啥用。</p><p>最可笑的是，前几天给我发了个邮件，告知我他跑路了。在邮件的最后，随信附赠了别家的aff代码，真是跑路也不忘了捞一笔…</p><h2 id="Virmach"><a href="#Virmach" class="headerlink" title="Virmach"></a>Virmach</h2><p>这家主打便宜，听有人说买了一台2USD/yr的机器，不知道配置如何，但是据说挺稳的。</p><p>买完之后需要经过审核，随便填信息就能过。</p><p>我这台机器买了一个月没咋用，就放那了233，反正便宜货。感觉延迟、速度一般般吧。</p><h2 id="AWS"><a href="#AWS" class="headerlink" title="AWS"></a>AWS</h2><p>找朋友帮忙开了个韩国的机器，速度不慢。用Caddy搭建了一个FileManager，速度令人满意。能扛过不少次墙，非常稳。</p><p>价格的话，如果没有认识的朋友帮你开，可能略贵。</p><h2 id="GigsGigsCloud"><a href="#GigsGigsCloud" class="headerlink" title="GigsGigsCloud"></a>GigsGigsCloud</h2><p>现在主要用这家，主要卖点是线路，机器配置不怎么样。线路有的时候也不太稳，但是总体来说也不错。</p><p>原来买了一台香港的，一开始很棒，到后来越来越慢，就退货了。</p><p>现在一直在用美西的，流量多，延迟也很不错。唯一遗憾的就是前几天被墙了，套了个CDN，线路优势就不存在了。</p><h2 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h2><p>如果有什么推荐的IDC的话，可以Telegram联系我。</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>讲讲小熊现在用的服务器</title>
+      <link href="/2019/06/%E8%AE%B2%E8%AE%B2%E5%B0%8F%E7%86%8A%E7%8E%B0%E5%9C%A8%E7%94%A8%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+      <url>/2019/06/%E8%AE%B2%E8%AE%B2%E5%B0%8F%E7%86%8A%E7%8E%B0%E5%9C%A8%E7%94%A8%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8/</url>
+      
+        <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>前几天正逢高考大事件，国内各种互联网公司都进入了自我阉割式的狂欢，防火墙也接连发威。后果就是，我坚挺了一年半的Gigs的美西服务器没能幸免于难，被照顾了。</p><p>在此之前，我有HK和LAX两台服务器。两台服务器都有代理服务以外，在HK上面还运行着我的个人博客（WordPress），在LAX上面跑着一个小网盘，方便自己下载一些文件和小工具什么的。除此之外，我自己写的Telegram的bot也运行在LAX的机器上面。</p><p>但是，HK服务器的配置本来并不是很高，再之流量也很少（一个月只有300G，这也是我把bot和网盘放在LAX的原因，LAX有1T的流量）。随着时间的推移，HK的速度越来越不尽人意，我准备将HK的个人博客迁移到LAX的服务器上面，可是…</p><h2 id="小插曲"><a href="#小插曲" class="headerlink" title="小插曲"></a>小插曲</h2><p>因为LAX的CN2 GIA线路还是挺好的（虽说有的时候会抽风），我打算把LAX的服务器进行升级，以应对网盘＋bot＋博客的压力。同时为了减少开销，将付费周期从月付调整为了季付。然而，高考来临，大事不妙，为了不更改ip地址（为了Twitter登陆），又不方便直接退款，我只好套了个CDN苟且偷生…</p><h2 id="未来服务器的计划"><a href="#未来服务器的计划" class="headerlink" title="未来服务器的计划"></a>未来服务器的计划</h2><p>考虑到节约成本，同时增加服务器的稳定性（因为Gigs确实有的时候不太稳，我很怕他跑路）。我打算将Gigs在这个季度的付费周期到期以后，丢弃这台服务器，转投别的IDC。</p><p>除了节约成本，当然也要增加稳定性。所以我在寻找一家比较老牌的IDC，线路不需要特别好（反正套了CDN，智能减速器，啥线路都一样的），性能适中就可以（毕竟要搭建网盘和bot），稳定性是第一位的，预算大概10刀一个月。如果有推荐的IDC请tg联系我推荐给我谢谢。</p>]]></content>
       
       
       
@@ -34,7 +47,7 @@
       <link href="/2019/06/%E4%BB%8Emashiro%E7%9A%84Twitter%E8%B4%A6%E5%8F%B7%E8%A2%AB%E5%B0%81%E7%A6%81%E8%AF%B4%E8%B5%B7%E2%80%A6/"/>
       <url>/2019/06/%E4%BB%8Emashiro%E7%9A%84Twitter%E8%B4%A6%E5%8F%B7%E8%A2%AB%E5%B0%81%E7%A6%81%E8%AF%B4%E8%B5%B7%E2%80%A6/</url>
       
-        <content type="html"><![CDATA[<blockquote><p>题外话：欢迎关注小熊的Twitter @LittleBear0729<br>MASHIRO的Twitter @Yunhao_J</p></blockquote><p>有一天，<a href="t.me/MASHIRO">mashiro</a>发现自己的Twitter账号被官方封禁了。虽然他在第一时间就邮件联系了Twitter官方，但还是得到了<strong>不予解封</strong>的回复。令人感到痛心的是，原来苦心经营5年的所有Twitter全部消失，账号再也找不回来了…这对于一名老用户是多么大的打击…</p><p>回想当天的操作，他大量转推了某个人的Twitter。除此之外，便是有可能和他人一起使用<strong>同一个ip地址</strong>访问Twitter而被判定为spambot导致封禁。</p><p>在此之后，我们积极寻求不会被封禁的办法，提出几点建议供大家参考。</p><ol><li>不再使用公共的ip地址访问Twitter。每次登陆都选择切换到只有自己一个人使用的ip地址，这样将被封禁的几率降到最低。</li><li>尽量减少重复操作的次数。比如在短时间内关注很多人，重复Retweet，大量刷评论，大量点赞等操作。</li></ol><p>与此同时，为了避免在Instagram上也被封禁。我尽量也遵循以上的方法，将被封禁的可能降到最低。</p><blockquote><p>题外话：欢迎关注小熊的Instagram @littlebear0729</p></blockquote>]]></content>
+        <content type="html"><![CDATA[<blockquote><p>题外话：欢迎关注小熊的Twitter @LittleBear0729<br>MASHIRO的Twitter @Yunhao_J</p></blockquote><p>有一天，<a href="https://t.me/MASHlRO" target="_blank" rel="noopener">mashiro</a>发现自己的Twitter账号被官方封禁了。虽然他在第一时间就邮件联系了Twitter官方，但还是得到了<strong>不予解封</strong>的回复。令人感到痛心的是，原来苦心经营5年的所有Twitter全部消失，账号再也找不回来了…这对于一名老用户是多么大的打击…</p><p>回想当天的操作，他大量转推了某个人的Twitter。除此之外，便是有可能和他人一起使用<strong>同一个ip地址</strong>访问Twitter而被判定为spambot导致封禁。</p><p>在此之后，我们积极寻求不会被封禁的办法，提出几点建议供大家参考。</p><ol><li>不再使用公共的ip地址访问Twitter。每次登陆都选择切换到只有自己一个人使用的ip地址，这样将被封禁的几率降到最低。</li><li>尽量减少重复操作的次数。比如在短时间内关注很多人，重复Retweet，大量刷评论，大量点赞等操作。</li></ol><p>与此同时，为了避免在Instagram上也被封禁。我尽量也遵循以上的方法，将被封禁的可能降到最低。</p><blockquote><p>题外话：欢迎关注小熊的Instagram @littlebear0729</p></blockquote>]]></content>
       
       
       
