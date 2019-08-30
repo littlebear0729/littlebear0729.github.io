@@ -4,19 +4,9 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="Instagram遇到网络问题可能的解决办法, 小熊の小站">
-    <meta name="description" content="问题描述
-在已经登陆的情况下，下拉刷新显示错误
-无法登陆（即使已经在使用魔法上网）
-…
-
-问题可能的解决方法
-在你的魔法上网工具中，找到“转发ipv6流量”的开关
-关闭它
-打开全局路由
-重新刷新、登陆Instagram试试
-
-一般情况下，问">
+    <meta name="keywords" content="关于speedtest测速上传受限问题, 小熊の小站">
+    <meta name="description" content="前几天在vultr上面买了一台服务器，装的是Ubuntu 18.04LTS，想用speedtest测一下速看看带宽怎么样。
+我使用的是 apt install speedtest-cli 安装的speedtest脚本，结果发现上传速度不尽如">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -24,7 +14,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Instagram遇到网络问题可能的解决办法 | 小熊の小站</title>
+    <title>关于speedtest测速上传受限问题 | 小熊の小站</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -173,13 +163,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://withmanish.com/wp-content/uploads/2017/11/Instagram-Banner.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/19.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        Instagram遇到网络问题可能的解决办法
+                        关于speedtest测速上传受限问题
                     </div>
                 </div>
             </div>
@@ -301,7 +291,7 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-06-21
+                    2019-08-30
                 </div>
 
                 
@@ -312,18 +302,38 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><ol>
-<li>在已经登陆的情况下，下拉刷新显示错误</li>
-<li>无法登陆（即使已经在使用魔法上网）</li>
-<li>…</li>
-</ol>
-<h2 id="问题可能的解决方法"><a href="#问题可能的解决方法" class="headerlink" title="问题可能的解决方法"></a>问题可能的解决方法</h2><ol>
-<li>在你的魔法上网工具中，找到“转发ipv6流量”的开关</li>
-<li>关闭它</li>
-<li>打开全局路由</li>
-<li>重新刷新、登陆Instagram试试</li>
-</ol>
-<p>一般情况下，问题可以得到解决。<br>如果你的问题还没有被解决，请Telegram联系我，咱们一起分析解决。</p>
+                <p>前几天在vultr上面买了一台服务器，装的是Ubuntu 18.04LTS，想用speedtest测一下速看看带宽怎么样。</p>
+<p>我使用的是 <code>apt install speedtest-cli</code> 安装的speedtest脚本，结果发现上传速度不尽如人意。</p>
+<pre><code>root@littlebear:~# speedtest
+Retrieving speedtest.net configuration...
+Testing from Choopa, LLC (207.246.*.*)...
+Retrieving speedtest.net server list...
+Selecting best server based on ping...
+Hosted by Starry, Inc. (Los Angeles, CA) [2.73 km]: 4.27 ms
+Testing download speed................................................................................
+Download: 1871.81 Mbit/s
+Testing upload speed......................................................................................................
+Upload: 4.17 Mbit/s</code></pre><p>经过找果果帮忙排查问题（感谢果果！赞美果果！），初步排除了系统版本和内核版本的原因。我甚至一度怀疑我的vultr账户被官方限速，开了一个ticket询问此事。</p>
+<p>眼尖的小熊发现果果发来的截图中，他使用的不是apt安装的speedtest，而是github上面的python脚本。于是我找到了那个repo，使用那个脚本运行了一遍，发现一切正常。可以判断是apt安装的speedtest程序存在问题。</p>
+<p>github上面speedtest-cli的repo地址：<a href="https://github.com/sivel/speedtest-cli" target="_blank" rel="noopener">https://github.com/sivel/speedtest-cli</a></p>
+<pre><code>使用方法
+wget -O speedtest https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py
+chmod +x speedtest.py
+./speedtest</code></pre><pre><code>正确的测试结果
+root@littlebear:~# python3 speedtest.py
+Retrieving speedtest.net configuration...
+Testing from Choopa, LLC (207.246.*.*)...
+Retrieving speedtest.net server list...
+Selecting best server based on ping...
+Hosted by Starry, Inc. (Los Angeles, CA) [2.73 km]: 1.728 ms
+Testing download speed................................................................................
+Download: 1355.15 Mbit/s
+Testing upload speed......................................................................................................
+Upload: 1900.53 Mbit/s</code></pre><p>我参考了<a href="https://www.liuquanhao.com/memory/2018/12/01/%E8%B0%83%E6%9F%A5%E8%A7%A3%E5%86%B3speedtest%E4%B8%8A%E4%BC%A0%E4%B8%8D%E5%87%86%E9%97%AE%E9%A2%98.html" target="_blank" rel="noopener">这篇文章</a>，大概了解了是speedtest的bug。（具体的技术细节咱也看不懂）这个bug已经在speedtest上游的新版本中被修复，可是apt里面的还是老版本，所以这个bug依旧存在。</p>
+<p>通过查询apt里面speedtest-cli的包。我发现19.04的版本更新，可能不存在这个问题。但是18.04LTS的speedtest比较老，这个问题存在。而Ubuntu相关的维护人员已经知晓这个bug，但是不知道为什么处于某种原因没有将其修复。</p>
+<p>bug tracking page：<a href="https://bugs.launchpad.net/ubuntu/+source/speedtest-cli/+bug/1828929" target="_blank" rel="noopener">https://bugs.launchpad.net/ubuntu/+source/speedtest-cli/+bug/1828929</a></p>
+<p>我就‘顺便’看了一眼Arch Linux中此package的版本状态，发现是最新的，应该不存在这种问题…（然后就被Arch神教种草了）</p>
+<p>所以，使用apt安装的speedtest存在上传速度测试不准确的问题，使用github的脚本即可规避。希望Ubuntu的维护人员可以尽快合并上游代码，解决此问题。</p>
 
             </div>
             <hr/>
@@ -364,30 +374,31 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2019/06/讲讲小熊现在用的服务器/">
+                <a href="/2019/08/关于speedtest测速上传受限问题/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="讲讲小熊现在用的服务器">
+                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="关于speedtest测速上传受限问题">
                         
-                        <span class="card-title">讲讲小熊现在用的服务器</span>
+                        <span class="card-title">关于speedtest测速上传受限问题</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            前言前几天正逢高考大事件，国内各种互联网公司都进入了自我阉割式的狂欢，防火墙也接连发威。后果就是，我坚挺了一年半的Gigs的美西服务器没能幸免于难，被照顾了。
-在此之前，我有HK和LAX两台服务器。两台服务器都有代理服务以外，在HK上面还运
+                            前几天在vultr上面买了一台服务器，装的是Ubuntu 18.04LTS，想用speedtest测一下速看看带宽怎么样。
+我使用的是 apt install speedtest-cli 安装的speedtest脚本，结果发现上传速度不尽如
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-06-23
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-08-30
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-user fa-fw"></i>
@@ -396,6 +407,7 @@
                         </span>
                     </div>
                 </div>
+
                 
             </div>
         </div>
@@ -406,27 +418,26 @@
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/06/从mashiro的Twitter账号被封禁说起…/">
+                <a href="/2019/06/讲讲我在Play上面买过的那些App/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="从mashiro的Twitter账号被封禁说起…">
+                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="讲讲我在Play上面买过的那些App">
                         
-                        <span class="card-title">从mashiro的Twitter账号被封禁说起…</span>
+                        <span class="card-title">讲讲我在Play上面买过的那些App</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
-题外话：欢迎关注小熊的Twitter @LittleBear0729MASHIRO的Twitter @Yunhao_J
+                            引言从开始玩刷机到现在已经差不多快两年了。每次刷机，把PlayStore装上是必不可少的一步。一段时间以来，我在那里面也氪金不少，遇见了好多有用的好用的App们。现在大概来讲讲，推荐一些我比较喜欢的App吧，可以给你们留作一些参考。
 
-有一天，mashiro发现自己的Twitter账号被官方封禁了。虽然他在第一时间就邮件联系了Twitter官方，但还
+排
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-06-21
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-06-25
                             </span>
                         <span class="publish-author">
                             
