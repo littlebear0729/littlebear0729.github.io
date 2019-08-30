@@ -25,6 +25,10 @@
     <link rel="stylesheet" type="text/css" href="/css/my.css">
     <style type="text/css">
         
+        code[class*="language-"], pre[class*="language-"] {
+            white-space: pre !important;
+        }
+        
     </style>
 
     <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
@@ -274,8 +278,19 @@ $(function () {
 
     let carouselIntervalId;
     
+    // Loop to call the next cover article picture.
+    let autoCarousel = function() {
+        carouselIntervalId = setInterval(function () {
+            coverSlider.carousel('next');
+        }, 5000);
+    };
+    autoCarousel();
+    
 
     let restartPlay = function () {
+        
+        clearInterval(carouselIntervalId);
+        autoCarousel();
         
     };
 
@@ -301,7 +316,7 @@ $(function () {
 <div class="music-player">
     
     <div class="title center-align">
-        <i class="fa fa-music"></i>&nbsp;&nbsp;但愿长醉不复醒
+        <i class="fa fa-music"></i>&nbsp;&nbsp;𝑰 𝒘𝒊𝒍𝒍 𝒕𝒓𝒚 𝒕𝒐 𝒇𝒊𝒙 𝒚𝒐𝒖.
     </div>
     
     <div class="row">
@@ -317,7 +332,7 @@ $(function () {
     new APlayer({
         container: document.getElementById('aplayer'),
         fixed: 'false' === 'true',
-        autoplay: 'true' === 'true',
+        autoplay: 'false' === 'true',
         theme: '#42b983',
         loop: 'all',
         order: 'list',
@@ -325,7 +340,7 @@ $(function () {
         volume: Number('0.4'),
         listFolded: 'false' === 'true',
         listMaxHeight: '',
-        audio: JSON.parse('[{"name":"One more time, One more chance","artist":"秒速5センチメートル","url":"http://m10.music.126.net/20190620191415/fcbfc6fce7793b8cb4e71479ec3b917b/ymusic/9174/cdfa/5ba1/d53cd530c31152d67a1e97eb6d2821d3.mp3","cover":"http://p1.music.126.net/1sw_ptPeI_GNm58VBW1udQ==/2504687488135369.jpg"}]')
+        audio: JSON.parse('[{"name":"Fix You","artist":"Coldplay","url":"https://hailres.xyz/file/music/Fix%20You_comp.mp3","cover":"https://hailres.xyz/file/music/Fix%20You.mp3_0.jpg"}]')
     });
 });
 </script>
@@ -636,6 +651,8 @@ $(function () {
 <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
+
+    <script src="/libs/others/clicklove.js"></script>
 
 
 
