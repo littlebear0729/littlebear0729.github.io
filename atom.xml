@@ -6,7 +6,7 @@
   <link href="https://blog.hailres.xyz/atom.xml" rel="self"/>
   
   <link href="https://blog.hailres.xyz/"/>
-  <updated>2022-05-23T15:16:08.269Z</updated>
+  <updated>2022-05-26T12:31:27.382Z</updated>
   <id>https://blog.hailres.xyz/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>《关于正确认识电子设备内存大小与存储空间的通知》</title>
+    <link href="https://blog.hailres.xyz/2022/05/%E3%80%8A%E5%85%B3%E4%BA%8E%E6%AD%A3%E7%A1%AE%E8%AE%A4%E8%AF%86%E7%94%B5%E5%AD%90%E8%AE%BE%E5%A4%87%E5%86%85%E5%AD%98%E5%A4%A7%E5%B0%8F%E4%B8%8E%E5%AD%98%E5%82%A8%E7%A9%BA%E9%97%B4%E7%9A%84%E9%80%9A%E7%9F%A5%E3%80%8B/"/>
+    <id>https://blog.hailres.xyz/2022/05/%E3%80%8A%E5%85%B3%E4%BA%8E%E6%AD%A3%E7%A1%AE%E8%AE%A4%E8%AF%86%E7%94%B5%E5%AD%90%E8%AE%BE%E5%A4%87%E5%86%85%E5%AD%98%E5%A4%A7%E5%B0%8F%E4%B8%8E%E5%AD%98%E5%82%A8%E7%A9%BA%E9%97%B4%E7%9A%84%E9%80%9A%E7%9F%A5%E3%80%8B/</id>
+    <published>2022-05-26T12:12:34.000Z</published>
+    <updated>2022-05-26T12:31:27.382Z</updated>
+    
+    <content type="html"><![CDATA[<p>随着智能电子设备的普及，使用电子产品的用户数量逐年升高。但是较大部分的用户无法正确区分电子设备的「内存大小」与「存储空间」。现发通知，望各位用家学习。</p><h3 id="一、内存"><a href="#一、内存" class="headerlink" title="一、内存"></a>一、内存</h3><p>根据<a href="https://zh.wikipedia.org/zh-cn/%E9%9A%8F%E6%9C%BA%E5%AD%98%E5%8F%96%E5%AD%98%E5%82%A8%E5%99%A8">维基百科</a>对随机存取存储器的解释：随机存取存储器（英语：Random Access Memory，缩写：RAM）是与 CPU 直接交换数据的内部存储器。它可以随时读写（刷新时除外，见下文），而且速度很快，通常作为操作系统或其他正在运行中的程序的临时资料存储介质。</p><p>根据<a href="https://baike.baidu.com/item/%E5%85%A7%E5%AD%98/103614">百度百科</a>对内存的解释：内存(Memory)是计算机的重要部件，也称内存储器和主存储器，它用于暂时存放CPU中的运算数据，以及与硬盘等外部存储器交换的数据。它是外存与CPU进行沟通的桥梁，计算机中所有程序的运行都在内存中进行，内存性能的强弱影响计算机整体发挥的水平。只要计算机开始运行，操作系统就会把需要运算的数据从内存调到CPU中进行运算，当运算完成，CPU将结果传送出来。</p><p>我们应当认识到，内存是程序运行的地方，是与CPU直接交换数据的地方。</p><p>举例来说：我们的电脑、手机内存可以是8G、16G等。</p><h3 id="二、存储"><a href="#二、存储" class="headerlink" title="二、存储"></a>二、存储</h3><p>根据<a href="https://zh.wikipedia.org/zh-cn/%E9%9D%9E%E6%8F%AE%E7%99%BC%E6%80%A7%E8%A8%98%E6%86%B6%E9%AB%94">维基百科</a>对非易失性存储器的解释：非易失性存储器（英语：Non-Volatile Memory，缩写：NVM）或非依电性存储器是指当电流关掉后，所存储的资料不会消失的资料存储设备。非易失性存储器中，依存储器内的资料是否能在使用系统时随时改写为标准，可分为二大类产品，即ROM和Flash memory。</p><p>我们也应认识到，存储空间是文件资料储存的地方。</p><p>举例来说：我们的手机存储空间可以是128G、256G，电脑的硬盘空间可以是512G，1T等。</p><h3 id="三、常见混淆错误案例"><a href="#三、常见混淆错误案例" class="headerlink" title="三、常见混淆错误案例"></a>三、常见混淆错误案例</h3><p>错误论述：我的电脑下了太多东西，内存空间不够用了。</p><p>解释：下载的软件，图片，视频等文件存储在电脑的硬盘空间中，与运行内存空间无关。</p><p>一般来说，影响运行内存空间大小最重要的因素在于同时打开的软件数量。</p><h3 id="四、推荐表述方法"><a href="#四、推荐表述方法" class="headerlink" title="四、推荐表述方法"></a>四、推荐表述方法</h3><ol><li>内存</li></ol><p>对于内存，推荐称其为运行内存、运存、RAM等。</p><ol start="2"><li>存储</li></ol><p>对于存储，推荐称其为存储空间、硬盘空间、存储容量等。</p><hr><p>如果发现有将以上两个设备和概念混淆的用户，纠正他们并普及正确的知识是我们的责任。</p><p>本通知如有错误，请即联系我加以改正。勘误恕不另行通知。</p><hr><p>正确认识电子设备内存大小与存储空间委员会</p><p>2022年5月26日</p>]]></content>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="折腾记" scheme="https://blog.hailres.xyz/categories/%E6%8A%98%E8%85%BE%E8%AE%B0/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>使用RSP1 SDR接收NOAA卫星云图</title>
@@ -381,28 +403,6 @@
     <updated>2022-03-15T02:55:18.976Z</updated>
     
     <content type="html"><![CDATA[<p>现在各式各样的互联网服务越来越多，对于一个互联网服务，你基本上必须要注册成为一名用户才可以使用。那么我们注册了那么多的用户，如何统一管理自己的账户和密码呢。</p><h2 id="安全漏洞"><a href="#安全漏洞" class="headerlink" title="安全漏洞"></a>安全漏洞</h2><ol><li><p>弱密码</p><p>用户喜欢用「123456」、「password」、「1qaz2wsx3edc」这种简单的弱密码作为自己账户的密码。这种典型的弱密码已经在密码词典里了，有心之人可以不费吹灰之力就可破解你的登录凭据。</p></li><li><p>相同密码</p><p>如果你在不同的网站使用相同的用户名密码组合作为你的登录凭据，其中一个网站的登录凭据遭到泄露时，你在其他网站的账户也有可能处于危险之中。</p></li><li><p>不可靠的密码存储方式</p><p>用户喜欢把重要的密码存储在手机备忘录里，或者记在本本上，都会增加被盗用的风险。</p><p>有的网站极其不负责任，将用户密码明文存储在数据库，甚至数据库的访问权限都不设限，用户的登录凭据一览无余。</p></li><li><p>不可靠的两步验证方式</p><p>现如今大多数互联网服务使用手机验证码或邮件验证码作为重设密码、登录的两步验证方式。在手机被盗、邮箱被盗的情况下这种验证方式变得十分不可靠。</p><blockquote><p>TIPS：为手机SIM卡设定PIN密码，在每次重新插卡、重启手机后需要输入PIN码才可以使用SIM卡，可以减少很多手机被盗时候的麻烦。</p></blockquote><p>相反，类似Google Authenticator、Yubikey等APP、硬件两步验证方式更加可靠一些。</p><blockquote><p>APP安利：推荐Authy作为Google Authenticator的OTP替代品，优势是可以云同步。</p></blockquote></li></ol><h2 id="密码管理软件"><a href="#密码管理软件" class="headerlink" title="密码管理软件"></a>密码管理软件</h2><p>密码管理软件使用一个主密码可以帮你记录所有服务的登录凭据，以后你只需要记住你密码管理软件的强密码即可登录你所有的互联网服务。</p><blockquote><p>鸡蛋不能放在一个篮子里。</p></blockquote><h3 id="被攻破了怎么办？"><a href="#被攻破了怎么办？" class="headerlink" title="被攻破了怎么办？"></a>被攻破了怎么办？</h3><p>大多数密码管理软件宣称自己使用了AES-128位以上的加密算法。可以保证即使密码管理软件被攻破，只要是没有主密码，存储的密码信息也不会被看到。具体是否使用此类密码管理软件，还是取决于用户对于密码管理服务提供商的信任程度。</p><h3 id="都有什么优点？"><a href="#都有什么优点？" class="headerlink" title="都有什么优点？"></a>都有什么优点？</h3><ol><li><p>密码生成器</p><p>大多数密码管理软件内置了各种强度的密码生成器，这意味着你可以为每一个账号设定一个不同的高强度登录密码，可以防止被「脱库」的风险。</p></li><li><p>密码云同步</p><p>云端的密码同步可以让你在不同设备、不同浏览器都可以无缝共享你的密码库。</p></li><li><p>自动填入密码</p><p>通过安装客户端、浏览器插件即可实现自动填入你的高强度密码。在移动端设备，只需要一个指纹、一次扫脸即可自动填写密码，不需要繁琐的记录和输入你每一个网站的高强度密码。</p></li><li><p>互联网服务的整理</p><p>通过密码管理软件，你可以看到你都在哪些网站注册了用户，可以注销掉一些不需要的账户，精简自己的账户体系。</p></li></ol><p>这一切，你只需要记住一个你的高强度密码。</p><h3 id="都有什么缺点？"><a href="#都有什么缺点？" class="headerlink" title="都有什么缺点？"></a>都有什么缺点？</h3><ol><li><p>主密码泄露</p><p>一般情况下，高强度主密码应当记在脑中且不与任何历史密码重合。但是如果你的主密码泄露，你密码管理软件中所有的账户就对有心之人敞开大门。</p></li><li><p>密码管理软件有后门</p><p>如果你信任你的密码管理服务提供商，就不会担心这个问题。LastPass、1Password等是闭源后端，无法保证他们的服务没有后门。但是Bitwarden、KeePass等是开源后端和客户端，每一行代码都暴露在用户眼睛之下，基本上可以排除有后门的情况。</p></li><li><p>没有网</p><p>如果你的密码管理软件依赖网络进行同步，而你恰好在离线环境，可能就无法知道你的账户密码了。</p></li><li><p>在公共计算机登录可能会麻烦</p><p>公共计算机不会安装密码管理软件，你如果要登入你的账户的话可能需要你在其他设备查询账户的密码，然后手动输入到公共计算机中。</p></li></ol><h2 id="对比与推荐"><a href="#对比与推荐" class="headerlink" title="对比与推荐"></a>对比与推荐</h2><h3 id="Bitwarden（推荐）"><a href="#Bitwarden（推荐）" class="headerlink" title="Bitwarden（推荐）"></a>Bitwarden（推荐）</h3><p>Bitwarden是我第二个使用的密码管理服务。其免费（内购）、后端开源的优势让我信任他并当作我主要的密码管理方案。鉴于他后端开源的优秀特性，我得以搭建自己的密码管理服务器，体验官方的内购服务。</p><p>感兴趣的读者可以体验一下我自己搭建的密码管理服务器：<a href="https://bw.hailres.xyz">https://bw.hailres.xyz</a></p><blockquote><p>免责声明：</p><p>理论上来说，只要是我一直使用Bitwarden作为我的密码管理软件，我就会一直维护我的密码管理服务。</p><p>但是我并不保证服务器的在线时长（SLA），也不保证我密码数据库不会被泄露（即使泄露也是有用户主密码加密）。</p><p>如果你使用我的密码管理服务你应该知晓这几点，做好自己的密码备份。</p></blockquote><h3 id="KeePass"><a href="#KeePass" class="headerlink" title="KeePass"></a>KeePass</h3><p>KeePass也是一个优秀的密码管理软件。优势在于免费、开源、离线。它的密码库存在本地文件当中，并用你的强密码加密。如果你的设备单一，可以考虑使用KeePass。如果要云同步你的密码库文件，可以考虑使用WebDAV等服务。</p><p>在不同的设备上，KeePass都有很多不错的开源客户端。感兴趣的读者可以尝试一下。</p><h3 id="1Password-和-LastPass"><a href="#1Password-和-LastPass" class="headerlink" title="1Password 和 LastPass"></a>1Password 和 LastPass</h3><p>LastPass是我第一个使用的密码管理服务，原先在安卓7、8上的自动填充体验不佳。现在好像是需要付费才可以使用。</p><p>1Password是年付费订阅制，学生可以有1年的免费体验，感兴趣的读者可以试试。</p><h3 id="Chrome-记忆密码-和-iCloud钥匙串"><a href="#Chrome-记忆密码-和-iCloud钥匙串" class="headerlink" title="Chrome 记忆密码 和 iCloud钥匙串"></a>Chrome 记忆密码 和 iCloud钥匙串</h3><p>Chrome记忆密码在多设备同步上还是有一定的局限性，在自动生成强密码方面还是欠缺。</p><p>如果你使用的是苹果全家桶，iCloud钥匙串可以提供非常好的使用体验。但是如果有安卓、Windows等设备可能就会麻烦一些。</p><h2 id="不同设备的自动填充体验"><a href="#不同设备的自动填充体验" class="headerlink" title="不同设备的自动填充体验"></a>不同设备的自动填充体验</h2><p>大多数密码管理软件在苹果设备上的自动填充体验都不错，使用TouchID、FaceID基本上仅需2秒即可填充密码。</p><p>在Android 10，使用Bitwarden的自动填充有的时候需要多点几次才可以跳出来。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html"></summary>
-      
-    
-    
-    
-    <category term="折腾记" scheme="https://blog.hailres.xyz/categories/%E6%8A%98%E8%85%BE%E8%AE%B0/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>北京联通 KD-YUN-811E 光猫改桥接</title>
-    <link href="https://blog.hailres.xyz/2021/09/%E5%8C%97%E4%BA%AC%E8%81%94%E9%80%9A-KD-YUN-811E-%E5%85%89%E7%8C%AB%E6%94%B9%E6%A1%A5%E6%8E%A5/"/>
-    <id>https://blog.hailres.xyz/2021/09/%E5%8C%97%E4%BA%AC%E8%81%94%E9%80%9A-KD-YUN-811E-%E5%85%89%E7%8C%AB%E6%94%B9%E6%A1%A5%E6%8E%A5/</id>
-    <published>2021-09-26T14:36:43.000Z</published>
-    <updated>2022-03-15T02:55:18.977Z</updated>
-    
-    <content type="html"><![CDATA[<p>中秋几天在家里折腾软路由，需要给联通光猫改桥接。虽然网上已经有一些教程，我觉得还是有必要总结分享一下。</p><h2 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h2><p>这个方法是我自己用的成功的，推荐使用。</p><p>在192.168.1.1联通光猫管理页面打开开发者工具，选择控制台，复制以下代码，即可以CUAdmin用户登入后台。</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.getElementById(<span class="string">&#x27;loginfrm&#x27;</span>).setAttribute(<span class="string">&#x27;method&#x27;</span>,<span class="string">&#x27;get&#x27;</span>)</span><br><span class="line"><span class="built_in">document</span>.getElementById(<span class="string">&#x27;username&#x27;</span>).value = <span class="string">&#x27;CUAdmin&#x27;</span></span><br><span class="line"><span class="built_in">document</span>.getElementById(<span class="string">&#x27;password&#x27;</span>).value = <span class="string">&#x27;CUAdmin&#x27;</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">submitFrm</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="function"><span class="title">with</span>(<span class="params"><span class="built_in">document</span>.forms[<span class="number">0</span>]</span>)</span></span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">if</span> ( password.value.length == <span class="number">0</span> ) &#123;</span><br><span class="line">alert(<span class="string">&#x27;密码不得为空!&#x27;</span>);</span><br><span class="line"><span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span> ( password.value.length &gt; <span class="number">32</span> ) &#123;</span><br><span class="line">alert(<span class="string">&#x27;密码长度不得大于32!&#x27;</span>);</span><br><span class="line"><span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">document</span>.getElementById(<span class="string">&#x27;loginfrm&#x27;</span>).submit();</span><br><span class="line">&#125;</span><br><span class="line">submitFrm()</span><br></pre></td></tr></table></figure><h2 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h2><p>这个是我打电话给10010。原来听说客服可以直接下发配置给我改成桥接，结果客服给我转接专家，专家语音指导我如何使用审查元素，我索性让专家直接把教程发在我手机上来。我试了一下，这个方法我没有成功。</p><p>以下是联通官方教程的原文：</p><ol><li>首先打开chrome浏览器，没有chrome的可以用360极速浏览器等！输入光猫后台地址：192.168.1.1（地址可以在终端背面查看）</li><li>浏览器地址栏输入192.168.1.1后跳转到终端首页，输入账号密码登录。（账号密码在终端背面查看）</li><li>登录后的首页，选择菜单-网络-进入网络设置页面</li><li>点击网络-宽带配置-宽带上网账号设置；这里我们可以看到初始的设置栏为灰色不能设置！这就是为什么装机师傅安装完后我们无法设置本地拨号、路由拨号、端口转发等功能的原因！（终端自带路由功能，所以装机师傅在这里输入宽带账号和密码后我们就可以直接上网，无需其它设置）</li><li>空白处右键-审查元素-打开控制台</li><li>CTRL+F：搜索“模式”找到对应的表格代码；对应的代码行找到联网模式修改项Frm_mode: 将“disabled”修改为“abled”这样就可以修改联网模式了。</li><li>模式：修改为桥接模式 Bridge 即可；保存退出。到这里我们终端后台的设置就已经完成了，很简单就是需要将联网模式修改为桥接。这样我们就可以实现本地建立拨号连接进行拨号上网，还可以连接路由器用路由进行拨号上网。</li></ol><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>一开始用「北京联通光猫桥接」为关键词在网上搜了好久，发现好多方法我这边都用不了，不适合我的光猫。后来直接搜索光猫的型号「KD-YUN-811E 桥接」就找到了本文所述的方法。如果有朋友同样有光猫改桥接的需求，但是和我的光猫不是一个型号的，可以用型号在搜索引擎找一下，也许可以找到适合你的方式。</p>]]></content>
     
     
       
