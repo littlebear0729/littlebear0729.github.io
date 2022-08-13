@@ -6,7 +6,7 @@
   <link href="https://blog.hailres.xyz/atom.xml" rel="self"/>
   
   <link href="https://blog.hailres.xyz/"/>
-  <updated>2022-07-02T11:46:28.225Z</updated>
+  <updated>2022-08-13T08:25:23.632Z</updated>
   <id>https://blog.hailres.xyz/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>国际短波广播中文节目频率表</title>
+    <link href="https://blog.hailres.xyz/2022/08/%E5%9B%BD%E9%99%85%E7%9F%AD%E6%B3%A2%E5%B9%BF%E6%92%AD%E4%B8%AD%E6%96%87%E8%8A%82%E7%9B%AE%E9%A2%91%E7%8E%87%E8%A1%A8/"/>
+    <id>https://blog.hailres.xyz/2022/08/%E5%9B%BD%E9%99%85%E7%9F%AD%E6%B3%A2%E5%B9%BF%E6%92%AD%E4%B8%AD%E6%96%87%E8%8A%82%E7%9B%AE%E9%A2%91%E7%8E%87%E8%A1%A8/</id>
+    <published>2022-08-13T02:28:32.000Z</published>
+    <updated>2022-08-13T08:25:23.632Z</updated>
+    
+    <content type="html"><![CDATA[<p>最近比较喜欢听短波广播，自己整理了一份频率表供查。</p><p>部分短波广播节目有明显的政治导向性，收听的时候要保持头脑的清醒。</p><a id="more"></a><p>设备：德生PL-330<br>天线：原机天线<br>位置：北京家中窗边</p><h3 id="可收听节目（大部分为中文节目）"><a href="#可收听节目（大部分为中文节目）" class="headerlink" title="可收听节目（大部分为中文节目）"></a>可收听节目（大部分为中文节目）</h3><table><thead><tr><th>广播电台</th><th>语言</th><th>时间（北京）</th><th>频率</th><th>收听状况</th><th>备注</th></tr></thead><tbody><tr><td>NHK</td><td>Chinese</td><td>0630-0650</td><td>9560</td><td></td><td></td></tr><tr><td></td><td></td><td>1200-1230</td><td>11825</td><td>成功收听</td><td>信号飘忽</td></tr><tr><td></td><td></td><td>1930-2000</td><td>13835</td><td>成功收听</td><td></td></tr><tr><td></td><td></td><td>2030-2100</td><td>6190</td><td>成功收听</td><td>同步验波USB效果好</td></tr><tr><td></td><td></td><td>2130-2200</td><td>6190</td><td>成功收听</td><td>信号强劲 BW 3.5kHz</td></tr><tr><td></td><td></td><td>2230-2300</td><td>6190</td><td>成功收听</td><td>信号强劲</td></tr><tr><td>蒙古之声</td><td>Chinese</td><td>1800-1830</td><td>12085</td><td>成功收听</td><td>信号微弱</td></tr><tr><td></td><td></td><td>2200-2230</td><td>12015</td><td>成功收听</td><td>信号强劲 有时邻频干扰严重？？</td></tr><tr><td>朝鲜之声</td><td>Chinese</td><td>0500-0700</td><td>9875 11635 7235 9445</td><td></td><td></td></tr><tr><td></td><td></td><td>1100-1200</td><td>13650 15105</td><td>成功收听</td><td>效果均不错 13650貌似更佳</td></tr><tr><td></td><td></td><td>1300-1400</td><td>7220 9445 9730</td><td>成功收听</td><td>9445有声音 信号微弱 7220无 9730微弱</td></tr><tr><td></td><td></td><td>1400-1500</td><td>13650 15105</td><td>成功收听</td><td>13650发射机与其他节目有串扰 15105貌似更佳 均有低沉声音</td></tr><tr><td></td><td></td><td>1600-1700</td><td>7220 9445</td><td>成功收听</td><td>9445效果更佳</td></tr><tr><td></td><td></td><td>1900-2000</td><td>7220 9445</td><td>9445成功收听</td><td>效果不佳</td></tr><tr><td></td><td></td><td>？</td><td>6185 9850</td><td></td><td></td></tr><tr><td>韩国国际广播电台</td><td>Chinese</td><td>1930-2030</td><td>6095 9770</td><td>6095成功收听</td><td>邻频干扰较严重 同步验波LSB可解</td></tr><tr><td></td><td></td><td>0700-0800</td><td>7215</td><td></td><td></td></tr><tr><td>泰国广播电台国际台</td><td>Chinese</td><td>2045-2100</td><td>9390</td><td>成功收听</td><td>信号强劲</td></tr><tr><td></td><td>Japanese</td><td>2100-2115</td><td>9390</td><td>成功收听</td><td>信号强劲</td></tr></tbody></table><h3 id="尝试收听但失败"><a href="#尝试收听但失败" class="headerlink" title="尝试收听但失败"></a>尝试收听但失败</h3><table><thead><tr><th>广播电台</th><th>语言</th><th>时间（北京）</th><th>频率</th><th>收听状况</th><th>备注</th></tr></thead><tbody><tr><td>越南之声</td><td>Chinese</td><td>0600-0630</td><td>7220 12000</td><td></td><td>同频干扰严重</td></tr><tr><td></td><td></td><td>1900-1930</td><td>7220 12000</td><td></td><td></td></tr><tr><td></td><td></td><td>2000-2030</td><td>7220 12000</td><td></td><td></td></tr><tr><td></td><td></td><td>2100-2130</td><td>7220 12000</td><td></td><td></td></tr><tr><td>美国之音</td><td>Chinese</td><td></td><td></td><td></td><td></td></tr><tr><td>罗马尼亚</td><td>Chinese</td><td>1200-1230</td><td>17760 15220</td><td>啥也听不到</td><td></td></tr><tr><td></td><td></td><td>2030-2100</td><td>15160 17760</td><td>啥也听不到</td><td></td></tr><tr><td>韩国国际广播电台</td><td>Chinese</td><td>1900-2000</td><td>1557</td><td>不可听</td><td></td></tr><tr><td></td><td></td><td>2100-2200</td><td>1170</td><td>不可听</td><td></td></tr></tbody></table><h3 id="可参考的频率表"><a href="#可参考的频率表" class="headerlink" title="可参考的频率表"></a>可参考的频率表</h3><p><a href="http://www1.s2.starcat.ne.jp/ndxc/">http://www1.s2.starcat.ne.jp/ndxc/</a></p><p><a href="http://www.hfcc.org/data/a22/">http://www.hfcc.org/data/a22/</a></p><h3 id="备注"><a href="#备注" class="headerlink" title="备注"></a>备注</h3><p>本博客可能会持续更新，但仅对最后更新时刻的频率有效。</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;最近比较喜欢听短波广播，自己整理了一份频率表供查。&lt;/p&gt;
+&lt;p&gt;部分短波广播节目有明显的政治导向性，收听的时候要保持头脑的清醒。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="折腾记" scheme="https://blog.hailres.xyz/categories/%E6%8A%98%E8%85%BE%E8%AE%B0/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>使用Chisel设计矩阵乘法电路</title>
@@ -403,25 +423,6 @@
     
     
     <category term="折腾记" scheme="https://blog.hailres.xyz/categories/%E6%8A%98%E8%85%BE%E8%AE%B0/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>聊聊我的摄影器材</title>
-    <link href="https://blog.hailres.xyz/2021/11/%E8%81%8A%E8%81%8A%E6%88%91%E7%9A%84%E6%91%84%E5%BD%B1%E5%99%A8%E6%9D%90/"/>
-    <id>https://blog.hailres.xyz/2021/11/%E8%81%8A%E8%81%8A%E6%88%91%E7%9A%84%E6%91%84%E5%BD%B1%E5%99%A8%E6%9D%90/</id>
-    <published>2021-11-21T01:03:35.000Z</published>
-    <updated>2022-03-15T02:55:18.979Z</updated>
-    
-    <content type="html"><![CDATA[<p>博客咕咕咕了三周，一个是因为比较忙，一个是因为没太想好选题。最近迷上了摄影，特别想用与别人不一样的、独特的视角记录下生活中的东西。写下这篇文章谈谈我用过的，现在在用的，以后想买的摄影器材。</p><a id="more"></a><h2 id="以前用过的"><a href="#以前用过的" class="headerlink" title="以前用过的"></a>以前用过的</h2><p>一开始接触摄影就是用的佳能的器材，这也许是我对佳能情有独钟的原因吧。佳能直出色彩的肤色讨喜、人机交互的人性化我都非常满意。反观索尼，机身的屏幕拉跨、颜色有些用力过猛，基本上每张照片都需要后期才可以出图。不过萝卜青菜各有所爱，就不评价不同品牌的优劣了。</p><h3 id="机身"><a href="#机身" class="headerlink" title="机身"></a>机身</h3><p>在我有记忆里，第一台使用的佳能单反就是 Canon EOS Kiss X 了。这台相机在日本是这个名字，国内应该叫 EOS-400D 。一个APS-C画幅的相机，算是我摄影的启蒙吧。</p><p>通过这台机器，我学会了构图、取景，一些简单的拍摄手法，摄影的一些基本知识等等。</p><p>但是这台机器的配置放在现在看来确实非常拉跨，10MP的有效像素，5FPS的“高速连拍”，实在是不符合现在的需求。再加之显示偏亮过曝的LCD屏幕，让我想把他换掉。</p><h3 id="镜头"><a href="#镜头" class="headerlink" title="镜头"></a>镜头</h3><p>镜头用的更是老古董了。</p><ol><li><p>Sigma 17-70 mm f/2.8-4.5 DC Macro 拥有巨大的对焦声音和缓慢的对焦速度还有时不时地跑校搞得我非常难受。唯一的亮点可能就在于微距拍摄，可以放大拍摄花蕊细节之类。再者变焦环转起来摩擦力很大、手感太差，对焦环已经有明显的齿轮的声音了，光圈还是2.8-4.5的可变光圈，让我非常想换掉这个镜头。</p></li><li><p>Canon EF 50 mm f/1.8 II 佳能的50 1.8小痰盂，是1990年发布的老镜头了。价格亲民，中规中矩。拍人像定焦还是非常好，是我拥有的镜头中，效果比较好的一个了。锐度还是可以接受的，配合我APS-C画幅的机身，四舍五入基本上可以到85定的效果。</p></li><li><p>Canon EF 70-210 mm f/3.5-4.5 USM 佳能的一个长焦镜头，也是1990年的老镜头了。主要是独特的长焦视角，纵深感和距离压缩感比较吸引人。但是3.5-4.5的可变光圈，逆光环境下飙上天的紫边色散，还有长焦居然没有防抖，实在是无法忍受。</p></li></ol><h2 id="现在在用的"><a href="#现在在用的" class="headerlink" title="现在在用的"></a>现在在用的</h2><h3 id="机身-1"><a href="#机身-1" class="headerlink" title="机身"></a>机身</h3><p>上一个暑假经过一番对比和深思熟虑，买了一台 Canon EOS M6 Mark ii 。算是一台非常热门的微单相机了，问题也是显而易见，EVF（电子取景）的取景模式还是不太熟悉，我还是比较熟悉OVF（光学取景）的取景方式。</p><blockquote><p>OVF 和 EVF 的对比</p><ol><li>OVF取景没有延迟，EVF会有些许延迟</li><li>OVF连拍的时候不会有黑屏的瞬间，EVF连拍的时候可能会因为这个丢失跟踪对象</li><li>OVF的显示效果完全取决于人眼，EVF取决于屏幕素质</li><li>在用奇特角度拍摄的时候OVF可能会非常的别扭，这种情况下用EVF翻转屏还是非常舒服</li><li>EVF可以在取景的时候就预览曝光效果和景深，OVF在应对大光比的情况下可能会差一些</li></ol><p>当然，EVF和OVF也各有优劣，所以说混合使用还是最好的。</p></blockquote><p>当时购买相机的两个选择一个是M62一个是90D，为了轻便买了M62。但是最大的槽点可能就是EF-M卡口了，家里现有的镜头都是EF卡口的，佳能又好像要放弃EF-M卡口了一样，买一个转接环一直套着感觉效果总不是很好。思来想去，还是趁着双11把EOS 90D买来了。</p><blockquote><p>硕大的肌肉，激情的拍摄！</p></blockquote><p>拿到Canon EOS 90D，第一个感觉就是，还是单反是属于我的。完美的握持感，OVF和EVF兼顾，EF卡口完美的满足了我的需要。事实上，M62和90D是一个CMOS传感器。同时，佳能应该是不继续做EF卡口的单反系列了，所以购买一台旗舰APS-C画幅的单反相机总是没有错的。听到连拍快门的声音的时候，感觉整个人都升华了。</p><h3 id="镜头-1"><a href="#镜头-1" class="headerlink" title="镜头"></a>镜头</h3><p>最近比较喜欢用长焦拍照，长焦可以突出拍摄主体，虚化背景。所以，换一个好用的长焦镜头还是比较重要的。最后我选中了 Sigma 70-200 mm f/2.8 EX DG APO OS HSM 。EX级的镜头，画质还是说得过去。APO代表着低色散，还有OS防抖，各个方面都可以满足我的要求。这几天使用下来感觉还是非常不错的，2.8的恒定光圈，还有光学防抖都给我的拍摄带来很大便利。</p><h2 id="以后想用的"><a href="#以后想用的" class="headerlink" title="以后想用的"></a>以后想用的</h2><p>上文说到佳能可能不再做EF卡口的相机了，而是转做RF卡口的无反相机了。届时只有EVF取景，对我来说算是比较遗憾了。下一台相机可能就是类似于 Canon EOS R6 这种级别的RF卡口无反相机了，不过谁说得好呢。现在看来，佳能的RF镜头系列还是挺香的（就是价格不是很香）。期待着未来的无反相机可以带给我什么样的惊艳吧。</p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;博客咕咕咕了三周，一个是因为比较忙，一个是因为没太想好选题。最近迷上了摄影，特别想用与别人不一样的、独特的视角记录下生活中的东西。写下这篇文章谈谈我用过的，现在在用的，以后想买的摄影器材。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="购物记" scheme="https://blog.hailres.xyz/categories/%E8%B4%AD%E7%89%A9%E8%AE%B0/"/>
     
     
   </entry>
