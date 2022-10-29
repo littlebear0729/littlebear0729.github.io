@@ -6,7 +6,7 @@
   <link href="https://blog.hailres.xyz/atom.xml" rel="self"/>
   
   <link href="https://blog.hailres.xyz/"/>
-  <updated>2022-08-23T13:04:09.474Z</updated>
+  <updated>2022-10-29T06:15:00.469Z</updated>
   <id>https://blog.hailres.xyz/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>USTC Hackergame 2022 Writeup</title>
+    <link href="https://blog.hailres.xyz/2022/10/USTC-Hackergame-2022-Writeup/"/>
+    <id>https://blog.hailres.xyz/2022/10/USTC-Hackergame-2022-Writeup/</id>
+    <published>2022-10-29T06:01:15.000Z</published>
+    <updated>2022-10-29T06:15:00.469Z</updated>
+    
+    <content type="html"><![CDATA[<p>今年的题更变态了…今年比较忙，时间也很少，难题就没有死磕。现在想来即使死磕应该也做不出来了…</p><p>最后成绩是341/2746，算是前13%吧。下面题目标斜体的是看了，有思路，但是没做出来的。</p><p>看完了题解，感慨一下，真是应了原来那个小故事：按按钮就要一块钱，但是知道在哪按按钮要9999元。</p><h3 id="签到"><a href="#签到" class="headerlink" title="签到"></a>签到</h3><p>瞎点摸索，直接提交，说要2022</p><p>观察url是？？？？改成2022即可</p><h3 id="猫咪问答"><a href="#猫咪问答" class="headerlink" title="猫咪问答"></a>猫咪问答</h3><h4 id="第一题"><a href="#第一题" class="headerlink" title="第一题"></a>第一题</h4><p><a href="https://cybersec.ustc.edu.cn/2022/0826/c23847a565848/page.htm">https://cybersec.ustc.edu.cn/2022/0826/c23847a565848/page.htm</a></p><p>2017-03</p><h4 id="第二题"><a href="#第二题" class="headerlink" title="第二题"></a>第二题</h4><p><a href="https://lug.ustc.edu.cn/news/2022/09/SFD/">https://lug.ustc.edu.cn/news/2022/09/SFD/</a></p><p><a href="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2022.9.20_%E8%BD%AF%E4%BB%B6%E8%87%AA%E7%94%B1%E6%97%A5/slides/gnome-wayland-user-perspective.pdf">https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2022.9.20_%E8%BD%AF%E4%BB%B6%E8%87%AA%E7%94%B1%E6%97%A5/slides/gnome-wayland-user-perspective.pdf</a></p><p>Kdenlive</p><h4 id="第三题"><a href="#第三题" class="headerlink" title="第三题"></a>第三题</h4><p><a href="https://support.mozilla.org/bm/questions/1052888">https://support.mozilla.org/bm/questions/1052888</a></p><p><a href="https://www.betaarchive.com/forum/viewtopic.php?t=34790">https://www.betaarchive.com/forum/viewtopic.php?t=34790</a></p><p>搜索firefox windows 2000 support</p><p>12</p><h4 id="第四题"><a href="#第四题" class="headerlink" title="第四题"></a>第四题</h4><p>github找到linux的repo，然后直接搜索cve号</p><p><a href="https://github.com/torvalds/linux/commit/dcd46d897adb70d63e025f175a00a89797d31a43">https://github.com/torvalds/linux/commit/dcd46d897adb70d63e025f175a00a89797d31a43</a></p><p>dcd46d897adb70d63e025f175a00a89797d31a43</p><h4 id="第五题"><a href="#第五题" class="headerlink" title="第五题"></a>第五题</h4><p>用”e4:ff:65:d7:be:5d:c8:44:1d:89:6b:50:f5:50:a0:ce”在google找到一个文档</p><p>发现ip 205.166.94.16</p><p>结果是 sdf.org</p><h4 id="第六题"><a href="#第六题" class="headerlink" title="第六题"></a>第六题</h4><p><a href="http://ustcnet.ustc.edu.cn/11180/list.htm">http://ustcnet.ustc.edu.cn/11180/list.htm</a></p><p><a href="https://netfee.ustc.edu.cn/ylxia/help/faq/faq_wltfuncs.htm">https://netfee.ustc.edu.cn/ylxia/help/faq/faq_wltfuncs.htm</a></p><p>2013-10-25</p><p>2014-12-16</p><p>2015-01-20</p><p>2011-01-01</p><p>找到的时间都不对！</p><p>最后写了个脚本爆破，是2003-03-01</p><h3 id="家目录里的秘密"><a href="#家目录里的秘密" class="headerlink" title="家目录里的秘密"></a>家目录里的秘密</h3><h4 id="VS-Code-里的-flag"><a href="#VS-Code-里的-flag" class="headerlink" title="VS Code 里的 flag"></a>VS Code 里的 flag</h4><p>下载家目录压缩包，直接解压</p><p>在vscode里面打开，直接搜索flag</p><p>发现 /user/.config/Code/User/History/2f23f721/DUGV.c 里面第五行有flag</p><p><code>flag&#123;finding_everything_through_vscode_config_file_932rjdakd&#125;</code></p><h4 id="Rclone-里的-flag"><a href="#Rclone-里的-flag" class="headerlink" title="Rclone 里的 flag"></a><em>Rclone 里的 flag</em></h4><p>没找到</p><p>/user/.config/rclone/rclone.conf 里面有ftp的配置文件，不知道是不是一个思路</p><blockquote><p>看了官方题解，确实是从这里入手。</p><p>那个token只是编码了，自己fake一个FTP server就可以看到密码了。</p></blockquote><h3 id="HeiLang"><a href="#HeiLang" class="headerlink" title="HeiLang"></a>HeiLang</h3><p>吐槽何同学的题目hhh</p><p>把源代码下下来</p><p>把<code>|</code>全部替换成<code>] = a [</code>，变成python可以运行的代码</p><p>直接运行得到flag</p><h3 id="Xcaptcha"><a href="#Xcaptcha" class="headerlink" title="Xcaptcha"></a>Xcaptcha</h3><p>如果直接用python的request发包不太行</p><p>用selenium模拟操作，先发送cookies、爬题目计算</p><p>然后sendkey输入计算结果</p><p><strong>必须要手动点击click提交才可以，等他自己提交结果已经晚了</strong></p><p>不知道有没有其他的解法…</p><h3 id="旅行照片-2-0"><a href="#旅行照片-2-0" class="headerlink" title="旅行照片 2.0"></a>旅行照片 2.0</h3><h4 id="照片分析"><a href="#照片分析" class="headerlink" title="照片分析"></a>照片分析</h4><p>把照片下下来，在网上随便找一个在线的EXIF查看器就可以分析出结果</p><p><strong>提醒我们在互联网上分享照片的时候，要注意自己的隐私不要泄露了~</strong></p><h4 id="社工实践"><a href="#社工实践" class="headerlink" title="社工实践"></a><em>社工实践</em></h4><ol><li><p>观察圆形建筑 有个<code>welcome to zozo* stadium</code></p><p>经过查找是ZOZO Marine Stadium</p><p>在日本，邮编是2610022</p><p>但是他是在APA酒店拍的，邮编是2060021</p><blockquote><p>结束了，发现自己这里打错了。应该是2610021，爆破没爆破出来。。。</p><p>失之交臂</p></blockquote></li><li><p>一开始是观察倒影摄像头形状判断是小米10手机：2340×1080（但是这个是错的）</p><p>看exif手机codename是sm6115 (juice)</p><p><a href="https://github.com/dotOS-Devices/device_xiaomi_juice">https://github.com/dotOS-Devices/device_xiaomi_juice</a></p><p>可以看到分辨率是2340×1080</p></li><li><p>按照方向判断应该是hnd出港飞机（猜测）</p></li><li><p>没暴力出来 难受</p></li></ol><blockquote><p>爆破的数据里面确实包括答案，但是前面的邮编写错了…</p></blockquote><h3 id="猜数字"><a href="#猜数字" class="headerlink" title="猜数字"></a><em>猜数字</em></h3><p>看了半天java代码，没思路</p><p>感觉java层面是随机的，应该要从web请求入手</p><p>因为他state是记录在后端的，不能同时开两个网页做</p><blockquote><p>看了题解，直呼坑爹</p></blockquote><h3 id="Latex-机器人"><a href="#Latex-机器人" class="headerlink" title="Latex 机器人"></a>Latex 机器人</h3><h4 id="纯文本"><a href="#纯文本" class="headerlink" title="纯文本"></a>纯文本</h4><p>查了一下 latex可以通过 <code>\immediate\write18&#123;&#125;</code> 运行系统代码</p><p>但是看了文件包中的sh文件发现了 <code>--no-shell-escape</code> 选项，这个方法行不通</p><p>latex还可以通过 <code>\input&#123;&#125;</code> 引用文件内容，直接 <code>\input&#123;/flag1&#125;</code> 得到结果</p><h4 id="特殊字符混入"><a href="#特殊字符混入" class="headerlink" title="特殊字符混入"></a><em>特殊字符混入</em></h4><p>应该要转义吧…不会做</p><blockquote><p>看了题解，确实不会</p></blockquote><h3 id="Flag的痕迹"><a href="#Flag的痕迹" class="headerlink" title="Flag的痕迹"></a><em>Flag的痕迹</em></h3><p>去wayback machine看了网站的历史snapshot，没有</p><p>url改成 <code>?do=recent</code> 显示功能关闭</p><p>不会了</p><blockquote><p>看了题解，确实不会</p><p>如果自己安装dokuwiki可能还能做出来，但是没那么多时间玩</p></blockquote><h3 id="线路板"><a href="#线路板" class="headerlink" title="线路板"></a>线路板</h3><p>用gerbv读取文件，重要的是那个B_Cu文件</p><p>一个一个删掉覆盖在上面的小圆圈就好了</p><h3 id="Flag自动机"><a href="#Flag自动机" class="headerlink" title="Flag自动机"></a><em>Flag自动机</em></h3><p>下下来直接点按钮会跑</p><p>直接反编译没有发现编码的flag字符串</p><p>发现字符串说可以不用反破解加密算法，但是没思路</p><blockquote><p>看了题解，是我不会的方向了</p></blockquote><h3 id="微积分计算小练习"><a href="#微积分计算小练习" class="headerlink" title="微积分计算小练习"></a><em>微积分计算小练习</em></h3><p>练习成绩的url的param是<code>分数:名称</code>的base64编码</p><p>获取成绩的代码会带着flag的cookie进行请求，不知道前端怎么把cookie显示出来啊</p><p>然后就没思路了</p><blockquote><p>看了题解，知道XSS，当时没想到。。</p><p>感觉当时即使想到了也做不出来…</p></blockquote><h3 id="光与影"><a href="#光与影" class="headerlink" title="光与影"></a>光与影</h3><p>把整个网页扒下来，发现和里面的 <code>fragment-shader.js</code>有关</p><blockquote><p>里面一堆min(min(min(min(min(min(给我看笑了</p></blockquote><p>不太会WebGL，一通瞎分析瞎改发现好像和<code>t5SDF</code>相关</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">float t5SDF(vec3 p, vec3 b, float r) &#123;</span><br><span class="line">  vec3 q = abs(p) - b;</span><br><span class="line">  // return length(max(q,0.0)) + min(max(q.x,max(q.y,q.z)),0.0) - r;</span><br><span class="line">  return length(0.0); // 全黑了</span><br><span class="line">  return length(1.0); // 除了地面都有</span><br><span class="line">  return length(9999999.0); // flag出现</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>获取到flag</p><blockquote><p>看了题解，一开始把 float tmin = min(min(min(min(t1, t2), t3), t4), t5);<br>改成了 float tmin = min(min(min(t1, t2), t3), t4);<br>但是出错了，不知道为啥…</p></blockquote><h3 id="你先别急"><a href="#你先别急" class="headerlink" title="你先别急"></a><em>你先别急</em></h3><p>验证码请求的参数包括选择的项目的名称</p><p>不知道项目的名称怎么转化为python生成验证码的参数的</p><p>可能是通过hack那个riskness参数吧，有一个test-riskness.png是flag</p><p>然后就没思路了，不知道这个题跟题目说的数据库有什么关系</p><blockquote><p>看了题解，确实不会</p></blockquote>]]></content>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="学习记" scheme="https://blog.hailres.xyz/categories/%E5%AD%A6%E4%B9%A0%E8%AE%B0/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>国际短波广播中文节目频率表</title>
@@ -107,7 +129,7 @@
     <link href="https://blog.hailres.xyz/2022/05/%E4%BD%BF%E7%94%A8RSP1-SDR%E6%8E%A5%E6%94%B6NOAA%E5%8D%AB%E6%98%9F%E4%BA%91%E5%9B%BE/"/>
     <id>https://blog.hailres.xyz/2022/05/%E4%BD%BF%E7%94%A8RSP1-SDR%E6%8E%A5%E6%94%B6NOAA%E5%8D%AB%E6%98%9F%E4%BA%91%E5%9B%BE/</id>
     <published>2022-05-23T14:59:52.000Z</published>
-    <updated>2022-05-23T15:16:08.269Z</updated>
+    <updated>2022-05-23T15:17:15.062Z</updated>
     
     <content type="html"><![CDATA[<p>对无线电感兴趣已经有一段时间了，一年前买了一个R820T2的USB棒子，还买了老鹰的771天线尝试接受NOAA的卫星云图，结果怎么操作都是一点信号都没有。怀疑可能是自己的天线不太行，毕竟771GP天线没有指向性。但是有一天在UV-5R上用771天线听到了NOAA的信号声音，突然发觉，接收不到信号可能是SDR设备的问题，于是下单了RSP1芯片的SDR。</p><h3 id="硬件方面"><a href="#硬件方面" class="headerlink" title="硬件方面"></a>硬件方面</h3><p>淘宝购买的RSP1 SDR，价格大概在180元左右，还可以覆盖短波频段，这是原来RTL-SDR的USB棒子无法做到的。（为了接收短波讯号，还购买了有源小环天线）</p><p>同时，我还购买了指向性强的手持八木天线，价格在280元左右。其中U段五单元，V段三单元，按照说明书安装好，效果还是很不错的。</p><h3 id="软件方面"><a href="#软件方面" class="headerlink" title="软件方面"></a>软件方面</h3><p>电脑上需要在windows系统上准备好WXtoIMG软件，安装VB Cable虚拟声卡，SDRuno SDR软件。在安卓手机上安装Look4sat软件追踪卫星。目前，NOAA-15、18和19是可用的。在windows上还可以使用Orbitron追踪和预测卫星位置。</p><h3 id="开始接收"><a href="#开始接收" class="headerlink" title="开始接收"></a>开始接收</h3><p>在卫星过境的时间准备好软件接收即可，用八木天线指向卫星的方向。尝试了几次，效果都不是很好。反复总结了经验教训，终于收到了效果还不错的图片。唯一美中不足的是家里的露台朝南，卫星在北面过境的时候会被遮挡，所以只能接一半左右的图片。</p><h3 id="经验"><a href="#经验" class="headerlink" title="经验"></a>经验</h3><ol><li><p>设置好SDRUno软件，V段多普勒效应不是非常明显，可以通过把带宽加大解决。（不知道是不是正确的解决方式）我使用的是WFM模式，卫星下传的带宽是38kHz，我接收设置带宽为42kHz。</p></li><li><p>卫星天线是圆极化天线，理论上八木天线任意方向摆放均可。但是实操发现振子水平于地面效果最佳。</p></li><li><p>注意虚拟声卡到WXtoIMG软件的音量不宜过大或过小，否则数据无法正常解码。</p></li></ol><p>网上有人使用拉杆羊角天线成功接收NOAA卫星讯号的，我感到十分费解。毕竟羊角（正V）天线方向性也不是非常的明显，如果有操作过的朋友欢迎讨论。</p><p>接下来，在合适的时间我会尝试接收并解码国际空间站下传的SSTV图像。</p><p>最近尝试收听业余卫星的中继器下行，准备在考取业余无线电操作证后进行业余卫星通联。</p><p>欢迎喜爱业余无线电的朋友交流讨论。</p>]]></content>
     
@@ -400,25 +422,6 @@
     
     <summary type="html">&lt;p&gt;在OpenWRT软路由上部署Telegram的MTProxy，可以在外不用连接家里的VPN即可顺利收发Telegram消息。&lt;/p&gt;
 &lt;p&gt;本文中介绍的OpenWRT路由器操作系统的进程守护、开机自启和防火墙配置对其他服务的配置也具有指导意义。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="折腾记" scheme="https://blog.hailres.xyz/categories/%E6%8A%98%E8%85%BE%E8%AE%B0/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>使用Zotero进行文献管理</title>
-    <link href="https://blog.hailres.xyz/2021/12/%E4%BD%BF%E7%94%A8Zotero%E8%BF%9B%E8%A1%8C%E6%96%87%E7%8C%AE%E7%AE%A1%E7%90%86/"/>
-    <id>https://blog.hailres.xyz/2021/12/%E4%BD%BF%E7%94%A8Zotero%E8%BF%9B%E8%A1%8C%E6%96%87%E7%8C%AE%E7%AE%A1%E7%90%86/</id>
-    <published>2021-12-21T08:13:49.000Z</published>
-    <updated>2022-03-15T02:55:18.975Z</updated>
-    
-    <content type="html"><![CDATA[<p>在日常的学习和科研生活中，总是有一些需要管理文献的场景。有的时候引用的参考文献一多就非常混乱，也不方便寻找。Zotero是一个开源的跨平台文献管理软件，可以快速生成引文条目供文章内引用。</p><a id="more"></a><h2 id="Zotero软件本体"><a href="#Zotero软件本体" class="headerlink" title="Zotero软件本体"></a>Zotero软件本体</h2><p>Zotero的软件布局非常简单，左侧是分类，中间是条目，右侧是文献的详细信息。</p><p>在左侧，可以根据查找的文献的不同种类进行分类。</p><p>中间，可以把下载好的pdf等论文文件拖入，Zotero会自动识别标题、作者、摘要等信息。双击条目即可跳转源网页或打开源文件。</p><p>右侧是详细信息，可以查看作者、期刊等信息，也可以自己修改。</p><p>同时在上方工具栏，在知道ISBN、DOI、PMID或arXiv ID的情况下Zotero会自动寻找文献并进行添加，非常方便。</p><p>在导出引文目录时，可以右键文献，选择「创建引文目录」选择需要的引用格式进行导出。</p><p>Zotero支持的引用格式非常多，包括常用的APA，Chicago，国标等，都可以进行一键导出。</p><h2 id="Zotero浏览器插件"><a href="#Zotero浏览器插件" class="headerlink" title="Zotero浏览器插件"></a>Zotero浏览器插件</h2><p>Zotero还提供浏览器插件，在浏览论文的时候就可以一键收录到自己的文献库当中。</p><p>比如在浏览Google Scholar、Elsevier或Web of Science等文献数据库时，点击插件即可一键收录。</p><h2 id="Zotero-Office-插件"><a href="#Zotero-Office-插件" class="headerlink" title="Zotero Office 插件"></a>Zotero Office 插件</h2><p>Zotero在Microsoft Office和LibreOffice中也提供插件，可以在你撰写论文时快速添加引用。</p><p>在Word中，需要首先打开Zotero的加载项。接着在Word里面就会出现Zotero标签页，在设定好引用格式等后即可添加引用文献。</p><p>你可以在Word里批量添加，一键引用，更改引用格式等。不需要一个一个文献复制粘贴引用格式，更不需要自己撰写引用格式。可以把重点放在论文的写作当中，而不是在复杂的引用上。</p><p>最后，欢迎朋友们来一起交流发掘Zotero的更多用法。</p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;在日常的学习和科研生活中，总是有一些需要管理文献的场景。有的时候引用的参考文献一多就非常混乱，也不方便寻找。Zotero是一个开源的跨平台文献管理软件，可以快速生成引文条目供文章内引用。&lt;/p&gt;</summary>
     
     
     
