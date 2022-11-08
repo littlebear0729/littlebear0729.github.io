@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.hailres.xyz/2022/11/%E3%80%8A%E6%B8%A9%E6%B0%B4%E7%85%AE%E9%9D%92%E8%9B%99%E3%80%8B/</loc>
+    
+    <lastmod>2022-11-08</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.hailres.xyz/2022/08/%E5%9B%BD%E9%99%85%E7%9F%AD%E6%B3%A2%E5%B9%BF%E6%92%AD%E4%B8%AD%E6%96%87%E8%8A%82%E7%9B%AE%E9%A2%91%E7%8E%87%E8%A1%A8/</loc>
     
     <lastmod>2022-10-29</lastmod>
@@ -436,7 +445,7 @@
 
   <url>
     <loc>https://blog.hailres.xyz/</loc>
-    <lastmod>2022-10-29</lastmod>
+    <lastmod>2022-11-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -446,28 +455,28 @@
   
   <url>
     <loc>https://blog.hailres.xyz/categories/%E6%8A%98%E8%85%BE%E8%AE%B0/</loc>
-    <lastmod>2022-10-29</lastmod>
+    <lastmod>2022-11-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.hailres.xyz/categories/%E5%AD%A6%E4%B9%A0%E8%AE%B0/</loc>
-    <lastmod>2022-10-29</lastmod>
+    <lastmod>2022-11-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.hailres.xyz/categories/%E8%A7%82/</loc>
-    <lastmod>2022-10-29</lastmod>
+    <lastmod>2022-11-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.hailres.xyz/categories/%E8%B4%AD%E7%89%A9%E8%AE%B0/</loc>
-    <lastmod>2022-10-29</lastmod>
+    <lastmod>2022-11-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
