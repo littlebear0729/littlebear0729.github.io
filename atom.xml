@@ -6,7 +6,7 @@
   <link href="https://blog.bearxiong.xyz/atom.xml" rel="self"/>
   
   <link href="https://blog.bearxiong.xyz/"/>
-  <updated>2023-10-17T06:23:28.339Z</updated>
+  <updated>2023-10-30T08:08:50.394Z</updated>
   <id>https://blog.bearxiong.xyz/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>校园网登入一键脚本分享</title>
+    <link href="https://blog.bearxiong.xyz/2023/10/%E6%A0%A1%E5%9B%AD%E7%BD%91%E7%99%BB%E5%85%A5%E4%B8%80%E9%94%AE%E8%84%9A%E6%9C%AC%E5%88%86%E4%BA%AB-1/"/>
+    <id>https://blog.bearxiong.xyz/2023/10/%E6%A0%A1%E5%9B%AD%E7%BD%91%E7%99%BB%E5%85%A5%E4%B8%80%E9%94%AE%E8%84%9A%E6%9C%AC%E5%88%86%E4%BA%AB-1/</id>
+    <published>2023-10-30T08:05:18.000Z</published>
+    <updated>2023-10-30T08:08:50.394Z</updated>
+    
+    <content type="html"><![CDATA[<p>适用于宿舍楼新装的光猫（wifi的ssid名称为bjut-sushe-(2.4G&#x2F;5G)-XXXX），原来需要在 ‘<a href="http://10.21.221.98/a79.htm">http://10.21.221.98/a79.htm</a>‘ 和 ‘lgn.bjut.edu.cn’ 分别登录两次，现在登录一次就可以了。</p><p>我的电脑是mac，所以写了个sh脚本。</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># fill your username and password</span></span><br><span class="line">username=20123456</span><br><span class="line">password=THISisYOURpassword</span><br><span class="line"></span><br><span class="line"><span class="comment"># the specific IP addr will be logged in, which means you can login other&#x27;s device by IP addr.</span></span><br><span class="line">ip=`ifconfig en0 | grep <span class="string">&#x27;inet &#x27;</span> | awk <span class="string">&#x27;&#123;print $2&#125;&#x27;</span>`</span><br><span class="line">curl <span class="string">&quot;http://10.21.221.98:801/eportal/portal/login?callback=dr1003&amp;login_method=1&amp;user_account=<span class="variable">$username</span>%40campus&amp;user_password=<span class="variable">$password</span>&amp;wlan_user_ip=<span class="variable">$ip</span>&amp;wlan_user_ipv6=&amp;wlan_user_mac=000000000000&amp;wlan_ac_ip=&amp;wlan_ac_name=&amp;jsVersion=4.2.1&amp;terminal_type=3&amp;lang=zh-cn&amp;v=4344&amp;lang=zh&quot;</span></span><br></pre></td></tr></table></figure><p>脚本分享在我的gist上面：<a href="https://gist.github.com/littlebear0729/730444f2e094bb520cab25d60092b177">https://gist.github.com/littlebear0729/730444f2e094bb520cab25d60092b177</a></p><p>新认证平台有一个很有意思的地方，就是可以为某一个ip进行登录。这就意味着如果你知道别的设备的ip，你可以为其他设备登录。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="折腾记" scheme="https://blog.bearxiong.xyz/categories/%E6%8A%98%E8%85%BE%E8%AE%B0/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>Is China now facing credentialism crisis?</title>
@@ -408,28 +430,6 @@
     
     
     <summary type="html">&lt;p&gt;小时候被父母逼着被英语单词，也经常在课上被老师问起「为什么要学习英语」。当时给出的答案大多都是「为了和外国人交流」、「看看外面的世界」等等的让老师、家长满意，但是自己并不满意的答案。而现如今社会进步了，时代变化了，我也长大了，我逐渐开始理解了学习英语的意义。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="学习记" scheme="https://blog.bearxiong.xyz/categories/%E5%AD%A6%E4%B9%A0%E8%AE%B0/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>好文推荐：一个受过教育的公民应具备的统计学和概率知识</title>
-    <link href="https://blog.bearxiong.xyz/2022/03/%E5%A5%BD%E6%96%87%E6%8E%A8%E8%8D%90%E4%B8%80%E4%B8%AA%E5%8F%97%E8%BF%87%E6%95%99%E8%82%B2%E7%9A%84%E5%85%AC%E6%B0%91%E5%BA%94%E5%85%B7%E5%A4%87%E7%9A%84%E7%BB%9F%E8%AE%A1%E5%AD%A6%E5%92%8C%E6%A6%82%E7%8E%87%E7%9F%A5%E8%AF%86/"/>
-    <id>https://blog.bearxiong.xyz/2022/03/%E5%A5%BD%E6%96%87%E6%8E%A8%E8%8D%90%E4%B8%80%E4%B8%AA%E5%8F%97%E8%BF%87%E6%95%99%E8%82%B2%E7%9A%84%E5%85%AC%E6%B0%91%E5%BA%94%E5%85%B7%E5%A4%87%E7%9A%84%E7%BB%9F%E8%AE%A1%E5%AD%A6%E5%92%8C%E6%A6%82%E7%8E%87%E7%9F%A5%E8%AF%86/</id>
-    <published>2022-03-29T13:49:40.000Z</published>
-    <updated>2023-09-10T14:04:15.715Z</updated>
-    
-    <content type="html"><![CDATA[<p>在TG冲浪的时候看到的一篇好文章，题目是 <code>What Educated Citizens Should Know About Statistics and Probability</code>。借用<a href="https://t.me/pincongessence">蛋挞报频道</a>的文案：</p><blockquote><p>作者在文中总结了七个常见误区，并且通过具体实例来说明为什么这些知识和我们的生活息息相关。<br>读完后会发现，作者喊话的对象是那些负责在课堂教授基础统计课程的教师们，而喊话的目的在于推动统计教育的变革。<br>尽管如此，我认为这篇文章写得非常好，适合推荐给所有渴望提升自己的读者。</p></blockquote><span id="more"></span><p>本博客文章结合了小熊自己的理解，把文章的大意进行提炼。我的英语水平有限，若有错误请谅解也请赐教。</p><p>先放上原文链接：<a href="https://www.ics.uci.edu/~jutts/AmerStat2003.pdf">https://www.ics.uci.edu/~jutts/AmerStat2003.pdf</a></p><h3 id="1-Cause-and-Effect"><a href="#1-Cause-and-Effect" class="headerlink" title="1. Cause and Effect"></a>1. Cause and Effect</h3><p>有的时候我们认为，在自变量和因变量有统计学相关性的时候，自变量的变化会引起因变量的变化。</p><p>但是事实上，这种变化只在非常受限的情况下适用，例如在大型随机实验的情况下。对于单一的观察性研究，很难得出一个变量引起另一个变量变化的结论。</p><p>作者建议在给学生的教授过程中，有必要提供很多样例来讲解交织在一起的变量是如何解释这类关系的。</p><h3 id="2-Statistical-Significance-amp-Practical-Importance"><a href="#2-Statistical-Significance-amp-Practical-Importance" class="headerlink" title="2. Statistical Significance &amp; Practical Importance"></a>2. Statistical Significance &amp; Practical Importance</h3><p>学生们应该知道在统计学意义上的重要发现不一定会对实践产生实际的意义。尤其是在样本量很大的时候，更可能成为一个问题。因为只要存在一个很小的影响（范例）即可拒绝无效假设。</p><p>在进行研究时，如果研究人员没有对多重（多变量）比较进行调整，只把注意力集中在统计学意义的关系上，就像这些关系是唯一被测试的关系，就会引起误解。</p><h3 id="3-Low-Power-vs-No-Effect"><a href="#3-Low-Power-vs-No-Effect" class="headerlink" title="3. Low Power vs. No Effect"></a>3. Low Power vs. No Effect</h3><p>让学生们理解<strong>样本量</strong>在某种关系或差异是否具有统计学意义方面起着很大的作用，”无明显差异”的结论可能仅仅意味着研究的样本量不足。</p><p>特别的，在研究人员预期研究两个变量之间应该有关联但是事实上没有的情况下，学生们更应该小心了。</p><p>只有当这一结论与先前的结论或常识相矛盾时，才有新闻价值。</p><p>在这种情况下，重要的是找出样本的大小，如果可能的话，找出结果的置信区间。如果置信区间很宽，或者它倾向于偏向偶然性的一方，就有理由怀疑该研究可能没有足够的样本容量来验证多个变量之间真正的差异或关系。</p><h3 id="4-Biases-in-Surveys"><a href="#4-Biases-in-Surveys" class="headerlink" title="4. Biases in Surveys"></a>4. Biases in Surveys</h3><p>在进行问卷调查的时候，不同的问题措辞甚至问题顺序都有可能导致问卷结果的不同。作者将其成为问卷中的「偏见」。</p><p>作者提到，不仅仅是问卷中问题的措辞会导致偏见的产生。还有许多关于如何进行问卷调查的其他小细节也有可能会对结果产生重大影响。</p><p>主要原因可能是受访者会自然地认为，调查中的问题应该是相互关联的，一个问题所带来的思考都可能影响后续的回答。</p><h3 id="5-Probable-Coincidences"><a href="#5-Probable-Coincidences" class="headerlink" title="5. Probable Coincidences"></a>5. Probable Coincidences</h3><p>作者强调了小概率巧合事件在样本较大的情况下仍然有可观的发生的可能性。虽然要计算出精确的巧合概率并不容易，但在教学过程中可以向学生展示近似数量级的计算结果。</p><p>文章中举例称即使用一个概率极低的实践，但是世界上有60多亿人（小熊注：现在是70多亿了），每个人每天都有很多情况发生。因此，肯定会有一些看起来很巧合的事情。</p><p>例如如果某件事在某一天发生在任何一个人身上的概率只有百万分之一，那么平均来说，它每天会发生在世界6000多人身上。所以在我们看到媒体报道一个令人难以置信的巧合时，应该从这个角度来思考。</p><h3 id="6-Confusion-of-The-Inverse-Conditional-Probability"><a href="#6-Confusion-of-The-Inverse-Conditional-Probability" class="headerlink" title="6. Confusion of The Inverse (Conditional Probability)"></a>6. Confusion of The Inverse (Conditional Probability)</h3><p>在这个问题之中，作者认为人们很容易就会将条件概率P(A|B)与条件概率P(B|A)混淆。</p><p>我们要着重思考事情的因果和概率问题。</p><h3 id="7-Average-vs-Normal"><a href="#7-Average-vs-Normal" class="headerlink" title="7. Average vs. Normal"></a>7. Average vs. Normal</h3><p>学生应当了解自然变异性（小熊注：原文为 natural variability，不知道怎么翻译合适）及其在解释”正态分布”上起到的作用。</p><p>不要将正态分布与平均值混淆。这种混淆的错误在温度和降雨量数据和其他情况下非常常见。自然变异性的概念对于理解统计结果非常关键，因此应该在整个统计学入门课程中强化这一概念。</p><h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>这篇文章在总结部分重申如果一个学生不能在阅读一篇报道后发现确定假设检验被误用，那么在课程中学习如何进行t验证又有什么用呢？</p><p>作者会经常问博士学生两个问题：1. 解释p值的含义。2. 如果在用一个更小的实验样本重新验证一个具有重要发现的实验，但是不能复现结果的时候能否给出可能的合理解释。</p><p>如果本篇文章引起了你对常见统计学和概率论误解的探索兴趣，可以去查看<a href="https://www.ics.uci.edu/~jutts/AmerStat2003.pdf">英文原文</a>，欢迎一起交流学习。</p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;在TG冲浪的时候看到的一篇好文章，题目是 &lt;code&gt;What Educated Citizens Should Know About Statistics and Probability&lt;/code&gt;。借用&lt;a href=&quot;https://t.me/pincongessence&quot;&gt;蛋挞报频道&lt;/a&gt;的文案：&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;作者在文中总结了七个常见误区，并且通过具体实例来说明为什么这些知识和我们的生活息息相关。&lt;br&gt;读完后会发现，作者喊话的对象是那些负责在课堂教授基础统计课程的教师们，而喊话的目的在于推动统计教育的变革。&lt;br&gt;尽管如此，我认为这篇文章写得非常好，适合推荐给所有渴望提升自己的读者。&lt;/p&gt;
-&lt;/blockquote&gt;</summary>
     
     
     
