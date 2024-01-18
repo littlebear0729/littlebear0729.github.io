@@ -6,7 +6,7 @@
   <link href="https://blog.bearxiong.xyz/atom.xml" rel="self"/>
   
   <link href="https://blog.bearxiong.xyz/"/>
-  <updated>2023-12-07T14:52:14.972Z</updated>
+  <updated>2024-01-18T12:37:12.456Z</updated>
   <id>https://blog.bearxiong.xyz/</id>
   
   <author>
@@ -15,6 +15,41 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>不要让「设备」成为了你前进路上的绊脚石——一些消费观方面的思考</title>
+    <link href="https://blog.bearxiong.xyz/2024/01/%E4%B8%8D%E8%A6%81%E8%AE%A9%E3%80%8C%E8%AE%BE%E5%A4%87%E3%80%8D%E6%88%90%E4%B8%BA%E4%BA%86%E4%BD%A0%E5%89%8D%E8%BF%9B%E8%B7%AF%E4%B8%8A%E7%9A%84%E7%BB%8A%E8%84%9A%E7%9F%B3%E2%80%94%E2%80%94%E4%B8%80%E4%BA%9B%E6%B6%88%E8%B4%B9%E8%A7%82%E6%96%B9%E9%9D%A2%E7%9A%84%E6%80%9D%E8%80%83/"/>
+    <id>https://blog.bearxiong.xyz/2024/01/%E4%B8%8D%E8%A6%81%E8%AE%A9%E3%80%8C%E8%AE%BE%E5%A4%87%E3%80%8D%E6%88%90%E4%B8%BA%E4%BA%86%E4%BD%A0%E5%89%8D%E8%BF%9B%E8%B7%AF%E4%B8%8A%E7%9A%84%E7%BB%8A%E8%84%9A%E7%9F%B3%E2%80%94%E2%80%94%E4%B8%80%E4%BA%9B%E6%B6%88%E8%B4%B9%E8%A7%82%E6%96%B9%E9%9D%A2%E7%9A%84%E6%80%9D%E8%80%83/</id>
+    <published>2024-01-18T06:02:15.000Z</published>
+    <updated>2024-01-18T12:37:12.456Z</updated>
+    
+    <content type="html"><![CDATA[<p>有的时候我常常会想，有一些设备真的需要吗？摄影中，不乏存在着一些「设备党」。指的是以「拍摄好照片」为借口，高价购买设备的人。但是，高价的设备带来的提升往往是非常有限的。以相机为例，2000元的相机和8000元的相机可能差距非常大，但是20000元和80000元的相机在大部分功能上的区别就不是很大了。这种「功用-成本」曲线的斜率有些类似于边际效用曲线。即，花得钱越多，得到的提升越微弱。</p><p>在日常生活中，基本上用不到如此”Extremely”好的设备，甚至有些设备的存在也不很必要。在购买某一个产品之前一定要想一想，这些东西是不是必须的？购买这些东西是不是紧迫的？现有的物品能否替代将要购买的产品？</p><p>Linux内核开发者Linus也透露自己的电脑是苹果笔记本，也并非我想象中价格昂贵、性能突出的台式机甚至服务器。有的人想要登山，于是购买了许多专业登山使用的装备，可却从来没有机会迈出登山的第一步。做一个享受过程的人。</p><p>于是写下这篇短文章以作反省，希望自己不要变成「设备党」，不要让设备成为我进步的绊脚石。另外，我总是想得太多，做得太少。作此篇也为勉励自己，有了想做的事情不要总想着以后有机会再做，现在就要勇敢骑来，迈开步子，大步向前走。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="观" scheme="https://blog.bearxiong.xyz/categories/%E8%A7%82/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>公民应当具有新闻素养和政治素养</title>
+    <link href="https://blog.bearxiong.xyz/2023/12/%E5%85%AC%E6%B0%91%E5%BA%94%E5%BD%93%E5%85%B7%E6%9C%89%E6%96%B0%E9%97%BB%E7%B4%A0%E5%85%BB%E5%92%8C%E6%94%BF%E6%B2%BB%E7%B4%A0%E5%85%BB/"/>
+    <id>https://blog.bearxiong.xyz/2023/12/%E5%85%AC%E6%B0%91%E5%BA%94%E5%BD%93%E5%85%B7%E6%9C%89%E6%96%B0%E9%97%BB%E7%B4%A0%E5%85%BB%E5%92%8C%E6%94%BF%E6%B2%BB%E7%B4%A0%E5%85%BB/</id>
+    <published>2023-12-07T06:02:15.000Z</published>
+    <updated>2024-01-18T12:36:46.987Z</updated>
+    
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>对于校园自行车管理的几点思考</title>
@@ -391,50 +426,6 @@
     
     
     <category term="折腾记" scheme="https://blog.bearxiong.xyz/categories/%E6%8A%98%E8%85%BE%E8%AE%B0/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>图的遍历与Dijkstra最短路算法实现</title>
-    <link href="https://blog.bearxiong.xyz/2022/05/%E5%9B%BE%E7%9A%84%E9%81%8D%E5%8E%86%E4%B8%8EDijkstra%E6%9C%80%E7%9F%AD%E8%B7%AF%E7%AE%97%E6%B3%95%E5%AE%9E%E7%8E%B0/"/>
-    <id>https://blog.bearxiong.xyz/2022/05/%E5%9B%BE%E7%9A%84%E9%81%8D%E5%8E%86%E4%B8%8EDijkstra%E6%9C%80%E7%9F%AD%E8%B7%AF%E7%AE%97%E6%B3%95%E5%AE%9E%E7%8E%B0/</id>
-    <published>2022-05-21T11:38:30.000Z</published>
-    <updated>2023-09-10T14:04:15.713Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="0-概述"><a href="#0-概述" class="headerlink" title="0 概述"></a>0 概述</h2><p>本实验使用C++语言实现了图的遍历与Dijkstra最短路算法，使用邻接表存储图。</p><h2 id="1-实验设计"><a href="#1-实验设计" class="headerlink" title="1 实验设计"></a>1 实验设计</h2><h3 id="1-1-算法实现原理"><a href="#1-1-算法实现原理" class="headerlink" title="1.1 算法实现原理"></a>1.1 算法实现原理</h3><p>定义n为顶点数，m为边数。</p><p>定义二维可变数组graph[u][v]，其中u、v为顶点，代表 u -&gt; v 有一条边，边权为w。</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vector&lt;vector&lt;<span class="type">int</span>&gt;&gt; graph;</span><br></pre></td></tr></table></figure><h3 id="1-2-算法设计与分析"><a href="#1-2-算法设计与分析" class="headerlink" title="1.2 算法设计与分析"></a>1.2 算法设计与分析</h3><p>定义数组vis[u]，其中u为顶点，代表u是否被访问过。</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vector&lt;<span class="type">bool</span>&gt; vis;</span><br></pre></td></tr></table></figure><h4 id="DFS深度优先搜索"><a href="#DFS深度优先搜索" class="headerlink" title="DFS深度优先搜索"></a>DFS深度优先搜索</h4><p>从起点顶点u开始，递归遍历这个点的所有邻接点。</p><p>当遍历到这个点的时候，标记该点为已访问，直到所有点都被访问后，遍历结束。</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">dfs</span><span class="params">(<span class="type">int</span> u)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (vis[u]) <span class="keyword">return</span>;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d &quot;</span>, u);</span><br><span class="line">    vis[u] = <span class="literal">true</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; graph[u].<span class="built_in">size</span>(); i++) &#123;</span><br><span class="line">        <span class="type">int</span> v = graph[u][i];</span><br><span class="line">        <span class="keyword">if</span> (!vis[v]) &#123;</span><br><span class="line">            <span class="built_in">dfs</span>(v);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h4 id="BFS广度优先搜索"><a href="#BFS广度优先搜索" class="headerlink" title="BFS广度优先搜索"></a>BFS广度优先搜索</h4><p>从起点顶点开始，遍历这个点的所有邻接点。</p><p>每遍历一个点，将该点的所有邻接点加入队列，标记该点为已访问，直到队列为空，遍历结束。</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">bfs</span><span class="params">(<span class="type">int</span> u)</span> </span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d &quot;</span>, u);</span><br><span class="line">    vis[u] = <span class="literal">true</span>;</span><br><span class="line">    queue&lt;<span class="type">int</span>&gt; q;</span><br><span class="line">    q.<span class="built_in">push</span>(u);</span><br><span class="line">    <span class="keyword">while</span> (!q.<span class="built_in">empty</span>()) &#123;</span><br><span class="line">        <span class="type">int</span> u = q.<span class="built_in">front</span>();</span><br><span class="line">        q.<span class="built_in">pop</span>();</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; graph[u].<span class="built_in">size</span>(); i++) &#123;</span><br><span class="line">            <span class="type">int</span> v = graph[u][i];</span><br><span class="line">            <span class="keyword">if</span> (!vis[v]) &#123;</span><br><span class="line">                <span class="built_in">printf</span>(<span class="string">&quot;%d &quot;</span>, v);</span><br><span class="line">                vis[v] = <span class="literal">true</span>;</span><br><span class="line">                q.<span class="built_in">push</span>(v);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h4 id="Dijkstra最短路算法"><a href="#Dijkstra最短路算法" class="headerlink" title="Dijkstra最短路算法"></a>Dijkstra最短路算法</h4><p>在实现Dijkstra最短路算法的过程中，创建了一个结构体edge，其中v是边的终点，w是边的权重。</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">struct</span> <span class="title class_">edge</span> &#123;</span><br><span class="line">    <span class="type">int</span> v, w; <span class="comment">// v: 终点， w: 权重</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><p>每次通过遍历，找到一条没有被访问过的距离最小的顶点，对这个点的所有邻接点更新距离为可能的最短距离。</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">dijkstra</span><span class="params">(<span class="type">int</span> s)</span> </span>&#123;</span><br><span class="line">    dis[s] = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++) &#123;</span><br><span class="line">        <span class="type">int</span> u = <span class="number">-1</span>, min = INF;</span><br><span class="line">        <span class="comment">// 找到未访问的、距离最小的顶点</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">1</span>; j &lt;= n; j++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (!vis[j] &amp;&amp; dis[j] &lt; min) &#123;</span><br><span class="line">                u = j;</span><br><span class="line">                min = dis[j];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (u == <span class="number">-1</span>) <span class="keyword">break</span>;</span><br><span class="line">        vis[u] = <span class="literal">true</span>;</span><br><span class="line">        <span class="comment">// 更新距离（松弛）</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt; graph[u].<span class="built_in">size</span>(); j++) &#123;</span><br><span class="line">            <span class="type">int</span> v = graph[u][j].v;</span><br><span class="line">            <span class="type">int</span> w = graph[u][j].w;</span><br><span class="line">            <span class="keyword">if</span> (dis[v] &gt; dis[u] + w) &#123;</span><br><span class="line">                dis[v] = dis[u] + w;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="2-实验结果说明与分析"><a href="#2-实验结果说明与分析" class="headerlink" title="2 实验结果说明与分析"></a>2 实验结果说明与分析</h2><h3 id="BFS与DFS"><a href="#BFS与DFS" class="headerlink" title="BFS与DFS"></a>BFS与DFS</h3><p>第一行输入点和边的数量。</p><p>接下来每行为一条边的信息，其中第一个数字为起点，第二个数字为终点。</p><p>输入如下：</p><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">5 10</span><br><span class="line">1 2</span><br><span class="line">1 3</span><br><span class="line">2 3</span><br><span class="line">3 2</span><br><span class="line">2 4</span><br><span class="line">3 4</span><br><span class="line">3 5</span><br><span class="line">4 5</span><br><span class="line">5 4</span><br><span class="line">5 1</span><br></pre></td></tr></table></figure><p>经过DFS和BFS遍历后，输出结果如下：</p><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">1 2 3 4 5</span><br><span class="line">1 2 3 4 5</span><br></pre></td></tr></table></figure><p>代码在<code>homework3/graph.cpp</code>。</p><h3 id="Dijkstra最短路算法-1"><a href="#Dijkstra最短路算法-1" class="headerlink" title="Dijkstra最短路算法"></a>Dijkstra最短路算法</h3><p>第一行输入点和边的数量。</p><p>接下来每行为一条边的信息，其中第一个数字为起点，第二个数字为终点，第三个数字为边权。</p><p>输入如下：</p><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">5 10</span><br><span class="line">1 2 10</span><br><span class="line">1 3 5</span><br><span class="line">2 3 2</span><br><span class="line">3 2 3</span><br><span class="line">2 4 1</span><br><span class="line">3 4 9</span><br><span class="line">3 5 2</span><br><span class="line">4 5 4</span><br><span class="line">5 4 6</span><br><span class="line">5 1 7</span><br></pre></td></tr></table></figure><p>输出起点（点1）到其他所有点的最短距离。</p><p>通过更改函数参数，可以设定任意一个起点。</p><p>输出如下：</p><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">node 1 to 1: minimum weight is 0</span><br><span class="line">node 1 to 2: minimum weight is 8</span><br><span class="line">node 1 to 3: minimum weight is 5</span><br><span class="line">node 1 to 4: minimum weight is 9</span><br><span class="line">node 1 to 5: minimum weight is 7</span><br></pre></td></tr></table></figure><blockquote><p>代码开源在：<a href="https://gitee.com/littlebear0729/data-structure-and-algorithm/tree/master/homework3">https://gitee.com/littlebear0729/data-structure-and-algorithm/tree/master/homework3</a></p></blockquote>]]></content>
-    
-    
-      
-      
-    <summary type="html"></summary>
-      
-    
-    
-    
-    <category term="学习记" scheme="https://blog.bearxiong.xyz/categories/%E5%AD%A6%E4%B9%A0%E8%AE%B0/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>二叉树的遍历实现</title>
-    <link href="https://blog.bearxiong.xyz/2022/05/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E9%81%8D%E5%8E%86%E5%AE%9E%E7%8E%B0/"/>
-    <id>https://blog.bearxiong.xyz/2022/05/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E9%81%8D%E5%8E%86%E5%AE%9E%E7%8E%B0/</id>
-    <published>2022-05-16T11:36:06.000Z</published>
-    <updated>2023-09-10T14:04:15.708Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="0-概述"><a href="#0-概述" class="headerlink" title="0 概述"></a>0 概述</h2><p>本实验使用C++语言与指针实现了二叉树的遍历。</p><h2 id="1-实验设计"><a href="#1-实验设计" class="headerlink" title="1 实验设计"></a>1 实验设计</h2><h3 id="1-1-算法实现原理"><a href="#1-1-算法实现原理" class="headerlink" title="1.1 算法实现原理"></a>1.1 算法实现原理</h3><p>定义<code>BinTreeNode</code>节点为二叉树的一个结点。</p><p>一个结点拥有<code>value</code>, <code>left</code> 和 <code>right</code>属性。</p><p>其中 <code>value</code> 属性为结点的值，<code>left</code> 和 <code>right</code> 属性分别为左右子树的指针。</p><h3 id="1-2-算法设计与分析"><a href="#1-2-算法设计与分析" class="headerlink" title="1.2 算法设计与分析"></a>1.2 算法设计与分析</h3><p>首先通过将二叉树补全成满二叉树的形式进行补全。</p><p>创建一个如图所示的树。</p><p><img src="/img.png" alt="img.png"></p><p>将其用 <code>@</code> 补全成满二叉树输入，构建二叉树结构。</p><p><img src="/img_1.png" alt="img_1.png"></p><p>输入序列为 <code>ABDF@@@E@G@@C@IJ@@K@@</code>，其中 <code>@</code> 为空节点，由此创建了一个二叉树结构。</p><p>本实验使用递归实现二叉树的前序，中序与后序遍历。</p><p>前序遍历：先访问根结点，再访问左子树，最后访问右子树。</p><p>中序遍历：先访问左子树，再访问根结点，最后访问右子树。</p><p>后序遍历：先访问左子树，再访问右子树，最后访问根结点。</p><p>本实验使用队列实现二叉树的层次遍历。</p><p>把每一层的所有子树放入队列中，然后从队列中取出子树，并逐个进行访问。</p><h2 id="2-实验结果说明与分析"><a href="#2-实验结果说明与分析" class="headerlink" title="2 实验结果说明与分析"></a>2 实验结果说明与分析</h2><p>输出结果：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">PreOrder: A B D F E G C I J K </span><br><span class="line">InOrder: F D B E G A C J I K </span><br><span class="line">PostOrder: F D G E B J K I C A </span><br><span class="line">LevelOrder: A B C D E I F G J K </span><br></pre></td></tr></table></figure><p>PreOrder: 前序遍历</p><p>InOrder: 中序遍历</p><p>PostOrder: 后序遍历</p><p>LevelOrder: 层次遍历</p><p>几种不同的遍历方式输出结果与构造的树预期遍历结果相同。</p><blockquote><p>代码开源在：<a href="https://gitee.com/littlebear0729/data-structure-and-algorithm/tree/master/homework2">https://gitee.com/littlebear0729/data-structure-and-algorithm/tree/master/homework2</a></p></blockquote>]]></content>
-    
-    
-      
-      
-    <summary type="html"></summary>
-      
-    
-    
-    
-    <category term="学习记" scheme="https://blog.bearxiong.xyz/categories/%E5%AD%A6%E4%B9%A0%E8%AE%B0/"/>
     
     
   </entry>
