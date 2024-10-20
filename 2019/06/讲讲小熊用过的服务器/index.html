@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+    <head>
+    <meta charset="utf-8">
+    <!--
+        hexo-theme-suka © SukkaW
+        GitHub: https://github.com/SukkaW/hexo-theme-suka
+    -->
+
+    <!-- ### Resource Hint ### -->
+
+    <!-- ## DNS Prefetch ## -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+<!-- busuanzi -->
+
+
+<!-- comment -->
+
+
+
+
+
+
+
+<!-- analytics -->
+
+
+    <link rel="dns-prefetch" href="//www.google-analytics.com">
+
+
+    <link rel="dns-prefetch" href="//www.googletagmanager.com">
+    <link rel="dns-prefetch" href="//www.google-analytics.com">
+
+
+
+
+
+    <!-- ## Preload ## -->
+    
+
+
+
+
+    <!-- ### Meta & Title & Info ### -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, maximum-scale=5, viewport-fit=cover">
+    <meta name="renderer" content="webkit">
+
+    <!-- Title -->
+    <title>讲讲小熊用过的服务器 | 小熊の小站</title>
+
+    <!-- Favicons -->
+    <link rel="icon" type="image&#x2F;ico" href="/img/favicon.ico"><link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png"><link rel="icon" typt="image&#x2F;png" sizes="32x32" href="/img/favicon-16x16.png"><link rel="icon" typt="image&#x2F;png" sizes="16x16" href="/img/favicon-16x16.png"><link rel="mask-icon" href="/img/safari-pinned-tab.svg" color="">
+
+    <!-- ### Import File ### -->
+    <link rel="stylesheet" href="/lib/spectre/spectre.min.css"><style>
+    body {
+        background-color: #f8f9fa;
+    }
+
+    a, a:visited {
+        color: #0070ff;
+    }
+
+    a:active, a:focus, a:hover {
+        color: #0070ff;
+        opacity: .75;
+    }
+
+    #post-content a,
+    #post-content a:hover,
+    #post-content a:focus,
+    #post-content a:visited {
+        color: #005eb9;
+        opacity: 1;
+    }
+
+    
+
+    .post-entry .card-body a {
+        color: #0070ff;
+    }
+
+    .avatar {
+        background: #444;
+    }
+
+    .navbar-link,
+    .navbar-link:visited,
+    .timeline .timeline-item .timeline-icon.icon-lg {
+        color: #0070ff;
+    }
+
+    .navbar-link:hover {
+        color: #0070ff;
+        opacity: .8;
+    }
+
+    #search-input .btn,
+    #disqus_click_btn,
+    #disqus-switch-to-direct,
+    #disqus-loadmore-button {
+        background: #727e96;
+        border-color: #727e96;
+        color: #fff;
+    }
+
+    #post-toc a.post-toc-link,
+    #post-toc a.post-toc-link:visited,
+    .share-menu.menu .menu-item>a {
+        color: #727e96;
+    }
+
+    .share-menu.menu .menu-item>a:hover,
+    .share-menu.menu .menu-item>a:focus,
+    .share-menu.menu .menu-item>a:visited {
+        color: #50596c;
+        background: #f8f9fa;
+        opacity: .85;
+    }
+</style><link rel="stylesheet" href="/css/style.min.css">
+
+
+
+
+
+
+
+
+    <!-- Prettify Theme -->
+    
+    <link rel="preload" href="/css/highlight/darcula.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="/css/highlight/darcula.min.css"></noscript>
+
+
+
+
+
+<script>
+/*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
+!function(t){"use strict";t.loadCSS||(t.loadCSS=function(){});var e=loadCSS.relpreload={};if(e.support=function(){var e;try{e=t.document.createElement("link").relList.supports("preload")}catch(t){e=!1}return function(){return e}}(),e.bindMediaToggle=function(t){var e=t.media||"all";function a(){t.addEventListener?t.removeEventListener("load",a):t.attachEvent&&t.detachEvent("onload",a),t.setAttribute("onload",null),t.media=e}t.addEventListener?t.addEventListener("load",a):t.attachEvent&&t.attachEvent("onload",a),setTimeout(function(){t.rel="stylesheet",t.media="only x"}),setTimeout(a,3e3)},e.poly=function(){if(!e.support())for(var a=t.document.getElementsByTagName("link"),n=0;n<a.length;n++){var o=a[n];"preload"!==o.rel||"style"!==o.getAttribute("as")||o.getAttribute("data-loadcss")||(o.setAttribute("data-loadcss",!0),e.bindMediaToggle(o))}},!e.support()){e.poly();var a=t.setInterval(e.poly,500);t.addEventListener?t.addEventListener("load",function(){e.poly(),t.clearInterval(a)}):t.attachEvent&&t.attachEvent("onload",function(){e.poly(),t.clearInterval(a)})}"undefined"!=typeof exports?exports.loadCSS=loadCSS:t.loadCSS=loadCSS}("undefined"!=typeof global?global:this);
+</script>
+
+    <!-- ### Site Verification ### -->
+    
+
+
+    <link rel="alternate" type="application/atom+xml" href="/atom.xml"><meta name="mobile-web-app-capable" content="yes"><meta name="application-name" content="小熊の小站"><meta name="msapplication-starturl" content="https://blog.bearxiong.xyz"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="小熊の小站"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <!-- ### The Open Graph & Twitter Card Protocol ### -->
+    <meta property="og:title" content="讲讲小熊用过的服务器 | 小熊の小站"><meta property="og:site_name" content="小熊の小站"><meta property="og:type" content="article"><meta property="og:url" content="https://blog.bearxiong.xyz/2019/06/%E8%AE%B2%E8%AE%B2%E5%B0%8F%E7%86%8A%E7%94%A8%E8%BF%87%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8/"><meta property="og:locale" content="zh-CN"><meta name="description" content="Linode老牌IDC了，需要信用卡才能付款。开了好几台都被墙了，人品太差，放弃。 当时用的时候，面板非常简陋。听说最近有升级，不知道怎么样。 ConoHa这是我用的第一家VPS，当时价格在50RMB&amp;#x2F;mo左右，看中他的是支持支付宝付款。当时还是懵懂的萌新，还不知道测试线路什么的，具体配置怎么样也早就忘记了，就记得他不限流量。但是如果你流量使用过多，就会被封机器。当时每个月用的心惊胆 - Littlebear0729 - 小熊の小站"><meta name="keywords" content="小熊, littlebear, 博客, 小站, littlebear0729"><meta property="article:published_time" content="2019-06-24T07:47:29.000Z"><meta property="article:modified_time" content="2024-10-06T09:45:10.340Z"><meta property="og:updated_time" content="2024-10-06T09:45:10.340Z"><meta property="article:author" content="Littlebear0729"><meta property="article:tag" content="小熊, littlebear, 博客, 小站, littlebear0729"><meta name="twitter:card" content="summary">
+
+    
+
+    <!-- ### Canonical link ### -->
+    <link rel="canonical" href="https://blog.bearxiong.xyz/2019/06/%E8%AE%B2%E8%AE%B2%E5%B0%8F%E7%86%8A%E7%94%A8%E8%BF%87%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8/">
+
+    <meta name="generator" content="Hexo 6.3.0">
+
+    <!-- ### Analytics ### -->
+    
+    <!-- Google Analytics -->
+<script>
+    window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+    ga('create', '6097140926', 'auto');
+    ga('send', 'pageview');
+</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+
+
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-R9F6KBLL62"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-R9F6KBLL62');
+</script>
+
+
+
+
+
+
+
+
+    <!-- ### Structured Data ### -->
+    
+
+
+
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "url": "https://blog.bearxiong.xyz/2019/06/%E8%AE%B2%E8%AE%B2%E5%B0%8F%E7%86%8A%E7%94%A8%E8%BF%87%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8/",
+    "@type": "BlogPosting",
+    "logo": "https://blog.bearxiong.xyz/img/apple-touch-icon.png",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://blog.bearxiong.xyz/2019/06/%E8%AE%B2%E8%AE%B2%E5%B0%8F%E7%86%8A%E7%94%A8%E8%BF%87%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8/"
+    },
+    "headline": "讲讲小熊用过的服务器 | 小熊の小站",
+    
+    "image": {
+        "@type": "ImageObject",
+        "url": "https://blog.bearxiong.xyz/img/apple-touch-icon.png"
+    },
+    
+    "datePublished": "2019-06-24T07:47:29.000Z",
+    "dateModified": "2024-10-06T09:45:10.340Z",
+    "author": {
+        "@type": "Person",
+        "name": "Littlebear0729",
+        "image": {
+            "@type": "ImageObject",
+            "url": "https://blog.bearxiong.xyz/img/apple-touch-icon.png"
+        },
+        "description": "Try my best."
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "小熊の小站",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://blog.bearxiong.xyz/img/apple-touch-icon.png"
+        }
+    },
+    
+    "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://blog.bearxiong.xyz/search.html?s={search_term_string}",
+        "query-input": "required name=search_term_string"
+    },
+    
+    "keywords": "小熊, littlebear, 博客, 小站, littlebear0729",
+    "description": "Linode老牌IDC了，需要信用卡才能付款。开了好几台都被墙了，人品太差，放弃。 当时用的时候，面板非常简陋。听说最近有升级，不知道怎么样。 ConoHa这是我用的第一家VPS，当时价格在50RMB&amp;amp;#x2F;mo左右，看中他的是支持支付宝付款。当时还是懵懂的萌新，还不知道测试线路什么的，具体配置怎么样也早就忘记了，就记得他不限流量。但是如果你流量使用过多，就会被封机器。当时每个月用的心惊胆 - Littlebear0729 - 小熊の小站"
+}
+</script>
+
+
+
+    <!-- ### Custom Head ### -->
+    
+</head>
+
+    <body>
+            
+
+            <!-- ### Main content ### -->
+            <!-- ## Header ##-->
+<header>
+    <h1 class="header-title text-center"><a href="/">小熊の小站</a></h1>
+
+    <p class="text-center header-slogan">
+        
+            
+                Try my best.
+            
+        
+    </p>
+
+    <nav class="navbar-section text-center">
+    
+        <a href="/" class="navbar-link">首页</a>
+    
+    
+        <a href="/archives/" class="navbar-link">归档</a>
+    
+    
+        <a href="/search.html" class="navbar-link">搜索</a>
+    
+    
+        <a href="/categories.html" class="navbar-link">分类</a>
+    
+        <a href="/about.html" class="navbar-link">关于</a>
+    
+        <a href="/links.html" class="navbar-link">友链</a>
+    
+        <a href="/QSL.html" class="navbar-link">QSL</a>
+    
+    
+    
+</nav>
+</header>
+
+            
+    <!-- ## Post ## -->
+    <div class="post-container">
+    <div id="post-card" class="card">
+        
+        <div class="card-item-container">
+            <div class="card-inner-cell">
+                <!-- # Post Header Info # -->
+                <div class="card-header">
+                    
+    <h1 class="card-title h3 mb-2">讲讲小熊用过的服务器</h1>
+
+
+
+
+<div class="post-header-info">
+    <p class="post-header-info-left text-gray">
+        <img class="author-thumb lazyload" data-src="/img/apple-touch-icon.png" src="/img/suka-lazyload.gif" alt="Littlebear0729's Avatar">
+        <span>2019-06-24</span>
+        
+            <span class="suka-devide-dot"></span>
+            <a class="category-link" href="/categories/%E6%8A%98%E8%85%BE%E8%AE%B0/">折腾记</a>
+        
+        
+        
+    </p>
+    <div class="post-header-info-right">
+        
+    </div>
+</div>
+                </div>
+                <div class="card-body">
+                    
+                        
+                        
+                            <div id="post-toc"><ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Linode"><span class="post-toc-number">1.</span> <span class="post-toc-text">Linode</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#ConoHa"><span class="post-toc-number">2.</span> <span class="post-toc-text">ConoHa</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Vultr"><span class="post-toc-number">3.</span> <span class="post-toc-text">Vultr</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#AlphaRacks"><span class="post-toc-number">4.</span> <span class="post-toc-text">AlphaRacks</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Virmach"><span class="post-toc-number">5.</span> <span class="post-toc-text">Virmach</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#AWS"><span class="post-toc-number">6.</span> <span class="post-toc-text">AWS</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#GigsGigsCloud"><span class="post-toc-number">7.</span> <span class="post-toc-text">GigsGigsCloud</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Hostwinds"><span class="post-toc-number">8.</span> <span class="post-toc-text">Hostwinds</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%86%99%E5%9C%A8%E6%9C%80%E5%90%8E"><span class="post-toc-number">9.</span> <span class="post-toc-text">写在最后</span></a></li></ol></div>
+                        
+                    
+                    <article id="post-content">
+                        <h2 id="Linode"><a href="#Linode" class="headerlink" title="Linode"></a>Linode</h2><p>老牌IDC了，需要信用卡才能付款。开了好几台都被墙了，人品太差，放弃。</p>
+<p>当时用的时候，面板非常简陋。听说最近有升级，不知道怎么样。</p>
+<h2 id="ConoHa"><a href="#ConoHa" class="headerlink" title="ConoHa"></a>ConoHa</h2><p>这是我用的第一家VPS，当时价格在50RMB&#x2F;mo左右，看中他的是支持支付宝付款。当时还是懵懂的萌新，还不知道测试线路什么的，具体配置怎么样也早就忘记了，就记得他不限流量。但是如果你流量使用过多，就会被封机器。当时每个月用的心惊胆战的，其实后来才知道，用的那一点流量算不了什么。</p>
+<p>最近听说ConoHa出了个什么ConoHa娘，感觉挺有意思的233</p>
+<h2 id="Vultr"><a href="#Vultr" class="headerlink" title="Vultr"></a>Vultr</h2><p>相信这家大家都不陌生了，算是个大牌IDC吧，机房遍布全球各地。最便宜的有2.5USD&#x2F;mo的日本纯ipv6的机器，贵的有400USD&#x2F;mo的，按照需求来买吧。这家按照小时计费，开机就算1hr，关机同样也计费，直到这台VPS被你destroy才会停止计费。在vu你还可以赊账，不过也就一点点。</p>
+<p>我原来用过一会200USD那个价位的机器，带宽给的很足，拉GitHub的源码非常快。</p>
+<p>面板也很人性化。</p>
+<p>另外，按小时计费还有一个好处，就是如果你开到了被墙的ip。<strong>可以再开一个机器，然后把原来的机器删除。</strong>看清顺序！先开机器再删除原来的，否则新开的机器可能还是原来的ip…</p>
+<p>不过这家的线路对中国不算特别友好，他的ip段也快被墙光了，所以按需入手吧。</p>
+<h2 id="AlphaRacks"><a href="#AlphaRacks" class="headerlink" title="AlphaRacks"></a>AlphaRacks</h2><p>注意：这家已经<strong>凉了</strong></p>
+<p>这家是别人送我的，本来是2020年7月份到期，结果他夭折（其实就是跑路）了。</p>
+<p>他家的面板贼难用，面板不方便重装系统。唯一的优点可能就是便宜吧。没有测试线路和速度怎么样，反正ssh非常卡。原来在这个机器上跑bot，做一些实验，没啥用。</p>
+<p>最可笑的是，前几天给我发了个邮件，告知我他跑路了。在邮件的最后，随信附赠了别家的aff代码，真是跑路也不忘了捞一笔…</p>
+<h2 id="Virmach"><a href="#Virmach" class="headerlink" title="Virmach"></a>Virmach</h2><p>这家主打便宜，听有人说买了一台2USD&#x2F;yr的机器，不知道配置如何，但是据说挺稳的。</p>
+<p>买完之后需要经过审核，随便填信息就能过。</p>
+<p>我这台机器买了一个月没咋用，就放那了233，反正便宜货。感觉延迟、速度一般般吧。</p>
+<h2 id="AWS"><a href="#AWS" class="headerlink" title="AWS"></a>AWS</h2><p>找朋友帮忙开了个韩国的机器，速度不慢。用Caddy搭建了一个FileManager，速度令人满意。扛过不少次墙，非常稳。</p>
+<p>价格的话，如果没有认识的朋友帮你开，可能略贵。</p>
+<h2 id="GigsGigsCloud"><a href="#GigsGigsCloud" class="headerlink" title="GigsGigsCloud"></a>GigsGigsCloud</h2><p>现在主要用这家，主要卖点是线路，机器配置不怎么样。线路有的时候也不太稳，但是总体来说也不错。</p>
+<p>原来买了一台香港的，一开始很棒，到后来越来越慢，就退货了。</p>
+<p>现在一直在用美西的，流量多，延迟也很不错。唯一遗憾的就是前几天被墙了，套了个CDN，线路优势就不存在了。</p>
+<h2 id="Hostwinds"><a href="#Hostwinds" class="headerlink" title="Hostwinds"></a>Hostwinds</h2><p>有全球三个机房，速度很快，价格也不是很贵。IO性能很不错。</p>
+<p>支持支付宝付款，不过是签约形式的，允许自动扣款。</p>
+<p>开ticket响应速度很快，如果急的话可以用live chat。</p>
+<h2 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h2><p>如果有什么推荐的IDC的话，可以Telegram联系我。</p>
+
+                    </article>
+                        
+    <blockquote class="post-license">
+        <p>
+            
+                <strong>本文作者&nbsp;:&nbsp;Littlebear0729</strong>
+            
+            <br>
+            <strong>
+            
+                本文使用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0)</a> 协议
+            </strong>
+            <br>
+            <strong>本文链接&nbsp;:&nbsp;</strong><a href="https://blog.bearxiong.xyz/2019/06/%E8%AE%B2%E8%AE%B2%E5%B0%8F%E7%86%8A%E7%94%A8%E8%BF%87%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8/">https://blog.bearxiong.xyz/2019/06/%E8%AE%B2%E8%AE%B2%E5%B0%8F%E7%86%8A%E7%94%A8%E8%BF%87%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8/</a>
+        </p>
+    </blockquote>
+
+
+
+    <blockquote id="date-expire-notification" class="post-expired-notify">本文最后更新于 <span id="date-expire-num"></span> 天前，文中所描述的信息可能已发生改变</blockquote>
+    <script>
+    (function() {
+        var dateUpdate = Date.parse("2024-10-06");
+        var nowDate = new Date();
+        var a = nowDate.getTime();
+        var b = a - dateUpdate;
+        var daysUpdateExpire = Math.floor(b/(24*3600*1000));
+        if (daysUpdateExpire >= 120) {
+            document.getElementById('date-expire-num').innerHTML = daysUpdateExpire;
+        } else {
+            document.getElementById('date-expire-notification').style.display = 'none';
+        }
+    })();
+    </script>
+
+
+<p class="post-footer-info mb-0 pt-0">本文发表于&nbsp;<time datetime="2019-06-24T07:47:29.000Z" itemprop="datePublished">2019-06-24</time>
+
+    , 最后修改于&nbsp;<time datetime="2024-10-06T09:45:10.340Z" itemprop="dateModified">2024-10-06</time>
+
+</p>
+<p class="post-footer-info mb-0 pt-2">
+
+<span class="post-categories-list mt-2">
+
+<a class="post-categories-list-item" href='/categories/%E6%8A%98%E8%85%BE%E8%AE%B0/'>折腾记</a>
+
+</span>
+
+
+
+
+</p>
+
+                </div>
+                <div class="post-nav px-2 bg-gray">
+<ul class="pagination">
+    <!-- Prev Nav -->
+    
+        <li class="page-item page-prev">
+            <a href="/2019/06/%E8%AE%B2%E8%AE%B2%E6%88%91%E5%9C%A8Play%E4%B8%8A%E9%9D%A2%E4%B9%B0%E8%BF%87%E7%9A%84%E9%82%A3%E4%BA%9BApp/" rel="prev">
+                <div class="page-item-title"><i class="icon icon-back" aria-hidden="true"></i></div>
+                <div class="page-item-subtitle">讲讲我在Play上面买过的那些App</div>
+            </a>
+        </li>
+    
+
+    <!-- Next Nav -->
+    
+        <li class="page-item page-next">
+            <a href="/2019/06/%E8%AE%B2%E8%AE%B2%E5%B0%8F%E7%86%8A%E7%8E%B0%E5%9C%A8%E7%94%A8%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8/" rel="next">
+                <div class="page-item-title"><i class="icon icon-forward" aria-hidden="true"></i></div>
+                <div class="page-item-subtitle">讲讲小熊现在用的服务器</div>
+            </a>
+        </li>
+    
+</ul>
+</div>
+
+                
+                    <!-- # Comment # -->
+                    
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+            <!-- ### Footer ### -->
+            <footer class="text-center">
+    <!-- footer copyright -->
+    
+        <p class="footer-copyright mb-0">Copyright&nbsp;©&nbsp;<span id="copyright-year"></span>
+            <a class="footer-copyright-a" href="https://blog.bearxiong.xyz">小熊の小站</a>
+        </p>
+
+    <!-- footer custom text -->
+    <p class="footer-text mb-0">
+    <a href="https://blog.bearxiong.xyz/atom.xml" rel="nofollow noopener noreferrer">Subscribe my Atom Feed</a>
+    </p>
+    <!-- footer develop info -->
+    <p class="footer-develop mb-0">
+        
+
+        
+        Powered by&nbsp;<!--
+         --><a href="https://hexo.io" target="_blank" class="footer-develop-a" rel="external nofollow noopener noreferrer">Hexo</a><span class="footer-develop-divider"></span>Theme&nbsp;-&nbsp;<!--
+         --><a href="https://github.com/SukkaW/hexo-theme-suka" target="_blank" class="footer-develop-a" rel="external noopener">Suka</a>
+    </p>
+</footer>
+
+
+        <!-- ### Import File ### -->
+        <!-- ### Footer JS Import ### -->
+
+<script>
+
+    
+window.lazyLoadOptions = {
+    elements_selector: ".lazyload",
+    threshold: 50
+};
+
+(function() {
+    var copyrightNow = new Date().getFullYear();
+    var copyrightContent = document.getElementById('copyright-year');
+    var copyrightSince = 2019;
+    if (copyrightSince === copyrightNow) {
+        copyrightContent.textContent = copyrightNow;
+    } else {
+        copyrightContent.textContent = copyrightSince + ' - ' + copyrightNow;
+    }
+})();
+console.log('\n %c Suka Theme (hexo-theme-suka) | © SukkaW | Verision 1.3.3 %c https://github.com/SukkaW/hexo-theme-suka \n', 'color: #fff; background: #444; padding:5px 0;', 'background: #bbb; padding:5px 0;');
+
+</script>
+
+<script src="/lib/vanilla-lazyload/lazyload.min.js" async></script>
+
+
+
+<!-- Comment -->
+
+
+<!-- ### Custom Footer ### -->
+
+    </body>
+
+</html>

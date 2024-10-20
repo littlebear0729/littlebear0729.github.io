@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+    <head>
+    <meta charset="utf-8">
+    <!--
+        hexo-theme-suka © SukkaW
+        GitHub: https://github.com/SukkaW/hexo-theme-suka
+    -->
+
+    <!-- ### Resource Hint ### -->
+
+    <!-- ## DNS Prefetch ## -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+<!-- busuanzi -->
+
+
+<!-- comment -->
+
+
+
+
+
+
+
+<!-- analytics -->
+
+
+    <link rel="dns-prefetch" href="//www.google-analytics.com">
+
+
+    <link rel="dns-prefetch" href="//www.googletagmanager.com">
+    <link rel="dns-prefetch" href="//www.google-analytics.com">
+
+
+
+
+
+    <!-- ## Preload ## -->
+    
+
+
+
+
+    <!-- ### Meta & Title & Info ### -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, maximum-scale=5, viewport-fit=cover">
+    <meta name="renderer" content="webkit">
+
+    <!-- Title -->
+    <title>微信，你好。 | 小熊の小站</title>
+
+    <!-- Favicons -->
+    <link rel="icon" type="image&#x2F;ico" href="/img/favicon.ico"><link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png"><link rel="icon" typt="image&#x2F;png" sizes="32x32" href="/img/favicon-16x16.png"><link rel="icon" typt="image&#x2F;png" sizes="16x16" href="/img/favicon-16x16.png"><link rel="mask-icon" href="/img/safari-pinned-tab.svg" color="">
+
+    <!-- ### Import File ### -->
+    <link rel="stylesheet" href="/lib/spectre/spectre.min.css"><style>
+    body {
+        background-color: #f8f9fa;
+    }
+
+    a, a:visited {
+        color: #0070ff;
+    }
+
+    a:active, a:focus, a:hover {
+        color: #0070ff;
+        opacity: .75;
+    }
+
+    #post-content a,
+    #post-content a:hover,
+    #post-content a:focus,
+    #post-content a:visited {
+        color: #005eb9;
+        opacity: 1;
+    }
+
+    
+
+    .post-entry .card-body a {
+        color: #0070ff;
+    }
+
+    .avatar {
+        background: #444;
+    }
+
+    .navbar-link,
+    .navbar-link:visited,
+    .timeline .timeline-item .timeline-icon.icon-lg {
+        color: #0070ff;
+    }
+
+    .navbar-link:hover {
+        color: #0070ff;
+        opacity: .8;
+    }
+
+    #search-input .btn,
+    #disqus_click_btn,
+    #disqus-switch-to-direct,
+    #disqus-loadmore-button {
+        background: #727e96;
+        border-color: #727e96;
+        color: #fff;
+    }
+
+    #post-toc a.post-toc-link,
+    #post-toc a.post-toc-link:visited,
+    .share-menu.menu .menu-item>a {
+        color: #727e96;
+    }
+
+    .share-menu.menu .menu-item>a:hover,
+    .share-menu.menu .menu-item>a:focus,
+    .share-menu.menu .menu-item>a:visited {
+        color: #50596c;
+        background: #f8f9fa;
+        opacity: .85;
+    }
+</style><link rel="stylesheet" href="/css/style.min.css">
+
+
+
+
+
+
+
+
+    <!-- Prettify Theme -->
+    
+    <link rel="preload" href="/css/highlight/darcula.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="/css/highlight/darcula.min.css"></noscript>
+
+
+
+
+
+<script>
+/*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
+!function(t){"use strict";t.loadCSS||(t.loadCSS=function(){});var e=loadCSS.relpreload={};if(e.support=function(){var e;try{e=t.document.createElement("link").relList.supports("preload")}catch(t){e=!1}return function(){return e}}(),e.bindMediaToggle=function(t){var e=t.media||"all";function a(){t.addEventListener?t.removeEventListener("load",a):t.attachEvent&&t.detachEvent("onload",a),t.setAttribute("onload",null),t.media=e}t.addEventListener?t.addEventListener("load",a):t.attachEvent&&t.attachEvent("onload",a),setTimeout(function(){t.rel="stylesheet",t.media="only x"}),setTimeout(a,3e3)},e.poly=function(){if(!e.support())for(var a=t.document.getElementsByTagName("link"),n=0;n<a.length;n++){var o=a[n];"preload"!==o.rel||"style"!==o.getAttribute("as")||o.getAttribute("data-loadcss")||(o.setAttribute("data-loadcss",!0),e.bindMediaToggle(o))}},!e.support()){e.poly();var a=t.setInterval(e.poly,500);t.addEventListener?t.addEventListener("load",function(){e.poly(),t.clearInterval(a)}):t.attachEvent&&t.attachEvent("onload",function(){e.poly(),t.clearInterval(a)})}"undefined"!=typeof exports?exports.loadCSS=loadCSS:t.loadCSS=loadCSS}("undefined"!=typeof global?global:this);
+</script>
+
+    <!-- ### Site Verification ### -->
+    
+
+
+    <link rel="alternate" type="application/atom+xml" href="/atom.xml"><meta name="mobile-web-app-capable" content="yes"><meta name="application-name" content="小熊の小站"><meta name="msapplication-starturl" content="https://blog.bearxiong.xyz"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="小熊の小站"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <!-- ### The Open Graph & Twitter Card Protocol ### -->
+    <meta property="og:title" content="微信，你好。 | 小熊の小站"><meta property="og:site_name" content="小熊の小站"><meta property="og:type" content="article"><meta property="og:url" content="https://blog.bearxiong.xyz/2021/08/%E5%BE%AE%E4%BF%A1%EF%BC%8C%E4%BD%A0%E5%A5%BD%E3%80%82/"><meta property="og:locale" content="zh-CN"><meta name="description" content="其实想写这么一篇吐槽微信的文章已经很久了。微信作为我们日常必需的即时通讯软件已经深度绑架了我们的生活，它的仅仅一个槽点就能让无数用户为之抓狂。这篇文章把我能想到的微信的槽点一一列举了出来。我也一直在想要不要把这些问题一个一个写出来，最后还是写出来了，希望能得到各位读者们的共鸣。 这篇文章分为微信的「一对一私聊」、「群聊」、「朋友圈」、「公众号小程序」、「安卓特色bug」、「微信支付」、「内部问题」 - Littlebear0729 - 小熊の小站"><meta name="keywords" content="小熊, littlebear, 博客, 小站, littlebear0729"><meta property="article:published_time" content="2021-08-14T10:21:56.000Z"><meta property="article:modified_time" content="2024-10-06T09:45:10.336Z"><meta property="og:updated_time" content="2024-10-06T09:45:10.336Z"><meta property="article:author" content="Littlebear0729"><meta property="article:tag" content="小熊, littlebear, 博客, 小站, littlebear0729"><meta name="twitter:card" content="summary">
+
+    
+
+    <!-- ### Canonical link ### -->
+    <link rel="canonical" href="https://blog.bearxiong.xyz/2021/08/%E5%BE%AE%E4%BF%A1%EF%BC%8C%E4%BD%A0%E5%A5%BD%E3%80%82/">
+
+    <meta name="generator" content="Hexo 6.3.0">
+
+    <!-- ### Analytics ### -->
+    
+    <!-- Google Analytics -->
+<script>
+    window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+    ga('create', '6097140926', 'auto');
+    ga('send', 'pageview');
+</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+
+
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-R9F6KBLL62"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-R9F6KBLL62');
+</script>
+
+
+
+
+
+
+
+
+    <!-- ### Structured Data ### -->
+    
+
+
+
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "url": "https://blog.bearxiong.xyz/2021/08/%E5%BE%AE%E4%BF%A1%EF%BC%8C%E4%BD%A0%E5%A5%BD%E3%80%82/",
+    "@type": "BlogPosting",
+    "logo": "https://blog.bearxiong.xyz/img/apple-touch-icon.png",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://blog.bearxiong.xyz/2021/08/%E5%BE%AE%E4%BF%A1%EF%BC%8C%E4%BD%A0%E5%A5%BD%E3%80%82/"
+    },
+    "headline": "微信，你好。 | 小熊の小站",
+    
+    "image": {
+        "@type": "ImageObject",
+        "url": "https://blog.bearxiong.xyz/img/apple-touch-icon.png"
+    },
+    
+    "datePublished": "2021-08-14T10:21:56.000Z",
+    "dateModified": "2024-10-06T09:45:10.336Z",
+    "author": {
+        "@type": "Person",
+        "name": "Littlebear0729",
+        "image": {
+            "@type": "ImageObject",
+            "url": "https://blog.bearxiong.xyz/img/apple-touch-icon.png"
+        },
+        "description": "Try my best."
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "小熊の小站",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://blog.bearxiong.xyz/img/apple-touch-icon.png"
+        }
+    },
+    
+    "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://blog.bearxiong.xyz/search.html?s={search_term_string}",
+        "query-input": "required name=search_term_string"
+    },
+    
+    "keywords": "小熊, littlebear, 博客, 小站, littlebear0729",
+    "description": "其实想写这么一篇吐槽微信的文章已经很久了。微信作为我们日常必需的即时通讯软件已经深度绑架了我们的生活，它的仅仅一个槽点就能让无数用户为之抓狂。这篇文章把我能想到的微信的槽点一一列举了出来。我也一直在想要不要把这些问题一个一个写出来，最后还是写出来了，希望能得到各位读者们的共鸣。 这篇文章分为微信的「一对一私聊」、「群聊」、「朋友圈」、「公众号小程序」、「安卓特色bug」、「微信支付」、「内部问题」 - Littlebear0729 - 小熊の小站"
+}
+</script>
+
+
+
+    <!-- ### Custom Head ### -->
+    
+</head>
+
+    <body>
+            
+
+            <!-- ### Main content ### -->
+            <!-- ## Header ##-->
+<header>
+    <h1 class="header-title text-center"><a href="/">小熊の小站</a></h1>
+
+    <p class="text-center header-slogan">
+        
+            
+                Try my best.
+            
+        
+    </p>
+
+    <nav class="navbar-section text-center">
+    
+        <a href="/" class="navbar-link">首页</a>
+    
+    
+        <a href="/archives/" class="navbar-link">归档</a>
+    
+    
+        <a href="/search.html" class="navbar-link">搜索</a>
+    
+    
+        <a href="/categories.html" class="navbar-link">分类</a>
+    
+        <a href="/about.html" class="navbar-link">关于</a>
+    
+        <a href="/links.html" class="navbar-link">友链</a>
+    
+        <a href="/QSL.html" class="navbar-link">QSL</a>
+    
+    
+    
+</nav>
+</header>
+
+            
+    <!-- ## Post ## -->
+    <div class="post-container">
+    <div id="post-card" class="card">
+        
+        <div class="card-item-container">
+            <div class="card-inner-cell">
+                <!-- # Post Header Info # -->
+                <div class="card-header">
+                    
+    <h1 class="card-title h3 mb-2">微信，你好。</h1>
+
+
+
+
+<div class="post-header-info">
+    <p class="post-header-info-left text-gray">
+        <img class="author-thumb lazyload" data-src="/img/apple-touch-icon.png" src="/img/suka-lazyload.gif" alt="Littlebear0729's Avatar">
+        <span>2021-08-14</span>
+        
+            <span class="suka-devide-dot"></span>
+            <a class="category-link" href="/categories/%E8%A7%82/">观</a>
+        
+        
+        
+    </p>
+    <div class="post-header-info-right">
+        
+    </div>
+</div>
+                </div>
+                <div class="card-body">
+                    
+                        
+                        
+                            <div id="post-toc"><ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E4%B8%80%E5%AF%B9%E4%B8%80%E7%A7%81%E8%81%8A"><span class="post-toc-number">1.</span> <span class="post-toc-text">一对一私聊</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E7%BE%A4%E8%81%8A"><span class="post-toc-number">2.</span> <span class="post-toc-text">群聊</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E6%9C%8B%E5%8F%8B%E5%9C%88"><span class="post-toc-number">3.</span> <span class="post-toc-text">朋友圈</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%86%85%E9%83%A8%E9%97%AE%E9%A2%98"><span class="post-toc-number">4.</span> <span class="post-toc-text">内部问题</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%AE%89%E5%8D%93%E7%89%B9%E8%89%B2bug"><span class="post-toc-number">5.</span> <span class="post-toc-text">安卓特色bug</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%85%AC%E4%BC%97%E5%8F%B7%E3%80%81%E8%AE%A2%E9%98%85%E5%8F%B7%E3%80%81%E5%B0%8F%E7%A8%8B%E5%BA%8F"><span class="post-toc-number">6.</span> <span class="post-toc-text">公众号、订阅号、小程序</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%B0%8F%E7%BB%86%E8%8A%82"><span class="post-toc-number">7.</span> <span class="post-toc-text">小细节</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%BE%AE%E4%BF%A1%E6%94%AF%E4%BB%98"><span class="post-toc-number">8.</span> <span class="post-toc-text">微信支付</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E6%80%BB%E7%BB%93"><span class="post-toc-number">9.</span> <span class="post-toc-text">总结</span></a></li></ol></div>
+                        
+                    
+                    <article id="post-content">
+                        <p>其实想写这么一篇吐槽微信的文章已经很久了。微信作为我们日常必需的即时通讯软件已经深度绑架了我们的生活，它的仅仅一个槽点就能让无数用户为之抓狂。这篇文章把我能想到的微信的槽点一一列举了出来。我也一直在想要不要把这些问题一个一个写出来，最后还是写出来了，希望能得到各位读者们的共鸣。</p>
+<p>这篇文章分为微信的「一对一私聊」、「群聊」、「朋友圈」、「公众号小程序」、「安卓特色bug」、「微信支付」、「内部问题」等这几个方面细数微信那些反人类设计的功能。</p>
+<blockquote>
+<p>「每天都有5亿人说我们做得不好，每天还有1亿人想教我怎么样做产品，我觉得这是非常正常的一个事情。」 —— 张小龙于2019微信之夜</p>
+</blockquote>
+<p>如果不想看我细数微信的槽点的话，可以直接跳到最后面看总结部分。</p>
+<h2 id="一对一私聊"><a href="#一对一私聊" class="headerlink" title="一对一私聊"></a>一对一私聊</h2><ol>
+<li><p>聊天记录云同步、跨设备</p>
+<p>微信美其名曰不在服务器上保留你的聊天记录，你的聊天记录只储存在你自己的手机上。这样的话就纯属当婊子又立牌坊，微信服务器有没有储存聊天记录大家心知肚明。只是张小龙不愿意把这个功能开放出来罢了，不知道是何用意。转头看看隔壁QQ吧…</p>
+</li>
+<li><p>文件过期、文件上传体积限制</p>
+<p>文件过期可能是最令人尴尬的情况了，你又不好意思再要求对方再发一遍。还是那句话，微信既然可以在服务器上存你的聊天文件，为什么还有过期这一说？微信上传文件大小限制为100M，上传视频大小限制为25M，你不看看自己微信一个安装包就有多大了？这就是你张小龙口中的「小而美」？</p>
+</li>
+<li><p>引用与回复功能</p>
+<p>微信终于在前个大版本加入了引用与回复的功能，但是操作不简便，需要长按进入二级菜单。而且不能跳转到引用的消息上下文…再转头看看隔壁QQ吧，左划直接回复，点击直接跳转。</p>
+</li>
+<li><p>聊天记录导出、迁移繁琐</p>
+<p>这个跟聊天记录云同步一个槽点，聊天记录在两个设备之间的迁移就像吃了屎一样难受。手机和电脑端的导出和导入简直不知道张小龙是喝了几杯设计出来的。</p>
+</li>
+<li><p>自定义表情包上限、分类和排序</p>
+<p>前几天微信好像是把200个自定义表情包上限调整到了500个。他铺天盖地的宣传好像是：我把一个很sb的限制改的不那么sb了，你可要感激我的大恩大德。自定义表情的顺序不能随意更改，只能选中一些放在最前面，这是什么样的nt产品经理才能想到的法子？</p>
+</li>
+<li><p>语音进度条、语音时长限制60s</p>
+<p>60s语音轰炸的时候，中间一个没听清所有语音都要重新听。日常使用还可以转文字，有些工作和学习上面的事情转文字识别成功率就不是那么高了，一条语音让我反复听好几遍很浪费时间的好不好？还好最长只有60s，要是没有限制的话岂不是听起来更蛋疼。</p>
+</li>
+<li><p>转发文件之前先需要下载、浪费流量</p>
+<p>跟聊天记录聊天文件云同步一个毛病，当婊子立牌坊。</p>
+</li>
+<li><p>拍一拍、炸屎？</p>
+<p>上面说的这些正经功能不好好写，非得整一个拍一拍，炸弹炸屎的功能。你们微信团队那么多高材生毕业了去写代码就让他们写拍一拍和炸屎特效去的吗？张小龙你觉得你自己很幽默？</p>
+</li>
+<li><p>一些见仁见智的小细节</p>
+<ol>
+<li>已读标志：这个企业微信是有的，个人希望微信也加上。不要让等待成为遗憾。</li>
+<li>撤回提示：你既然撤回了就说明这条消息不希望人家看了，还非得留下来一个提示。干嘛啊？欲擒故纵？</li>
+<li>消息编辑：有错别字直接编辑消息改，还撤回，重新编辑不累吗？</li>
+<li>聊天端对端加密：国家监管要求，没辙。</li>
+<li>单删提醒、不能互删好友：看到「对方已开启好友验证」和红色感叹号，心都是凉的。要删还不删干净点？</li>
+<li>临时好友功能：群里加的私聊本来就一两句话能说清楚的事还得加好友，完事儿了又不好意思删。</li>
+</ol>
+</li>
+</ol>
+<h2 id="群聊"><a href="#群聊" class="headerlink" title="群聊"></a>群聊</h2><ol>
+<li><p>接龙顶消息</p>
+<p>不知道是谁一开始发明的这个接龙的操作的，10个人的群一个人发一条接龙，直接就把上面的群消息顶上去了。想翻一个通知往上划手都抽筋了。</p>
+</li>
+<li><p>消息置顶、群公告</p>
+<p>没有消息置顶，群公告同时只能存在一个。我不能有好几个公告？</p>
+</li>
+<li><p>拉群不用征集用户同意</p>
+<p>不知道什么时候就被拉到奇奇怪怪的群里面去了，还没法设置隐私权限不被拉群。</p>
+</li>
+<li><p>群聊需要单独保存到通讯录</p>
+<p>换了设备之后，群聊如果不保存到通讯录里面，群里面没人说话就找不到那个群了。实在是搞不懂这样的设计有什么意思，社交体验特别割裂。</p>
+</li>
+<li><p>群聊归拢</p>
+<p>群聊没有分类没有分组，工作的学习的日常的混杂在一起。</p>
+</li>
+<li><p>不能单独屏蔽人、不能全体禁言、不能临时对话</p>
+<p>看看隔壁QQ吧求求你了张小龙。</p>
+</li>
+</ol>
+<h2 id="朋友圈"><a href="#朋友圈" class="headerlink" title="朋友圈"></a>朋友圈</h2><ol>
+<li><p>点赞和评论的二级菜单</p>
+<p>给一条朋友圈点赞的时候还需要点两下按钮，你直接在一条朋友圈下面放一个点赞一个评论怎么了？把两个按钮折叠起来你很有成就感吗张小龙？</p>
+</li>
+<li><p>红点？</p>
+<p>别人给我点过赞的朋友圈点赞关我啥事？你妈妈下葬的时候是不是也给我来一个红点让我去看啊？</p>
+</li>
+<li><p>广告？</p>
+<p>乱七八糟的广告一大堆，啥也不是。</p>
+</li>
+<li><p>折叠？</p>
+<p>发长文有两种奇怪的折叠方式，不明所以。</p>
+</li>
+<li><p>不能发GIF动图</p>
+<p>实在是搞不懂我发个动图怎么了？</p>
+</li>
+<li><p>视频时长限制15s（引流微视、视频号）</p>
+<p>你们程序员都是快男只能坚持15s所以只能发15s的视频吗？（现在好像时间可以更长了，如果有视频号的话几分钟的也可以）</p>
+</li>
+<li><p>发现页越来越臃肿</p>
+<p>有用的没用的功能一股脑往上加，你还是个聊天软件吗？</p>
+</li>
+<li><p>不能删评论</p>
+<p>我的朋友圈我作主，下面的评论我还不能删了？</p>
+</li>
+</ol>
+<h2 id="内部问题"><a href="#内部问题" class="headerlink" title="内部问题"></a>内部问题</h2><ol>
+<li><p>开发流程混乱</p>
+<p>感觉内部没有一个统一的开发流程，想到哪哪就加个功能，东一榔头西一棒槌的。</p>
+</li>
+<li><p>iOS、安卓更新不同步</p>
+<p>新功能都是iOS先上，怎么，瞧不起安卓用户？还是苹果库克是你野爹？</p>
+</li>
+<li><p>英文标准不统一</p>
+<p>打开安卓微信的目录下面发现，有的文件夹叫WeiXin，有的叫WeChat，还有的叫MicroMsg。从这就能看出来微信团队内部开发和管理的混乱，连一个统一的英文名称都没有，这就是规范？代码也许就是个屎山吧…</p>
+</li>
+</ol>
+<h2 id="安卓特色bug"><a href="#安卓特色bug" class="headerlink" title="安卓特色bug"></a>安卓特色bug</h2><ol>
+<li><p>apk.1后缀</p>
+<p>这个可能是安全考量，把别人发的apk直接下载下来命名为apk.1。大多数人不知道怎么找到apk1文件然后改名成apk文件安装，这个安全问题其实可以有更好的解决方法。</p>
+</li>
+<li><p>文件下载目录不规范</p>
+<p>安卓的规范告诉你把文件下载在<code>/sdcard/Download/</code>下面，把图片存在<code>/sdcard/Picture/</code>里面。你呢？你就不，就放在<code>/sdcard/WeiXin/</code>下面。目录结构乱得跟一坨shit一样，让用户一级一级点开自己找，让手机厂商的文件管理给你特殊适配？你怎么摆那么大谱呢？</p>
+</li>
+<li><p>FCM推送、统一推送联盟、推送框架</p>
+<p>摆谱，不支持推送框架。让手机厂商给你开后台白名单，大家把你供得跟爷似的就不敢杀你的进程。生怕一个消息收不到就被用户骂，反正用户骂的是手机厂商不骂你呗。你就偷偷在后台耗电，你就耗吧耗吧耗吧耗吧。</p>
+</li>
+<li><p>优化差、低端机型卡顿</p>
+<p>家里老人手机配置本来就不高，就你那垃圾优化，滚动聊天列表都掉帧。</p>
+</li>
+<li><p>深色模式适配墨迹</p>
+<blockquote>
+<p>为什么没有夜间模式？你的夜晚太珍贵，我们不忍心占用，更不愿意成为你半夜醒来看手机的原因。愿你每夜好眠。 —— 腾讯微信团队微博</p>
+</blockquote>
+<p>我呸。这个理由倒是冠冕堂皇，你倒是解释解释为啥iOS比安卓先好几个版本适配深色模式？就因为苹果库克是你野爹？我知道安卓机型种类差异繁多，但请不要用这么脑残的理由来把用户当傻逼好吗？</p>
+</li>
+</ol>
+<h2 id="公众号、订阅号、小程序"><a href="#公众号、订阅号、小程序" class="headerlink" title="公众号、订阅号、小程序"></a>公众号、订阅号、小程序</h2><ol>
+<li><p>瀑布流、时间顺序</p>
+<p>微信在某一个版本把公众号的默认按照不同帐号分类给改成瀑布流一样的布局之后，你不看看你一个页面的消息密度有多低？</p>
+</li>
+<li><p>营销号质量低</p>
+<p>质量低的无脑转发营销号不管，专门就管有话语权的维权公众号是吧。微信公众号最nt的设计就是不管你这个界面到底有没有违规内容，只要是被举报多了，一律红色感叹号。</p>
+</li>
+<li><p>分享链接引流小程序</p>
+<p>这个微信和其他app厂商都有锅，明明直接分享链接点开就可以跳转的，现在非得分享成小程序。说你呢哔哩哔哩。</p>
+</li>
+</ol>
+<h2 id="小细节"><a href="#小细节" class="headerlink" title="小细节"></a>小细节</h2><ol>
+<li><p>乱封禁</p>
+<p>无论是用户帐号也好，公众号也好，推送也好，有事没事红叹号。参考前几天的「未命名公众号」事件。</p>
+</li>
+<li><p>屏蔽外链：淘宝、拼多多等（火星文），内部浏览器</p>
+<p>微信利用自己在即时通讯软件领域的垄断地位开始不正当竞争，定向屏蔽淘宝、拼多多的分享链接。逼得他们只能复制火星文来分享商品了，没想到在2021年还能看到火星文，堪称奇葩。</p>
+<p>好好的系统浏览器和WebView不用，非得微信里面自带一个WebView，何苦呢？</p>
+</li>
+<li><p>获取权限过多、不给就闪退</p>
+<p>国产软件通病。</p>
+</li>
+<li><p>安装包体积上百M：小而美？</p>
+<p>看看隔壁QQ安装包都没你一个微信大，再看看国外的聊天软件。哪一个聊天体验不比你的好，哪一个安装包比你的大。</p>
+</li>
+<li><p>占用手机存储空间巨大：小而美？</p>
+<p>行，你聊天记录不能云同步，全都放我手机里面。现在看看哪个人手机微信占用不是10G以上的？这你张小龙也配标榜自己小而美？</p>
+</li>
+<li><p>手机扫码登录电脑微信、iPad</p>
+<p>司马设计。张小龙是天生脑瘫记不住用户名和密码吗？还是因为自己没有马了所以登录哪个设备都需要手机扫码才能登录？</p>
+</li>
+<li><p>头像设置放大过大、缩小过小</p>
+<p>这个是最绝的，2021年的程序员居然还能写出来设置用户头像图片放大过大缩小过小的。别写代码了，回家看看你老婆和母亲吧。</p>
+</li>
+<li><p>图片、视频压缩严重</p>
+<p>那么多图片和视频的压缩算法你不学，你不瞅瞅你压的是个什么玩意儿。没眼看，啥也不是。</p>
+</li>
+<li><p>微信ID更改频率限制</p>
+<p>原来不让改，现在好歹让改了。原来那个中二的微信ID终于可以改掉了。</p>
+</li>
+<li><p>不允许双开</p>
+<p>我就是想老婆小三分开存储不行？小米华为系统级提供的这个双开的功能一个不小心直接就给封号了。</p>
+</li>
+<li><p>API不开放、调用繁琐</p>
+</li>
+</ol>
+<h2 id="微信支付"><a href="#微信支付" class="headerlink" title="微信支付"></a>微信支付</h2><ol>
+<li><p>人工客服难寻</p>
+<p>跳楼找客服，不说了跳楼去了。</p>
+</li>
+<li><p>红包封面吃相难看</p>
+<p>红包封面一个一毛钱，张小龙你是想钱想疯了还是你母亲在天之灵没有纸钱花了？</p>
+</li>
+</ol>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>说了这么多微信的槽点，我们到底有没有一个聊天软件可以代替微信？有，太多了。我们都用那个软件不就好了？难，太难了。微信发展到现在已经不仅仅是一个聊天软件了，已经成为了一个人社交圈的代表。微信已经把一个人的社交圈深度绑定了，而社交圈的迁移成本太高了。当你迁移到别的聊天软件时，你在微信上面的朋友也要迁移到别的聊天软件上去吗？显然是不可能的。你最多只能安利你一个小圈子的部分好友到别的平台上去，但是在大家都用微信的情况下，迁移一整个社交圈几乎是不可能的。</p>
+<p>小米做过米聊，老罗做过子弹短信。哪个不是被微信干掉了？甚至一个子弹短信的邀请链接都会被微信大手一挥给屏蔽掉。作为用户，也只能被微信喂屎。但是我不会说好吃，我会把问题一一说出来，期待微信的改变。但是张小龙作为微信的产品经理，他自负的性格注定了这是一个为他而生的即时通讯产品，而不是一个为用户而生的产品。这就是微信最大的失败，那就是不以用户为中心。等待微信听取用户的声音并作出改变太难了，这个过程太漫长了。</p>
+<p>微信设计的初衷就是陌生人交友平台，然而发展到现在已经变成了熟人交流，甚至是工作学习的平台。它的设计基础就不适合将其用作正式交流的工具，这也是为什么微信之后设计了企业微信的原因。很高兴看到现在越来越多的企业开始抛弃微信，转而使用钉钉和飞书等作为企业内部的通讯软件。在正式交流的专业性方面，比微信做的好的太多了。</p>
+<p>微信，你好，你毁掉了所有人的社交网络。</p>
+<blockquote>
+<p>写在最后：微信有没有可取之处，当然是有的。在游戏和社交圈结合这方面，微信做的很成功。从一开始的「经典飞机大战」，再到「跳一跳」，再到天美的大型手游「王者荣耀」等，哪一个不是将游戏和社交圈融合，这样的设计思路确实十分新颖。</p>
+</blockquote>
+
+                    </article>
+                        
+    <blockquote class="post-license">
+        <p>
+            
+                <strong>本文作者&nbsp;:&nbsp;Littlebear0729</strong>
+            
+            <br>
+            <strong>
+            
+                本文使用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0)</a> 协议
+            </strong>
+            <br>
+            <strong>本文链接&nbsp;:&nbsp;</strong><a href="https://blog.bearxiong.xyz/2021/08/%E5%BE%AE%E4%BF%A1%EF%BC%8C%E4%BD%A0%E5%A5%BD%E3%80%82/">https://blog.bearxiong.xyz/2021/08/%E5%BE%AE%E4%BF%A1%EF%BC%8C%E4%BD%A0%E5%A5%BD%E3%80%82/</a>
+        </p>
+    </blockquote>
+
+
+
+    <blockquote id="date-expire-notification" class="post-expired-notify">本文最后更新于 <span id="date-expire-num"></span> 天前，文中所描述的信息可能已发生改变</blockquote>
+    <script>
+    (function() {
+        var dateUpdate = Date.parse("2024-10-06");
+        var nowDate = new Date();
+        var a = nowDate.getTime();
+        var b = a - dateUpdate;
+        var daysUpdateExpire = Math.floor(b/(24*3600*1000));
+        if (daysUpdateExpire >= 120) {
+            document.getElementById('date-expire-num').innerHTML = daysUpdateExpire;
+        } else {
+            document.getElementById('date-expire-notification').style.display = 'none';
+        }
+    })();
+    </script>
+
+
+<p class="post-footer-info mb-0 pt-0">本文发表于&nbsp;<time datetime="2021-08-14T10:21:56.000Z" itemprop="datePublished">2021-08-14</time>
+
+    , 最后修改于&nbsp;<time datetime="2024-10-06T09:45:10.336Z" itemprop="dateModified">2024-10-06</time>
+
+</p>
+<p class="post-footer-info mb-0 pt-2">
+
+<span class="post-categories-list mt-2">
+
+<a class="post-categories-list-item" href='/categories/%E8%A7%82/'>观</a>
+
+</span>
+
+
+
+
+</p>
+
+                </div>
+                <div class="post-nav px-2 bg-gray">
+<ul class="pagination">
+    <!-- Prev Nav -->
+    
+        <li class="page-item page-prev">
+            <a href="/2021/08/PSV%E7%A0%B4%E8%A7%A3%E8%AE%B0%E5%BD%95/" rel="prev">
+                <div class="page-item-title"><i class="icon icon-back" aria-hidden="true"></i></div>
+                <div class="page-item-subtitle">PSV-2000破解记录</div>
+            </a>
+        </li>
+    
+
+    <!-- Next Nav -->
+    
+        <li class="page-item page-next">
+            <a href="/2021/08/%E5%A4%8D%E6%B4%BB%E5%92%8C%E9%87%8D%E7%94%9F/" rel="next">
+                <div class="page-item-title"><i class="icon icon-forward" aria-hidden="true"></i></div>
+                <div class="page-item-subtitle">复活和重生</div>
+            </a>
+        </li>
+    
+</ul>
+</div>
+
+                
+                    <!-- # Comment # -->
+                    
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+            <!-- ### Footer ### -->
+            <footer class="text-center">
+    <!-- footer copyright -->
+    
+        <p class="footer-copyright mb-0">Copyright&nbsp;©&nbsp;<span id="copyright-year"></span>
+            <a class="footer-copyright-a" href="https://blog.bearxiong.xyz">小熊の小站</a>
+        </p>
+
+    <!-- footer custom text -->
+    <p class="footer-text mb-0">
+    <a href="https://blog.bearxiong.xyz/atom.xml" rel="nofollow noopener noreferrer">Subscribe my Atom Feed</a>
+    </p>
+    <!-- footer develop info -->
+    <p class="footer-develop mb-0">
+        
+
+        
+        Powered by&nbsp;<!--
+         --><a href="https://hexo.io" target="_blank" class="footer-develop-a" rel="external nofollow noopener noreferrer">Hexo</a><span class="footer-develop-divider"></span>Theme&nbsp;-&nbsp;<!--
+         --><a href="https://github.com/SukkaW/hexo-theme-suka" target="_blank" class="footer-develop-a" rel="external noopener">Suka</a>
+    </p>
+</footer>
+
+
+        <!-- ### Import File ### -->
+        <!-- ### Footer JS Import ### -->
+
+<script>
+
+    
+window.lazyLoadOptions = {
+    elements_selector: ".lazyload",
+    threshold: 50
+};
+
+(function() {
+    var copyrightNow = new Date().getFullYear();
+    var copyrightContent = document.getElementById('copyright-year');
+    var copyrightSince = 2019;
+    if (copyrightSince === copyrightNow) {
+        copyrightContent.textContent = copyrightNow;
+    } else {
+        copyrightContent.textContent = copyrightSince + ' - ' + copyrightNow;
+    }
+})();
+console.log('\n %c Suka Theme (hexo-theme-suka) | © SukkaW | Verision 1.3.3 %c https://github.com/SukkaW/hexo-theme-suka \n', 'color: #fff; background: #444; padding:5px 0;', 'background: #bbb; padding:5px 0;');
+
+</script>
+
+<script src="/lib/vanilla-lazyload/lazyload.min.js" async></script>
+
+
+
+<!-- Comment -->
+
+
+<!-- ### Custom Footer ### -->
+
+    </body>
+
+</html>

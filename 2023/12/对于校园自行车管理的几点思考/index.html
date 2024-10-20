@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+    <head>
+    <meta charset="utf-8">
+    <!--
+        hexo-theme-suka © SukkaW
+        GitHub: https://github.com/SukkaW/hexo-theme-suka
+    -->
+
+    <!-- ### Resource Hint ### -->
+
+    <!-- ## DNS Prefetch ## -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+<!-- busuanzi -->
+
+
+<!-- comment -->
+
+
+
+
+
+
+
+<!-- analytics -->
+
+
+    <link rel="dns-prefetch" href="//www.google-analytics.com">
+
+
+    <link rel="dns-prefetch" href="//www.googletagmanager.com">
+    <link rel="dns-prefetch" href="//www.google-analytics.com">
+
+
+
+
+
+    <!-- ## Preload ## -->
+    
+
+
+
+
+    <!-- ### Meta & Title & Info ### -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, maximum-scale=5, viewport-fit=cover">
+    <meta name="renderer" content="webkit">
+
+    <!-- Title -->
+    <title>对于校园自行车管理的几点思考 | 小熊の小站</title>
+
+    <!-- Favicons -->
+    <link rel="icon" type="image&#x2F;ico" href="/img/favicon.ico"><link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png"><link rel="icon" typt="image&#x2F;png" sizes="32x32" href="/img/favicon-16x16.png"><link rel="icon" typt="image&#x2F;png" sizes="16x16" href="/img/favicon-16x16.png"><link rel="mask-icon" href="/img/safari-pinned-tab.svg" color="">
+
+    <!-- ### Import File ### -->
+    <link rel="stylesheet" href="/lib/spectre/spectre.min.css"><style>
+    body {
+        background-color: #f8f9fa;
+    }
+
+    a, a:visited {
+        color: #0070ff;
+    }
+
+    a:active, a:focus, a:hover {
+        color: #0070ff;
+        opacity: .75;
+    }
+
+    #post-content a,
+    #post-content a:hover,
+    #post-content a:focus,
+    #post-content a:visited {
+        color: #005eb9;
+        opacity: 1;
+    }
+
+    
+
+    .post-entry .card-body a {
+        color: #0070ff;
+    }
+
+    .avatar {
+        background: #444;
+    }
+
+    .navbar-link,
+    .navbar-link:visited,
+    .timeline .timeline-item .timeline-icon.icon-lg {
+        color: #0070ff;
+    }
+
+    .navbar-link:hover {
+        color: #0070ff;
+        opacity: .8;
+    }
+
+    #search-input .btn,
+    #disqus_click_btn,
+    #disqus-switch-to-direct,
+    #disqus-loadmore-button {
+        background: #727e96;
+        border-color: #727e96;
+        color: #fff;
+    }
+
+    #post-toc a.post-toc-link,
+    #post-toc a.post-toc-link:visited,
+    .share-menu.menu .menu-item>a {
+        color: #727e96;
+    }
+
+    .share-menu.menu .menu-item>a:hover,
+    .share-menu.menu .menu-item>a:focus,
+    .share-menu.menu .menu-item>a:visited {
+        color: #50596c;
+        background: #f8f9fa;
+        opacity: .85;
+    }
+</style><link rel="stylesheet" href="/css/style.min.css">
+
+
+
+
+
+
+
+
+    <!-- Prettify Theme -->
+    
+    <link rel="preload" href="/css/highlight/darcula.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="/css/highlight/darcula.min.css"></noscript>
+
+
+
+
+
+<script>
+/*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
+!function(t){"use strict";t.loadCSS||(t.loadCSS=function(){});var e=loadCSS.relpreload={};if(e.support=function(){var e;try{e=t.document.createElement("link").relList.supports("preload")}catch(t){e=!1}return function(){return e}}(),e.bindMediaToggle=function(t){var e=t.media||"all";function a(){t.addEventListener?t.removeEventListener("load",a):t.attachEvent&&t.detachEvent("onload",a),t.setAttribute("onload",null),t.media=e}t.addEventListener?t.addEventListener("load",a):t.attachEvent&&t.attachEvent("onload",a),setTimeout(function(){t.rel="stylesheet",t.media="only x"}),setTimeout(a,3e3)},e.poly=function(){if(!e.support())for(var a=t.document.getElementsByTagName("link"),n=0;n<a.length;n++){var o=a[n];"preload"!==o.rel||"style"!==o.getAttribute("as")||o.getAttribute("data-loadcss")||(o.setAttribute("data-loadcss",!0),e.bindMediaToggle(o))}},!e.support()){e.poly();var a=t.setInterval(e.poly,500);t.addEventListener?t.addEventListener("load",function(){e.poly(),t.clearInterval(a)}):t.attachEvent&&t.attachEvent("onload",function(){e.poly(),t.clearInterval(a)})}"undefined"!=typeof exports?exports.loadCSS=loadCSS:t.loadCSS=loadCSS}("undefined"!=typeof global?global:this);
+</script>
+
+    <!-- ### Site Verification ### -->
+    
+
+
+    <link rel="alternate" type="application/atom+xml" href="/atom.xml"><meta name="mobile-web-app-capable" content="yes"><meta name="application-name" content="小熊の小站"><meta name="msapplication-starturl" content="https://blog.bearxiong.xyz"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="小熊の小站"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <!-- ### The Open Graph & Twitter Card Protocol ### -->
+    <meta property="og:title" content="对于校园自行车管理的几点思考 | 小熊の小站"><meta property="og:site_name" content="小熊の小站"><meta property="og:type" content="article"><meta property="og:url" content="https://blog.bearxiong.xyz/2023/12/%E5%AF%B9%E4%BA%8E%E6%A0%A1%E5%9B%AD%E8%87%AA%E8%A1%8C%E8%BD%A6%E7%AE%A1%E7%90%86%E7%9A%84%E5%87%A0%E7%82%B9%E6%80%9D%E8%80%83/"><meta property="og:locale" content="zh-CN"><meta name="description" content="前几日，学校出台了在校园内关于电动车管理的一系列新政策。作为一个入学以来，给校长信箱写过不下十篇邮件的「刺儿头」，还是斗胆写一篇博客谈一谈自己的看法。针对于这次的新政策，学生们的反应也十分多样。有支持的，也有反对的，主要能听到的还是反对的声音居多。我个人还是比较乐于看到学校愿意出手管这件事情的，对于一部分政策，我非常赞同。但是对于令一部分政策，我不敢苟同，认为还是有待斟酌。写下这篇文章供大家一起交 - Littlebear0729 - 小熊の小站"><meta name="keywords" content="小熊, littlebear, 博客, 小站, littlebear0729"><meta property="article:published_time" content="2023-12-07T06:01:19.000Z"><meta property="article:modified_time" content="2024-10-06T09:45:10.335Z"><meta property="og:updated_time" content="2024-10-06T09:45:10.335Z"><meta property="article:author" content="Littlebear0729"><meta property="article:tag" content="小熊, littlebear, 博客, 小站, littlebear0729"><meta name="twitter:card" content="summary">
+
+    
+
+    <!-- ### Canonical link ### -->
+    <link rel="canonical" href="https://blog.bearxiong.xyz/2023/12/%E5%AF%B9%E4%BA%8E%E6%A0%A1%E5%9B%AD%E8%87%AA%E8%A1%8C%E8%BD%A6%E7%AE%A1%E7%90%86%E7%9A%84%E5%87%A0%E7%82%B9%E6%80%9D%E8%80%83/">
+
+    <meta name="generator" content="Hexo 6.3.0">
+
+    <!-- ### Analytics ### -->
+    
+    <!-- Google Analytics -->
+<script>
+    window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+    ga('create', '6097140926', 'auto');
+    ga('send', 'pageview');
+</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+
+
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-R9F6KBLL62"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-R9F6KBLL62');
+</script>
+
+
+
+
+
+
+
+
+    <!-- ### Structured Data ### -->
+    
+
+
+
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "url": "https://blog.bearxiong.xyz/2023/12/%E5%AF%B9%E4%BA%8E%E6%A0%A1%E5%9B%AD%E8%87%AA%E8%A1%8C%E8%BD%A6%E7%AE%A1%E7%90%86%E7%9A%84%E5%87%A0%E7%82%B9%E6%80%9D%E8%80%83/",
+    "@type": "BlogPosting",
+    "logo": "https://blog.bearxiong.xyz/img/apple-touch-icon.png",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://blog.bearxiong.xyz/2023/12/%E5%AF%B9%E4%BA%8E%E6%A0%A1%E5%9B%AD%E8%87%AA%E8%A1%8C%E8%BD%A6%E7%AE%A1%E7%90%86%E7%9A%84%E5%87%A0%E7%82%B9%E6%80%9D%E8%80%83/"
+    },
+    "headline": "对于校园自行车管理的几点思考 | 小熊の小站",
+    
+    "image": {
+        "@type": "ImageObject",
+        "url": "https://blog.bearxiong.xyz/img/apple-touch-icon.png"
+    },
+    
+    "datePublished": "2023-12-07T06:01:19.000Z",
+    "dateModified": "2024-10-06T09:45:10.335Z",
+    "author": {
+        "@type": "Person",
+        "name": "Littlebear0729",
+        "image": {
+            "@type": "ImageObject",
+            "url": "https://blog.bearxiong.xyz/img/apple-touch-icon.png"
+        },
+        "description": "Try my best."
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "小熊の小站",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://blog.bearxiong.xyz/img/apple-touch-icon.png"
+        }
+    },
+    
+    "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://blog.bearxiong.xyz/search.html?s={search_term_string}",
+        "query-input": "required name=search_term_string"
+    },
+    
+    "keywords": "小熊, littlebear, 博客, 小站, littlebear0729",
+    "description": "前几日，学校出台了在校园内关于电动车管理的一系列新政策。作为一个入学以来，给校长信箱写过不下十篇邮件的「刺儿头」，还是斗胆写一篇博客谈一谈自己的看法。针对于这次的新政策，学生们的反应也十分多样。有支持的，也有反对的，主要能听到的还是反对的声音居多。我个人还是比较乐于看到学校愿意出手管这件事情的，对于一部分政策，我非常赞同。但是对于令一部分政策，我不敢苟同，认为还是有待斟酌。写下这篇文章供大家一起交 - Littlebear0729 - 小熊の小站"
+}
+</script>
+
+
+
+    <!-- ### Custom Head ### -->
+    
+</head>
+
+    <body>
+            
+
+            <!-- ### Main content ### -->
+            <!-- ## Header ##-->
+<header>
+    <h1 class="header-title text-center"><a href="/">小熊の小站</a></h1>
+
+    <p class="text-center header-slogan">
+        
+            
+                Try my best.
+            
+        
+    </p>
+
+    <nav class="navbar-section text-center">
+    
+        <a href="/" class="navbar-link">首页</a>
+    
+    
+        <a href="/archives/" class="navbar-link">归档</a>
+    
+    
+        <a href="/search.html" class="navbar-link">搜索</a>
+    
+    
+        <a href="/categories.html" class="navbar-link">分类</a>
+    
+        <a href="/about.html" class="navbar-link">关于</a>
+    
+        <a href="/links.html" class="navbar-link">友链</a>
+    
+        <a href="/QSL.html" class="navbar-link">QSL</a>
+    
+    
+    
+</nav>
+</header>
+
+            
+    <!-- ## Post ## -->
+    <div class="post-container">
+    <div id="post-card" class="card">
+        
+        <div class="card-item-container">
+            <div class="card-inner-cell">
+                <!-- # Post Header Info # -->
+                <div class="card-header">
+                    
+    <h1 class="card-title h3 mb-2">对于校园自行车管理的几点思考</h1>
+
+
+
+
+<div class="post-header-info">
+    <p class="post-header-info-left text-gray">
+        <img class="author-thumb lazyload" data-src="/img/apple-touch-icon.png" src="/img/suka-lazyload.gif" alt="Littlebear0729's Avatar">
+        <span>2023-12-07</span>
+        
+            <span class="suka-devide-dot"></span>
+            <a class="category-link" href="/categories/%E8%A7%82/">观</a>
+        
+        
+        
+    </p>
+    <div class="post-header-info-right">
+        
+    </div>
+</div>
+                </div>
+                <div class="card-body">
+                    
+                        
+                        
+                            <div id="post-toc"><ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E6%94%BF%E7%AD%96%E5%86%85%E5%AE%B9%E6%98%AF%E4%BB%80%E4%B9%88"><span class="post-toc-number">1.</span> <span class="post-toc-text">政策内容是什么</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%8F%8D%E5%AF%B9%E8%80%85%E4%B8%BA%E4%BB%80%E4%B9%88%E5%8F%8D%E5%AF%B9"><span class="post-toc-number">2.</span> <span class="post-toc-text">反对者为什么反对</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E6%88%91%E7%9A%84%E6%80%81%E5%BA%A6%E4%B8%8E%E7%9C%8B%E6%B3%95"><span class="post-toc-number">3.</span> <span class="post-toc-text">我的态度与看法</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E6%A0%A1%E5%9B%AD%E8%87%AA%E8%A1%8C%E8%BD%A6%E7%8E%B0%E7%8A%B6"><span class="post-toc-number">4.</span> <span class="post-toc-text">校园自行车现状</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%8F%AF%E4%BB%A5%E6%80%8E%E4%B9%88%E5%8A%9E"><span class="post-toc-number">5.</span> <span class="post-toc-text">可以怎么办</span></a></li></ol></div>
+                        
+                    
+                    <article id="post-content">
+                        <p>前几日，学校出台了在校园内关于电动车管理的一系列新政策。作为一个入学以来，给校长信箱写过不下十篇邮件的「刺儿头」，还是斗胆写一篇博客谈一谈自己的看法。针对于这次的新政策，学生们的反应也十分多样。有支持的，也有反对的，主要能听到的还是反对的声音居多。我个人还是比较乐于看到学校愿意出手管这件事情的，对于一部分政策，我非常赞同。但是对于令一部分政策，我不敢苟同，认为还是有待斟酌。写下这篇文章供大家一起交流讨论。</p>
+<span id="more"></span>
+
+<h3 id="政策内容是什么"><a href="#政策内容是什么" class="headerlink" title="政策内容是什么"></a>政策内容是什么</h3><p>2023年11月28日，校内网发了两篇通知，题目分别为《关于办理校园电动自行车备案的通知》和《关于在平乐园校区设置电动自行车专用停车场及规范车辆停放要求的通知》。</p>
+<p>在《关于办理校园电动自行车备案的通知》中，要求对所有「通知发布日期之前」的「有购车发票或电动车行驶证」的电动车进行备案。在规定时间和过渡期过后，禁止未备案的电动自行车驶入校园。<strong>禁止所有电动自行车驶入中蓝校区。</strong></p>
+<p>在《关于在平乐园校区设置电动自行车专用停车场及规范车辆停放要求的通知》中，学校在校园内规定了两处电动自行车专用停放点和一处电动车专用充电处。要求「所有」电动自行车停放在两个指定停放点，并对于没有按要求停放的车辆「移动至」停车场且「后果自负」。在规定时间和过渡期过后，严格执行电动车集中停放。<strong>禁止所有电动自行车驶入中蓝校区。同时「倡议」师生员工在校园内不使用电动自行车作为通行工具。</strong></p>
+<h3 id="反对者为什么反对"><a href="#反对者为什么反对" class="headerlink" title="反对者为什么反对"></a>反对者为什么反对</h3><p>北工大可能是北京电动车保有量最大的高校之一了，学校面积不大，但是由于研究生宿舍在几公里外的中蓝校区，所以在两校区之间往返通勤的需求非常大。而购买电动车的大部分恰恰是有通勤需求的研究生。</p>
+<p>在政策中，禁止了电动车进入中蓝校区，必然会加强中蓝校区周边道路的停车压力。于是，矛盾就将转移到市政部门与学生。这也是大多数反对者的主要顾虑。由于我是本科生，不便过多对中蓝校区的情况作出评价，后文不再讨论中蓝校区相关的内容。</p>
+<p>另一个反对点在于，不允许将电动车作为校园内的通行工具有一些太过一刀切了。规定的停放地点也太远，结果就是大家都不是很方便。</p>
+<h3 id="我的态度与看法"><a href="#我的态度与看法" class="headerlink" title="我的态度与看法"></a>我的态度与看法</h3><p>在第一篇通知中，学校要求所有进入校园内的电动车备案。这样做便于学校对电动车进行管理，在电动车上牌的基础上进行备案，方便学校根据车牌号找到对应的车主。同时，这么做杜绝了校外电动车进入校园。对于备案政策，我是举双手赞成的。</p>
+<p>在第二篇通知中，首先，学校「倡议」在校园内不使用电动自行车作为通行工具。大家都知道，学校的「倡议」基本上就是明令禁止。在《校园电动自行车安全使用承诺书》中，写着「本人承诺遵守不使用电动自行车作为校内通行工具」。说白了，学校不想让大家在校园内骑电动车，而是想让大家把电动车作为校外的代步工具。这一点依我来看是否有一些太过一刀切了？平乐园校区说大不大，说小不小。在有急事的情况下，电动车还是最方便的交通工具。我认为这点政策确实还有待商榷。</p>
+<p>第二点是，学校要求所有电动车在指定的两个停车区停车。我认为这项政策也太过极端。首先这两个停车区的面积是否足够容纳所有的电动车还不得而知，而且这两个停车区的位置设定，距离大部分同学非常远。事实上，这项政策是遵循「电动车为校外代步工具」的假设前提下成立的。按照实际情况来看，学生们也有将电动车停放在教学楼下、食堂门口、办公楼下和宿舍楼门口的需求。如果在这些相应地方画好停车引导标志线，在不允许停车的地方画好黄色网格线。通过增加规定停车的位置，同学们可能会更容易接受这项政策，从而配合政策落地。其实在这里，最重要的点在于学校没有执法权。对于学生的电动车，谈不上「强制移动」，更谈不上「后果自负」。这一点也希望学校采用更温和的方式，对违规学生进行批评教育和处罚。</p>
+<p>总得来说，学校如此制定政策，是实实在在的一刀切懒政，只想着用最低的成本解决问题。在制定政策之前没有广泛听取学生的意见，是本次政策制定的最大败笔，也是激起群愤的导火索。校方妄图通过一刀切的政策解决问题，殊不知这么做只会激化矛盾。认识问题、直面问题、解决问题是优秀管理的态度，无视问题、掩盖问题、回避问题是低水平的逃避。</p>
+<p>我的另外看法还包括，目前的政策仅针对于电动自行车进行备案和管理，对于自行车的备案和管理还没有政策。我个人希望学校可以完善这方面的政策。另外，对于新购买的电动车如何进行上牌和备案，目前的政策是不允许进行备案。但是新学年一定会有这样的需求，希望学校可以继续完善相关政策。</p>
+<h3 id="校园自行车现状"><a href="#校园自行车现状" class="headerlink" title="校园自行车现状"></a>校园自行车现状</h3><p>同学，你见过被各种自行车围的水泄不通的宿舍楼门口吗？你见过停放了双层车辆，人都无法挤过去的食堂门口吗？你见过原本10米宽，但是两侧都停了自行车导致只有一人宽的道路吗？你有过被快速穿行的电动车、自行车刮蹭到的经历吗？这些我都经历过。除此之外，还有一些车辆经常停放在「热门区域」却从来没有移动过，座椅上积了厚厚的一层灰尘，成为了名副其实的「僵尸车」，阻碍了原本可以停放车辆的位置。</p>
+<p>学校出台政策的背景绝对不只是应付消防安全检查，校方一定是看到了越来越多的非机动车在校园内的乱象，才出台政策准备解决这个问题。我结合个人的经历，也希望大家首先可以自觉将车辆停放在合理的位置，提升自己的安全骑行意识。在有条件的情况下，写信给学校，对自行车的管理提出自己的建议，配合施行学校指定的合理的政策。</p>
+<p>总结一下，主要的问题在以下几点：</p>
+<ol>
+<li>校园里自行车数量过多</li>
+<li>僵尸车数量多</li>
+<li>乱停放现象突出</li>
+<li>骑车人安全意识淡薄</li>
+</ol>
+<p>综上，究其根本原因，校园内的非机动车的矛盾点，从来就不是电动车和自行车数量的问题，而是非机动车车主没有自觉停放车辆、安全骑行意识低下的问题。这个问题与电动车还是自行车无关，与学生的道德、素质水平、自觉性，和学校的管理水平、管理决心有关。</p>
+<h3 id="可以怎么办"><a href="#可以怎么办" class="headerlink" title="可以怎么办"></a>可以怎么办</h3><p>针对于上文总结的主要问题，我提出如下建议：</p>
+<ol>
+<li>充分规划停车位，建设遮雨棚、自行车架，划定明显标志，请同学们规范停放车辆。</li>
+<li>在特定地点修建凸面镜、画定自行车道等交通安全设施。</li>
+<li>增强对同学们的安全骑行教育。</li>
+<li>处理僵尸车。</li>
+<li>进行车辆编号和登记（即备案制度）。</li>
+<li>建立完善的惩罚制度。</li>
+</ol>
+<p>就近期学校颁布的政策来看，目前的结果恐怕是大家都不想看到的。学校不愿意花钱修建遮雨棚，只愿意使用警戒线围住楼门口。不舍得投资修建便利设施，永远无法解决问题。我只能说，学校的管理水平还需要再学习一个。如果在学校规定的过渡期之后，校园内自行车问题得不到改善，我将继续给校长信箱写信提出以上建议。</p>
+<p>希望学校可以以正面引导、批评教育为主，惩罚为辅，拿出解决问题的态度，共同建立美好的校园环境。</p>
+<p>最后，附上我在2023年10月23日给校长信箱的信件全文内容如下：</p>
+<blockquote>
+<p>校长信箱，</p>
+<p>您好！</p>
+<p>目前，学校内的自行车和电动自行车的数量急剧增多。加之共享单车的使用量较大，校园自行车管理成为较大挑战。</p>
+<p>在图书馆东侧与美食园相邻的道路上，经管楼门口，10号、11号宿舍楼门口均可看到大量随意停放的自行车和电动车。这些自行车的随意停放大量占用了行人通道，甚至占用了无障碍通道，为师生带来诸多不便。在宿舍楼门口堆积的自行车更会引发安全问题。一旦宿舍楼失火，楼内学生无法通过门口逃生，甚至消防通道也会被自行车占用，造成的后果不容小觑。</p>
+<p>随意骑行、超速骑行的自行车还会带来安全问题。有的驾驶员不礼让行人，在校园路口（银杏大道与图书馆南门的十字路口）不观察左右来车和行人，极易引发事故。[1]</p>
+<p>我建议学校可以加强对学生的自行车骑行安全教育，规定同学们有序、规范停放自行车。</p>
+<p>建议在学校内划分充足的合理的非机动车指定停放点并设立醒目的指示牌和区域标识。规定共享单车、自行车和电动自行车停放在指定停放点（北操场北侧、金工楼南侧等），标明停放自行车的具体区域，禁止学生双层停车。同时对于这些停放点，适当修建遮雨棚，使学生们停车更加放心。</p>
+<p>建议对所有进入校园的自行车做一车一人的登记，将车辆管理编号粘贴在车辆醒目位置，方便入校时安保人员进行查验。对没有停放在规定区域的自行车根据管理编号找到学生进行批评教育和处罚，对于没有管理编号的“僵尸车”进行统一清理。</p>
+<p>希望在不久的将来可以看到校园内摆放整齐的自行车，共同维护文明有序的校园交通环境。</p>
+<p>祝好，</p>
+<p>[署名]</p>
+</blockquote>
+<p>*注1：我的确有一次差点被后座载人的电动车撞到。骑车人在前面扭头和后面的人说话，没有看路。我甚至站定在路中间没有走动，看着他们说笑，径直撞向我。气得我大叫了一句：看着点！还有一次与一辆快速骑行的自行车擦肩而过，对方的书包甚至撞到了我的胳膊上。</p>
+<p>只能说，学校听了，但是只听了一半，听了最方便做的那一半。</p>
+
+                    </article>
+                        
+    <blockquote class="post-license">
+        <p>
+            
+                <strong>本文作者&nbsp;:&nbsp;Littlebear0729</strong>
+            
+            <br>
+            <strong>
+            
+                本文使用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0)</a> 协议
+            </strong>
+            <br>
+            <strong>本文链接&nbsp;:&nbsp;</strong><a href="https://blog.bearxiong.xyz/2023/12/%E5%AF%B9%E4%BA%8E%E6%A0%A1%E5%9B%AD%E8%87%AA%E8%A1%8C%E8%BD%A6%E7%AE%A1%E7%90%86%E7%9A%84%E5%87%A0%E7%82%B9%E6%80%9D%E8%80%83/">https://blog.bearxiong.xyz/2023/12/%E5%AF%B9%E4%BA%8E%E6%A0%A1%E5%9B%AD%E8%87%AA%E8%A1%8C%E8%BD%A6%E7%AE%A1%E7%90%86%E7%9A%84%E5%87%A0%E7%82%B9%E6%80%9D%E8%80%83/</a>
+        </p>
+    </blockquote>
+
+
+
+    <blockquote id="date-expire-notification" class="post-expired-notify">本文最后更新于 <span id="date-expire-num"></span> 天前，文中所描述的信息可能已发生改变</blockquote>
+    <script>
+    (function() {
+        var dateUpdate = Date.parse("2024-10-06");
+        var nowDate = new Date();
+        var a = nowDate.getTime();
+        var b = a - dateUpdate;
+        var daysUpdateExpire = Math.floor(b/(24*3600*1000));
+        if (daysUpdateExpire >= 120) {
+            document.getElementById('date-expire-num').innerHTML = daysUpdateExpire;
+        } else {
+            document.getElementById('date-expire-notification').style.display = 'none';
+        }
+    })();
+    </script>
+
+
+<p class="post-footer-info mb-0 pt-0">本文发表于&nbsp;<time datetime="2023-12-07T06:01:19.000Z" itemprop="datePublished">2023-12-07</time>
+
+    , 最后修改于&nbsp;<time datetime="2024-10-06T09:45:10.335Z" itemprop="dateModified">2024-10-06</time>
+
+</p>
+<p class="post-footer-info mb-0 pt-2">
+
+<span class="post-categories-list mt-2">
+
+<a class="post-categories-list-item" href='/categories/%E8%A7%82/'>观</a>
+
+</span>
+
+
+
+
+</p>
+
+                </div>
+                <div class="post-nav px-2 bg-gray">
+<ul class="pagination">
+    <!-- Prev Nav -->
+    
+        <li class="page-item page-prev">
+            <a href="/2024/01/%E4%B8%8D%E8%A6%81%E8%AE%A9%E3%80%8C%E8%AE%BE%E5%A4%87%E3%80%8D%E6%88%90%E4%B8%BA%E4%BA%86%E4%BD%A0%E5%89%8D%E8%BF%9B%E8%B7%AF%E4%B8%8A%E7%9A%84%E7%BB%8A%E8%84%9A%E7%9F%B3%E2%80%94%E2%80%94%E4%B8%80%E4%BA%9B%E6%B6%88%E8%B4%B9%E8%A7%82%E6%96%B9%E9%9D%A2%E7%9A%84%E6%80%9D%E8%80%83/" rel="prev">
+                <div class="page-item-title"><i class="icon icon-back" aria-hidden="true"></i></div>
+                <div class="page-item-subtitle">不要让「设备」成为了你前进路上的绊脚石——一些消费观方面的思考</div>
+            </a>
+        </li>
+    
+
+    <!-- Next Nav -->
+    
+        <li class="page-item page-next">
+            <a href="/2023/11/%E5%BE%B7%E7%94%9FPL-660%EF%BC%8CPL-330%EF%BC%8C%E5%B0%8FK%E6%94%B6%E9%9F%B3%E6%9C%BA%E5%92%8CSR-286%E2%80%9C%E5%B0%8F%E5%BC%BA%E6%9C%BA%E2%80%9D%E4%BD%BF%E7%94%A8%E6%84%9F%E5%8F%97%E5%92%8C%E4%BD%93%E9%AA%8C/" rel="next">
+                <div class="page-item-title"><i class="icon icon-forward" aria-hidden="true"></i></div>
+                <div class="page-item-subtitle">德生PL-660，PL-330，小K收音机和SR-286“小强机”使用感受和体验</div>
+            </a>
+        </li>
+    
+</ul>
+</div>
+
+                
+                    <!-- # Comment # -->
+                    
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+            <!-- ### Footer ### -->
+            <footer class="text-center">
+    <!-- footer copyright -->
+    
+        <p class="footer-copyright mb-0">Copyright&nbsp;©&nbsp;<span id="copyright-year"></span>
+            <a class="footer-copyright-a" href="https://blog.bearxiong.xyz">小熊の小站</a>
+        </p>
+
+    <!-- footer custom text -->
+    <p class="footer-text mb-0">
+    <a href="https://blog.bearxiong.xyz/atom.xml" rel="nofollow noopener noreferrer">Subscribe my Atom Feed</a>
+    </p>
+    <!-- footer develop info -->
+    <p class="footer-develop mb-0">
+        
+
+        
+        Powered by&nbsp;<!--
+         --><a href="https://hexo.io" target="_blank" class="footer-develop-a" rel="external nofollow noopener noreferrer">Hexo</a><span class="footer-develop-divider"></span>Theme&nbsp;-&nbsp;<!--
+         --><a href="https://github.com/SukkaW/hexo-theme-suka" target="_blank" class="footer-develop-a" rel="external noopener">Suka</a>
+    </p>
+</footer>
+
+
+        <!-- ### Import File ### -->
+        <!-- ### Footer JS Import ### -->
+
+<script>
+
+    
+window.lazyLoadOptions = {
+    elements_selector: ".lazyload",
+    threshold: 50
+};
+
+(function() {
+    var copyrightNow = new Date().getFullYear();
+    var copyrightContent = document.getElementById('copyright-year');
+    var copyrightSince = 2019;
+    if (copyrightSince === copyrightNow) {
+        copyrightContent.textContent = copyrightNow;
+    } else {
+        copyrightContent.textContent = copyrightSince + ' - ' + copyrightNow;
+    }
+})();
+console.log('\n %c Suka Theme (hexo-theme-suka) | © SukkaW | Verision 1.3.3 %c https://github.com/SukkaW/hexo-theme-suka \n', 'color: #fff; background: #444; padding:5px 0;', 'background: #bbb; padding:5px 0;');
+
+</script>
+
+<script src="/lib/vanilla-lazyload/lazyload.min.js" async></script>
+
+
+
+<!-- Comment -->
+
+
+<!-- ### Custom Footer ### -->
+
+    </body>
+
+</html>

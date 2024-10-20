@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+    <head>
+    <meta charset="utf-8">
+    <!--
+        hexo-theme-suka © SukkaW
+        GitHub: https://github.com/SukkaW/hexo-theme-suka
+    -->
+
+    <!-- ### Resource Hint ### -->
+
+    <!-- ## DNS Prefetch ## -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+<!-- busuanzi -->
+
+
+<!-- comment -->
+
+
+
+
+
+
+
+<!-- analytics -->
+
+
+    <link rel="dns-prefetch" href="//www.google-analytics.com">
+
+
+    <link rel="dns-prefetch" href="//www.googletagmanager.com">
+    <link rel="dns-prefetch" href="//www.google-analytics.com">
+
+
+
+
+
+    <!-- ## Preload ## -->
+    
+
+
+
+
+    <!-- ### Meta & Title & Info ### -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, maximum-scale=5, viewport-fit=cover">
+    <meta name="renderer" content="webkit">
+
+    <!-- Title -->
+    <title>利用IPv6进行校园网免流量以及国际互联网访问 | 小熊の小站</title>
+
+    <!-- Favicons -->
+    <link rel="icon" type="image&#x2F;ico" href="/img/favicon.ico"><link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png"><link rel="icon" typt="image&#x2F;png" sizes="32x32" href="/img/favicon-16x16.png"><link rel="icon" typt="image&#x2F;png" sizes="16x16" href="/img/favicon-16x16.png"><link rel="mask-icon" href="/img/safari-pinned-tab.svg" color="">
+
+    <!-- ### Import File ### -->
+    <link rel="stylesheet" href="/lib/spectre/spectre.min.css"><style>
+    body {
+        background-color: #f8f9fa;
+    }
+
+    a, a:visited {
+        color: #0070ff;
+    }
+
+    a:active, a:focus, a:hover {
+        color: #0070ff;
+        opacity: .75;
+    }
+
+    #post-content a,
+    #post-content a:hover,
+    #post-content a:focus,
+    #post-content a:visited {
+        color: #005eb9;
+        opacity: 1;
+    }
+
+    
+
+    .post-entry .card-body a {
+        color: #0070ff;
+    }
+
+    .avatar {
+        background: #444;
+    }
+
+    .navbar-link,
+    .navbar-link:visited,
+    .timeline .timeline-item .timeline-icon.icon-lg {
+        color: #0070ff;
+    }
+
+    .navbar-link:hover {
+        color: #0070ff;
+        opacity: .8;
+    }
+
+    #search-input .btn,
+    #disqus_click_btn,
+    #disqus-switch-to-direct,
+    #disqus-loadmore-button {
+        background: #727e96;
+        border-color: #727e96;
+        color: #fff;
+    }
+
+    #post-toc a.post-toc-link,
+    #post-toc a.post-toc-link:visited,
+    .share-menu.menu .menu-item>a {
+        color: #727e96;
+    }
+
+    .share-menu.menu .menu-item>a:hover,
+    .share-menu.menu .menu-item>a:focus,
+    .share-menu.menu .menu-item>a:visited {
+        color: #50596c;
+        background: #f8f9fa;
+        opacity: .85;
+    }
+</style><link rel="stylesheet" href="/css/style.min.css">
+
+
+
+
+
+
+
+
+    <!-- Prettify Theme -->
+    
+    <link rel="preload" href="/css/highlight/darcula.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="/css/highlight/darcula.min.css"></noscript>
+
+
+
+
+
+<script>
+/*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
+!function(t){"use strict";t.loadCSS||(t.loadCSS=function(){});var e=loadCSS.relpreload={};if(e.support=function(){var e;try{e=t.document.createElement("link").relList.supports("preload")}catch(t){e=!1}return function(){return e}}(),e.bindMediaToggle=function(t){var e=t.media||"all";function a(){t.addEventListener?t.removeEventListener("load",a):t.attachEvent&&t.detachEvent("onload",a),t.setAttribute("onload",null),t.media=e}t.addEventListener?t.addEventListener("load",a):t.attachEvent&&t.attachEvent("onload",a),setTimeout(function(){t.rel="stylesheet",t.media="only x"}),setTimeout(a,3e3)},e.poly=function(){if(!e.support())for(var a=t.document.getElementsByTagName("link"),n=0;n<a.length;n++){var o=a[n];"preload"!==o.rel||"style"!==o.getAttribute("as")||o.getAttribute("data-loadcss")||(o.setAttribute("data-loadcss",!0),e.bindMediaToggle(o))}},!e.support()){e.poly();var a=t.setInterval(e.poly,500);t.addEventListener?t.addEventListener("load",function(){e.poly(),t.clearInterval(a)}):t.attachEvent&&t.attachEvent("onload",function(){e.poly(),t.clearInterval(a)})}"undefined"!=typeof exports?exports.loadCSS=loadCSS:t.loadCSS=loadCSS}("undefined"!=typeof global?global:this);
+</script>
+
+    <!-- ### Site Verification ### -->
+    
+
+
+    <link rel="alternate" type="application/atom+xml" href="/atom.xml"><meta name="mobile-web-app-capable" content="yes"><meta name="application-name" content="小熊の小站"><meta name="msapplication-starturl" content="https://blog.bearxiong.xyz"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="小熊の小站"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <!-- ### The Open Graph & Twitter Card Protocol ### -->
+    <meta property="og:title" content="利用IPv6进行校园网免流量以及国际互联网访问 | 小熊の小站"><meta property="og:site_name" content="小熊の小站"><meta property="og:type" content="article"><meta property="og:url" content="https://blog.bearxiong.xyz/2021/08/%E5%88%A9%E7%94%A8IPv6%E8%BF%9B%E8%A1%8C%E6%A0%A1%E5%9B%AD%E7%BD%91%E5%85%8D%E6%B5%81%E9%87%8F%E4%BB%A5%E5%8F%8A%E5%9B%BD%E9%99%85%E4%BA%92%E8%81%94%E7%BD%91%E8%AE%BF%E9%97%AE/"><meta property="og:locale" content="zh-CN"><meta name="description" content="BJUT一个月30G的流量屈指可数，稍微一个不注意就用光了。而购买流量的价格又十分昂贵，想着通过IPv6可以免除校园网流量计费，就折腾了一下，现分享一下折腾记。 校园网环境以及工作原理我所在的BJUT提供有线以及无线两种互联网接入方式。有线的RJ45接口一般在宿舍桌子下方，无线AP在走廊里面，数个宿舍共享一个AP（通州是一个宿舍一个AP）。其中，在大多数情况下，无线网络的速度上下行基本上都只有40 - Littlebear0729 - 小熊の小站"><meta name="keywords" content="小熊, littlebear, 博客, 小站, littlebear0729"><meta property="article:published_time" content="2021-08-29T00:21:11.000Z"><meta property="article:modified_time" content="2024-10-06T09:45:10.332Z"><meta property="og:updated_time" content="2024-10-06T09:45:10.332Z"><meta property="article:author" content="Littlebear0729"><meta property="article:tag" content="小熊, littlebear, 博客, 小站, littlebear0729"><meta name="twitter:card" content="summary">
+
+    
+
+    <!-- ### Canonical link ### -->
+    <link rel="canonical" href="https://blog.bearxiong.xyz/2021/08/%E5%88%A9%E7%94%A8IPv6%E8%BF%9B%E8%A1%8C%E6%A0%A1%E5%9B%AD%E7%BD%91%E5%85%8D%E6%B5%81%E9%87%8F%E4%BB%A5%E5%8F%8A%E5%9B%BD%E9%99%85%E4%BA%92%E8%81%94%E7%BD%91%E8%AE%BF%E9%97%AE/">
+
+    <meta name="generator" content="Hexo 6.3.0">
+
+    <!-- ### Analytics ### -->
+    
+    <!-- Google Analytics -->
+<script>
+    window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+    ga('create', '6097140926', 'auto');
+    ga('send', 'pageview');
+</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+
+
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-R9F6KBLL62"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-R9F6KBLL62');
+</script>
+
+
+
+
+
+
+
+
+    <!-- ### Structured Data ### -->
+    
+
+
+
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "url": "https://blog.bearxiong.xyz/2021/08/%E5%88%A9%E7%94%A8IPv6%E8%BF%9B%E8%A1%8C%E6%A0%A1%E5%9B%AD%E7%BD%91%E5%85%8D%E6%B5%81%E9%87%8F%E4%BB%A5%E5%8F%8A%E5%9B%BD%E9%99%85%E4%BA%92%E8%81%94%E7%BD%91%E8%AE%BF%E9%97%AE/",
+    "@type": "BlogPosting",
+    "logo": "https://blog.bearxiong.xyz/img/apple-touch-icon.png",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://blog.bearxiong.xyz/2021/08/%E5%88%A9%E7%94%A8IPv6%E8%BF%9B%E8%A1%8C%E6%A0%A1%E5%9B%AD%E7%BD%91%E5%85%8D%E6%B5%81%E9%87%8F%E4%BB%A5%E5%8F%8A%E5%9B%BD%E9%99%85%E4%BA%92%E8%81%94%E7%BD%91%E8%AE%BF%E9%97%AE/"
+    },
+    "headline": "利用IPv6进行校园网免流量以及国际互联网访问 | 小熊の小站",
+    
+    "image": {
+        "@type": "ImageObject",
+        "url": "https://blog.bearxiong.xyz/img/apple-touch-icon.png"
+    },
+    
+    "datePublished": "2021-08-29T00:21:11.000Z",
+    "dateModified": "2024-10-06T09:45:10.332Z",
+    "author": {
+        "@type": "Person",
+        "name": "Littlebear0729",
+        "image": {
+            "@type": "ImageObject",
+            "url": "https://blog.bearxiong.xyz/img/apple-touch-icon.png"
+        },
+        "description": "Try my best."
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "小熊の小站",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://blog.bearxiong.xyz/img/apple-touch-icon.png"
+        }
+    },
+    
+    "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://blog.bearxiong.xyz/search.html?s={search_term_string}",
+        "query-input": "required name=search_term_string"
+    },
+    
+    "keywords": "小熊, littlebear, 博客, 小站, littlebear0729",
+    "description": "BJUT一个月30G的流量屈指可数，稍微一个不注意就用光了。而购买流量的价格又十分昂贵，想着通过IPv6可以免除校园网流量计费，就折腾了一下，现分享一下折腾记。 校园网环境以及工作原理我所在的BJUT提供有线以及无线两种互联网接入方式。有线的RJ45接口一般在宿舍桌子下方，无线AP在走廊里面，数个宿舍共享一个AP（通州是一个宿舍一个AP）。其中，在大多数情况下，无线网络的速度上下行基本上都只有40 - Littlebear0729 - 小熊の小站"
+}
+</script>
+
+
+
+    <!-- ### Custom Head ### -->
+    
+</head>
+
+    <body>
+            
+
+            <!-- ### Main content ### -->
+            <!-- ## Header ##-->
+<header>
+    <h1 class="header-title text-center"><a href="/">小熊の小站</a></h1>
+
+    <p class="text-center header-slogan">
+        
+            
+                Try my best.
+            
+        
+    </p>
+
+    <nav class="navbar-section text-center">
+    
+        <a href="/" class="navbar-link">首页</a>
+    
+    
+        <a href="/archives/" class="navbar-link">归档</a>
+    
+    
+        <a href="/search.html" class="navbar-link">搜索</a>
+    
+    
+        <a href="/categories.html" class="navbar-link">分类</a>
+    
+        <a href="/about.html" class="navbar-link">关于</a>
+    
+        <a href="/links.html" class="navbar-link">友链</a>
+    
+        <a href="/QSL.html" class="navbar-link">QSL</a>
+    
+    
+    
+</nav>
+</header>
+
+            
+    <!-- ## Post ## -->
+    <div class="post-container">
+    <div id="post-card" class="card">
+        
+        <div class="card-item-container">
+            <div class="card-inner-cell">
+                <!-- # Post Header Info # -->
+                <div class="card-header">
+                    
+    <h1 class="card-title h3 mb-2">利用IPv6进行校园网免流量以及国际互联网访问</h1>
+
+
+
+
+<div class="post-header-info">
+    <p class="post-header-info-left text-gray">
+        <img class="author-thumb lazyload" data-src="/img/apple-touch-icon.png" src="/img/suka-lazyload.gif" alt="Littlebear0729's Avatar">
+        <span>2021-08-29</span>
+        
+            <span class="suka-devide-dot"></span>
+            <a class="category-link" href="/categories/%E6%8A%98%E8%85%BE%E8%AE%B0/">折腾记</a>
+        
+        
+        
+    </p>
+    <div class="post-header-info-right">
+        
+    </div>
+</div>
+                </div>
+                <div class="card-body">
+                    
+                        
+                        
+                            <div id="post-toc"><ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E6%A0%A1%E5%9B%AD%E7%BD%91%E7%8E%AF%E5%A2%83%E4%BB%A5%E5%8F%8A%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86"><span class="post-toc-number">1.</span> <span class="post-toc-text">校园网环境以及工作原理</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E8%B7%B3%E6%9D%BF%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E6%90%AD%E5%BB%BA"><span class="post-toc-number">2.</span> <span class="post-toc-text">跳板服务器的搭建</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="post-toc-number">3.</span> <span class="post-toc-text">注意事项</span></a></li></ol></div>
+                        
+                    
+                    <article id="post-content">
+                        <p>BJUT一个月30G的流量屈指可数，稍微一个不注意就用光了。而购买流量的价格又十分昂贵，想着通过IPv6可以免除校园网流量计费，就折腾了一下，现分享一下折腾记。</p>
+<h2 id="校园网环境以及工作原理"><a href="#校园网环境以及工作原理" class="headerlink" title="校园网环境以及工作原理"></a>校园网环境以及工作原理</h2><p>我所在的BJUT提供有线以及无线两种互联网接入方式。有线的RJ45接口一般在宿舍桌子下方，无线AP在走廊里面，数个宿舍共享一个AP（通州是一个宿舍一个AP）。其中，在大多数情况下，无线网络的速度上下行基本上都只有40Mbps，有线网络IPv4上下行基本上也是只有40Mbps。这点上下行带宽对于一个geek来说可能有点不太够用，但是IPv6有线的带宽下行可以达到400Mbps，上行也有100Mbps。无线网络基本上没有IPv6的接入，有线网络在大多数情况下还是有IPv6的接入的，所以想要免流量最好是只通过有线网上网。</p>
+<p>得以实现IPv6的免流量的逻辑就是校园网并不对IPv6的请求计入流量，而只对IPv4计入流量，所以我们的思路就是找一台IPv4&#x2F;IPv6双栈服务器做跳板，在校园内通过IPv6访问跳板服务器，服务器再将请求通过IPv4转发给目标，实现在校内通过IPv6访问IPv4资源和免流量的目的。同时，如果跳板服务器在GFW墙外，那么同时可以达到翻墙的效果，何乐而不为呢？这一切的成本可以低至5USD&#x2F;mo。</p>
+<h2 id="跳板服务器的搭建"><a href="#跳板服务器的搭建" class="headerlink" title="跳板服务器的搭建"></a>跳板服务器的搭建</h2><p>搭建跳板服务器的过程与搭建一台普通的V2Ray服务器别无二致，只是跳板服务器同时需要IPv6和IPv4两种IP协议罢了。在校内访问跳板服务器的时候需要通过IPv6的地址就可以了。</p>
+<ol>
+<li><p>购买VPS（以Vultr为例）</p>
+<p>跳板服务器就是我们所说的VPS，在这个情况下我选择了境外的Vultr。它的VPS提供IPv6的地址，而且价格便宜，创建和删除VPS都很方便。</p>
+<p>我购买了5USD&#x2F;mo的VPS实例，其配置是单核CPU，1G内存，25G的SSD，以及一个月1T的数据流量，对我来说应该是绰绰有余了。</p>
+<p><strong>在购买的时候选择Enable IPv6，安装好自己会用的操作系统，如果不会用Linux那么推荐安装Ubuntu 20.04。</strong></p>
+<p><strong>注意不要买2.5USD&#x2F;mo的IPv6 only的实例，那样会让你无法访问IPv4的资源！</strong></p>
+</li>
+<li><p>登入VPS</p>
+<p>在VPS实例创建完成后，就可以通过SSH登入进服务器了。在后台的控制界面可以看到服务器的IP地址以及root帐号的密码。我们可以通过putty或者xshell等软件远程登入服务器。这个过程就不详细展开了，网上都有详细的教程，具体可以关键字「SSH登入服务器」进行搜索。</p>
+</li>
+<li><p>安装V2Ray服务器端</p>
+<p>按照 <a target="_blank" rel="noopener" href="https://github.com/v2fly/fhs-install-v2ray">https://github.com/v2fly/fhs-install-v2ray</a> 的脚本，安装V2Fly服务器端。</p>
+<p>在终端运行：</p>
+<p><code># bash &lt;(curl -L https://raw.githubusercontent.com/v2fly/fhs-install-v2ray/master/install-release.sh)</code></p>
+<p>应该就可以自动安装成功了，如果有错误，请先解决依赖问题。</p>
+<p>下面开始配置V2Ray服务端。用喜欢的文字编辑器打开 <code>/usr/local/etc/v2ray/config.json</code> V2Ray配置文件。</p>
+<p>下面提供一个配置文件的模板。</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;log&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;access&quot;</span><span class="punctuation">:</span> <span class="string">&quot;/var/log/v2ray/access.log&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;error&quot;</span><span class="punctuation">:</span> <span class="string">&quot;/var/log/v2ray/error.log&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;loglevel&quot;</span><span class="punctuation">:</span> <span class="string">&quot;warning&quot;</span></span><br><span class="line">  <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;dns&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span><span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;stats&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span><span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;inbounds&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">    <span class="punctuation">&#123;</span></span><br><span class="line">      <span class="attr">&quot;port&quot;</span><span class="punctuation">:</span> <span class="number">443</span> <span class="comment">//将这里改成一个自己喜欢的端口号，推荐443,</span></span><br><span class="line">      <span class="attr">&quot;protocol&quot;</span><span class="punctuation">:</span> <span class="string">&quot;vmess&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;settings&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">        <span class="attr">&quot;clients&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">          <span class="punctuation">&#123;</span></span><br><span class="line">            <span class="attr">&quot;id&quot;</span><span class="punctuation">:</span> <span class="string">&quot;&quot;</span> <span class="comment">//在网站生成一个随机的UUID,</span></span><br><span class="line">            <span class="attr">&quot;alterId&quot;</span><span class="punctuation">:</span> <span class="number">2</span></span><br><span class="line">          <span class="punctuation">&#125;</span></span><br><span class="line">        <span class="punctuation">]</span></span><br><span class="line">      <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;tag&quot;</span><span class="punctuation">:</span> <span class="string">&quot;in-0&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;streamSettings&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">        <span class="attr">&quot;network&quot;</span><span class="punctuation">:</span> <span class="string">&quot;tcp&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;security&quot;</span><span class="punctuation">:</span> <span class="string">&quot;none&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;tcpSettings&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span><span class="punctuation">&#125;</span></span><br><span class="line">      <span class="punctuation">&#125;</span></span><br><span class="line">    <span class="punctuation">&#125;</span></span><br><span class="line">  <span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;outbounds&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">    <span class="punctuation">&#123;</span></span><br><span class="line">      <span class="attr">&quot;tag&quot;</span><span class="punctuation">:</span> <span class="string">&quot;direct&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;protocol&quot;</span><span class="punctuation">:</span> <span class="string">&quot;freedom&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;settings&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span><span class="punctuation">&#125;</span></span><br><span class="line">    <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="punctuation">&#123;</span></span><br><span class="line">      <span class="attr">&quot;tag&quot;</span><span class="punctuation">:</span> <span class="string">&quot;blocked&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;protocol&quot;</span><span class="punctuation">:</span> <span class="string">&quot;blackhole&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;settings&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span><span class="punctuation">&#125;</span></span><br><span class="line">    <span class="punctuation">&#125;</span></span><br><span class="line">  <span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;routing&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;domainStrategy&quot;</span><span class="punctuation">:</span> <span class="string">&quot;AsIs&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;rules&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">      <span class="punctuation">&#123;</span></span><br><span class="line">        <span class="attr">&quot;type&quot;</span><span class="punctuation">:</span> <span class="string">&quot;field&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;ip&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">          <span class="string">&quot;geoip:private&quot;</span></span><br><span class="line">        <span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;outboundTag&quot;</span><span class="punctuation">:</span> <span class="string">&quot;blocked&quot;</span></span><br><span class="line">      <span class="punctuation">&#125;</span></span><br><span class="line">    <span class="punctuation">]</span></span><br><span class="line">  <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;policy&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span><span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;reverse&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span><span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;transport&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span><span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>这是一个非常基础的使用vmess协议的配置文件，如果你有更多的其他需求，可以自己更改配置文件。</p>
+<p>在保存配置文件后，重新启动V2Ray服务端。检查一下端口占用状态和V2Ray运行情况，如果一切正常，就可以开始客户端的配置了。</p>
+</li>
+<li><p>安装V2Ray客户端</p>
+<p>由于客户端系统环境众多，就不一一说明如何配置了。要点就是在服务器地址中填写服务器的IPv6地址（可以在Vultr后台的Settings里面找到），填写好正确的端口号和UUID即可连接。自此，我们就搭建并配置好了一台跳板服务器且可以成功连接。此时我们的网络访问请求可以通过IPv6连接跳板服务器进行转发，这样我们校园网就不计流量，而且还可以达到翻墙的效果了。</p>
+</li>
+</ol>
+<h2 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h2><p>在登入校园网的时候，最好通过 <a target="_blank" rel="noopener" href="http://lgn6.bjut.edu.cn/">http://lgn6.bjut.edu.cn</a> 进行登入。同时选中IPv4和IPv6登入而不是仅选中IPv6登入，这样可以避免不走代理的流量无法访问非IPv6资源（例如微信等）。</p>
+<p>手机上面的VPN和电脑上VPN的原理略有不同，不一定是所有的软件和流量都会被IPv6转发至跳板服务器，要特别注意一下。</p>
+<p>如果对这个点有疑问，可以自己了解一下代理服务器实现的VPN和TUN&#x2F;TAP实现的虚拟网卡实现的VPN的区别。</p>
+
+                    </article>
+                        
+    <blockquote class="post-license">
+        <p>
+            
+                <strong>本文作者&nbsp;:&nbsp;Littlebear0729</strong>
+            
+            <br>
+            <strong>
+            
+                本文使用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0)</a> 协议
+            </strong>
+            <br>
+            <strong>本文链接&nbsp;:&nbsp;</strong><a href="https://blog.bearxiong.xyz/2021/08/%E5%88%A9%E7%94%A8IPv6%E8%BF%9B%E8%A1%8C%E6%A0%A1%E5%9B%AD%E7%BD%91%E5%85%8D%E6%B5%81%E9%87%8F%E4%BB%A5%E5%8F%8A%E5%9B%BD%E9%99%85%E4%BA%92%E8%81%94%E7%BD%91%E8%AE%BF%E9%97%AE/">https://blog.bearxiong.xyz/2021/08/%E5%88%A9%E7%94%A8IPv6%E8%BF%9B%E8%A1%8C%E6%A0%A1%E5%9B%AD%E7%BD%91%E5%85%8D%E6%B5%81%E9%87%8F%E4%BB%A5%E5%8F%8A%E5%9B%BD%E9%99%85%E4%BA%92%E8%81%94%E7%BD%91%E8%AE%BF%E9%97%AE/</a>
+        </p>
+    </blockquote>
+
+
+
+    <blockquote id="date-expire-notification" class="post-expired-notify">本文最后更新于 <span id="date-expire-num"></span> 天前，文中所描述的信息可能已发生改变</blockquote>
+    <script>
+    (function() {
+        var dateUpdate = Date.parse("2024-10-06");
+        var nowDate = new Date();
+        var a = nowDate.getTime();
+        var b = a - dateUpdate;
+        var daysUpdateExpire = Math.floor(b/(24*3600*1000));
+        if (daysUpdateExpire >= 120) {
+            document.getElementById('date-expire-num').innerHTML = daysUpdateExpire;
+        } else {
+            document.getElementById('date-expire-notification').style.display = 'none';
+        }
+    })();
+    </script>
+
+
+<p class="post-footer-info mb-0 pt-0">本文发表于&nbsp;<time datetime="2021-08-29T00:21:11.000Z" itemprop="datePublished">2021-08-29</time>
+
+    , 最后修改于&nbsp;<time datetime="2024-10-06T09:45:10.332Z" itemprop="dateModified">2024-10-06</time>
+
+</p>
+<p class="post-footer-info mb-0 pt-2">
+
+<span class="post-categories-list mt-2">
+
+<a class="post-categories-list-item" href='/categories/%E6%8A%98%E8%85%BE%E8%AE%B0/'>折腾记</a>
+
+</span>
+
+
+
+
+</p>
+
+                </div>
+                <div class="post-nav px-2 bg-gray">
+<ul class="pagination">
+    <!-- Prev Nav -->
+    
+        <li class="page-item page-prev">
+            <a href="/2021/09/%E4%BD%8E%E6%88%90%E6%9C%AC%E5%AE%BF%E8%88%8D%E6%97%A0%E7%BA%BF%E7%BD%91%E6%8B%AF%E6%95%91%E6%96%B9%E6%A1%88%E5%88%86%E4%BA%AB/" rel="prev">
+                <div class="page-item-title"><i class="icon icon-back" aria-hidden="true"></i></div>
+                <div class="page-item-subtitle">低成本宿舍无线网拯救方案分享</div>
+            </a>
+        </li>
+    
+
+    <!-- Next Nav -->
+    
+        <li class="page-item page-next">
+            <a href="/2021/08/%E5%B0%8F%E9%B9%A4%E5%8F%8C%E6%8B%BC%E4%BB%8E%E5%88%9D%E8%AF%86%E5%88%B0%E4%BD%BF%E7%94%A8/" rel="next">
+                <div class="page-item-title"><i class="icon icon-forward" aria-hidden="true"></i></div>
+                <div class="page-item-subtitle">小鹤双拼从初识到使用</div>
+            </a>
+        </li>
+    
+</ul>
+</div>
+
+                
+                    <!-- # Comment # -->
+                    
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+            <!-- ### Footer ### -->
+            <footer class="text-center">
+    <!-- footer copyright -->
+    
+        <p class="footer-copyright mb-0">Copyright&nbsp;©&nbsp;<span id="copyright-year"></span>
+            <a class="footer-copyright-a" href="https://blog.bearxiong.xyz">小熊の小站</a>
+        </p>
+
+    <!-- footer custom text -->
+    <p class="footer-text mb-0">
+    <a href="https://blog.bearxiong.xyz/atom.xml" rel="nofollow noopener noreferrer">Subscribe my Atom Feed</a>
+    </p>
+    <!-- footer develop info -->
+    <p class="footer-develop mb-0">
+        
+
+        
+        Powered by&nbsp;<!--
+         --><a href="https://hexo.io" target="_blank" class="footer-develop-a" rel="external nofollow noopener noreferrer">Hexo</a><span class="footer-develop-divider"></span>Theme&nbsp;-&nbsp;<!--
+         --><a href="https://github.com/SukkaW/hexo-theme-suka" target="_blank" class="footer-develop-a" rel="external noopener">Suka</a>
+    </p>
+</footer>
+
+
+        <!-- ### Import File ### -->
+        <!-- ### Footer JS Import ### -->
+
+<script>
+
+    
+window.lazyLoadOptions = {
+    elements_selector: ".lazyload",
+    threshold: 50
+};
+
+(function() {
+    var copyrightNow = new Date().getFullYear();
+    var copyrightContent = document.getElementById('copyright-year');
+    var copyrightSince = 2019;
+    if (copyrightSince === copyrightNow) {
+        copyrightContent.textContent = copyrightNow;
+    } else {
+        copyrightContent.textContent = copyrightSince + ' - ' + copyrightNow;
+    }
+})();
+console.log('\n %c Suka Theme (hexo-theme-suka) | © SukkaW | Verision 1.3.3 %c https://github.com/SukkaW/hexo-theme-suka \n', 'color: #fff; background: #444; padding:5px 0;', 'background: #bbb; padding:5px 0;');
+
+</script>
+
+<script src="/lib/vanilla-lazyload/lazyload.min.js" async></script>
+
+
+
+<!-- Comment -->
+
+
+<!-- ### Custom Footer ### -->
+
+    </body>
+
+</html>

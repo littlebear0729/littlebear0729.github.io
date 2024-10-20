@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+    <head>
+    <meta charset="utf-8">
+    <!--
+        hexo-theme-suka © SukkaW
+        GitHub: https://github.com/SukkaW/hexo-theme-suka
+    -->
+
+    <!-- ### Resource Hint ### -->
+
+    <!-- ## DNS Prefetch ## -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+<!-- busuanzi -->
+
+
+<!-- comment -->
+
+
+
+
+
+
+
+<!-- analytics -->
+
+
+    <link rel="dns-prefetch" href="//www.google-analytics.com">
+
+
+    <link rel="dns-prefetch" href="//www.googletagmanager.com">
+    <link rel="dns-prefetch" href="//www.google-analytics.com">
+
+
+
+
+
+    <!-- ## Preload ## -->
+    
+
+
+
+
+    <!-- ### Meta & Title & Info ### -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, maximum-scale=5, viewport-fit=cover">
+    <meta name="renderer" content="webkit">
+
+    <!-- Title -->
+    <title>图的遍历与Dijkstra最短路算法实现 | 小熊の小站</title>
+
+    <!-- Favicons -->
+    <link rel="icon" type="image&#x2F;ico" href="/img/favicon.ico"><link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png"><link rel="icon" typt="image&#x2F;png" sizes="32x32" href="/img/favicon-16x16.png"><link rel="icon" typt="image&#x2F;png" sizes="16x16" href="/img/favicon-16x16.png"><link rel="mask-icon" href="/img/safari-pinned-tab.svg" color="">
+
+    <!-- ### Import File ### -->
+    <link rel="stylesheet" href="/lib/spectre/spectre.min.css"><style>
+    body {
+        background-color: #f8f9fa;
+    }
+
+    a, a:visited {
+        color: #0070ff;
+    }
+
+    a:active, a:focus, a:hover {
+        color: #0070ff;
+        opacity: .75;
+    }
+
+    #post-content a,
+    #post-content a:hover,
+    #post-content a:focus,
+    #post-content a:visited {
+        color: #005eb9;
+        opacity: 1;
+    }
+
+    
+
+    .post-entry .card-body a {
+        color: #0070ff;
+    }
+
+    .avatar {
+        background: #444;
+    }
+
+    .navbar-link,
+    .navbar-link:visited,
+    .timeline .timeline-item .timeline-icon.icon-lg {
+        color: #0070ff;
+    }
+
+    .navbar-link:hover {
+        color: #0070ff;
+        opacity: .8;
+    }
+
+    #search-input .btn,
+    #disqus_click_btn,
+    #disqus-switch-to-direct,
+    #disqus-loadmore-button {
+        background: #727e96;
+        border-color: #727e96;
+        color: #fff;
+    }
+
+    #post-toc a.post-toc-link,
+    #post-toc a.post-toc-link:visited,
+    .share-menu.menu .menu-item>a {
+        color: #727e96;
+    }
+
+    .share-menu.menu .menu-item>a:hover,
+    .share-menu.menu .menu-item>a:focus,
+    .share-menu.menu .menu-item>a:visited {
+        color: #50596c;
+        background: #f8f9fa;
+        opacity: .85;
+    }
+</style><link rel="stylesheet" href="/css/style.min.css">
+
+
+
+
+
+
+
+
+    <!-- Prettify Theme -->
+    
+    <link rel="preload" href="/css/highlight/darcula.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="/css/highlight/darcula.min.css"></noscript>
+
+
+
+
+
+<script>
+/*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
+!function(t){"use strict";t.loadCSS||(t.loadCSS=function(){});var e=loadCSS.relpreload={};if(e.support=function(){var e;try{e=t.document.createElement("link").relList.supports("preload")}catch(t){e=!1}return function(){return e}}(),e.bindMediaToggle=function(t){var e=t.media||"all";function a(){t.addEventListener?t.removeEventListener("load",a):t.attachEvent&&t.detachEvent("onload",a),t.setAttribute("onload",null),t.media=e}t.addEventListener?t.addEventListener("load",a):t.attachEvent&&t.attachEvent("onload",a),setTimeout(function(){t.rel="stylesheet",t.media="only x"}),setTimeout(a,3e3)},e.poly=function(){if(!e.support())for(var a=t.document.getElementsByTagName("link"),n=0;n<a.length;n++){var o=a[n];"preload"!==o.rel||"style"!==o.getAttribute("as")||o.getAttribute("data-loadcss")||(o.setAttribute("data-loadcss",!0),e.bindMediaToggle(o))}},!e.support()){e.poly();var a=t.setInterval(e.poly,500);t.addEventListener?t.addEventListener("load",function(){e.poly(),t.clearInterval(a)}):t.attachEvent&&t.attachEvent("onload",function(){e.poly(),t.clearInterval(a)})}"undefined"!=typeof exports?exports.loadCSS=loadCSS:t.loadCSS=loadCSS}("undefined"!=typeof global?global:this);
+</script>
+
+    <!-- ### Site Verification ### -->
+    
+
+
+    <link rel="alternate" type="application/atom+xml" href="/atom.xml"><meta name="mobile-web-app-capable" content="yes"><meta name="application-name" content="小熊の小站"><meta name="msapplication-starturl" content="https://blog.bearxiong.xyz"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="小熊の小站"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <!-- ### The Open Graph & Twitter Card Protocol ### -->
+    <meta property="og:title" content="图的遍历与Dijkstra最短路算法实现 | 小熊の小站"><meta property="og:site_name" content="小熊の小站"><meta property="og:type" content="article"><meta property="og:url" content="https://blog.bearxiong.xyz/2022/05/%E5%9B%BE%E7%9A%84%E9%81%8D%E5%8E%86%E4%B8%8EDijkstra%E6%9C%80%E7%9F%AD%E8%B7%AF%E7%AE%97%E6%B3%95%E5%AE%9E%E7%8E%B0/"><meta property="og:locale" content="zh-CN"><meta name="description" content="0 概述本实验使用C++语言实现了图的遍历与Dijkstra最短路算法，使用邻接表存储图。 1 实验设计1.1 算法实现原理定义n为顶点数，m为边数。 定义二维可变数组graph[u][v]，其中u、v为顶点，代表 u -&amp;gt; v 有一条边，边权为w。 1vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt; graph;  1.2 算法设计与分析定义数组vis[u]，其中u为顶点，代 - Littlebear0729 - 小熊の小站"><meta name="keywords" content="小熊, littlebear, 博客, 小站, littlebear0729"><meta property="article:published_time" content="2022-05-21T11:38:30.000Z"><meta property="article:modified_time" content="2024-10-06T09:45:10.333Z"><meta property="og:updated_time" content="2024-10-06T09:45:10.333Z"><meta property="article:author" content="Littlebear0729"><meta property="article:tag" content="小熊, littlebear, 博客, 小站, littlebear0729"><meta name="twitter:card" content="summary">
+
+    
+
+    <!-- ### Canonical link ### -->
+    <link rel="canonical" href="https://blog.bearxiong.xyz/2022/05/%E5%9B%BE%E7%9A%84%E9%81%8D%E5%8E%86%E4%B8%8EDijkstra%E6%9C%80%E7%9F%AD%E8%B7%AF%E7%AE%97%E6%B3%95%E5%AE%9E%E7%8E%B0/">
+
+    <meta name="generator" content="Hexo 6.3.0">
+
+    <!-- ### Analytics ### -->
+    
+    <!-- Google Analytics -->
+<script>
+    window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+    ga('create', '6097140926', 'auto');
+    ga('send', 'pageview');
+</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+
+
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-R9F6KBLL62"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-R9F6KBLL62');
+</script>
+
+
+
+
+
+
+
+
+    <!-- ### Structured Data ### -->
+    
+
+
+
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "url": "https://blog.bearxiong.xyz/2022/05/%E5%9B%BE%E7%9A%84%E9%81%8D%E5%8E%86%E4%B8%8EDijkstra%E6%9C%80%E7%9F%AD%E8%B7%AF%E7%AE%97%E6%B3%95%E5%AE%9E%E7%8E%B0/",
+    "@type": "BlogPosting",
+    "logo": "https://blog.bearxiong.xyz/img/apple-touch-icon.png",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://blog.bearxiong.xyz/2022/05/%E5%9B%BE%E7%9A%84%E9%81%8D%E5%8E%86%E4%B8%8EDijkstra%E6%9C%80%E7%9F%AD%E8%B7%AF%E7%AE%97%E6%B3%95%E5%AE%9E%E7%8E%B0/"
+    },
+    "headline": "图的遍历与Dijkstra最短路算法实现 | 小熊の小站",
+    
+    "image": {
+        "@type": "ImageObject",
+        "url": "https://blog.bearxiong.xyz/img/apple-touch-icon.png"
+    },
+    
+    "datePublished": "2022-05-21T11:38:30.000Z",
+    "dateModified": "2024-10-06T09:45:10.333Z",
+    "author": {
+        "@type": "Person",
+        "name": "Littlebear0729",
+        "image": {
+            "@type": "ImageObject",
+            "url": "https://blog.bearxiong.xyz/img/apple-touch-icon.png"
+        },
+        "description": "Try my best."
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "小熊の小站",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://blog.bearxiong.xyz/img/apple-touch-icon.png"
+        }
+    },
+    
+    "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://blog.bearxiong.xyz/search.html?s={search_term_string}",
+        "query-input": "required name=search_term_string"
+    },
+    
+    "keywords": "小熊, littlebear, 博客, 小站, littlebear0729",
+    "description": "0 概述本实验使用C++语言实现了图的遍历与Dijkstra最短路算法，使用邻接表存储图。 1 实验设计1.1 算法实现原理定义n为顶点数，m为边数。 定义二维可变数组graph[u][v]，其中u、v为顶点，代表 u -&amp;amp;gt; v 有一条边，边权为w。 1vector&amp;amp;lt;vector&amp;amp;lt;int&amp;amp;gt;&amp;amp;gt; graph;  1.2 算法设计与分析定义数组vis[u]，其中u为顶点，代 - Littlebear0729 - 小熊の小站"
+}
+</script>
+
+
+
+    <!-- ### Custom Head ### -->
+    
+</head>
+
+    <body>
+            
+
+            <!-- ### Main content ### -->
+            <!-- ## Header ##-->
+<header>
+    <h1 class="header-title text-center"><a href="/">小熊の小站</a></h1>
+
+    <p class="text-center header-slogan">
+        
+            
+                Try my best.
+            
+        
+    </p>
+
+    <nav class="navbar-section text-center">
+    
+        <a href="/" class="navbar-link">首页</a>
+    
+    
+        <a href="/archives/" class="navbar-link">归档</a>
+    
+    
+        <a href="/search.html" class="navbar-link">搜索</a>
+    
+    
+        <a href="/categories.html" class="navbar-link">分类</a>
+    
+        <a href="/about.html" class="navbar-link">关于</a>
+    
+        <a href="/links.html" class="navbar-link">友链</a>
+    
+        <a href="/QSL.html" class="navbar-link">QSL</a>
+    
+    
+    
+</nav>
+</header>
+
+            
+    <!-- ## Post ## -->
+    <div class="post-container">
+    <div id="post-card" class="card">
+        
+        <div class="card-item-container">
+            <div class="card-inner-cell">
+                <!-- # Post Header Info # -->
+                <div class="card-header">
+                    
+    <h1 class="card-title h3 mb-2">图的遍历与Dijkstra最短路算法实现</h1>
+
+
+
+
+<div class="post-header-info">
+    <p class="post-header-info-left text-gray">
+        <img class="author-thumb lazyload" data-src="/img/apple-touch-icon.png" src="/img/suka-lazyload.gif" alt="Littlebear0729's Avatar">
+        <span>2022-05-21</span>
+        
+            <span class="suka-devide-dot"></span>
+            <a class="category-link" href="/categories/%E5%AD%A6%E4%B9%A0%E8%AE%B0/">学习记</a>
+        
+        
+        
+    </p>
+    <div class="post-header-info-right">
+        
+    </div>
+</div>
+                </div>
+                <div class="card-body">
+                    
+                        
+                        
+                            <div id="post-toc"><ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#0-%E6%A6%82%E8%BF%B0"><span class="post-toc-number">1.</span> <span class="post-toc-text">0 概述</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#1-%E5%AE%9E%E9%AA%8C%E8%AE%BE%E8%AE%A1"><span class="post-toc-number">2.</span> <span class="post-toc-text">1 实验设计</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-1-%E7%AE%97%E6%B3%95%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">1.1 算法实现原理</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-2-%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">1.2 算法设计与分析</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#DFS%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2"><span class="post-toc-number">2.2.1.</span> <span class="post-toc-text">DFS深度优先搜索</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#BFS%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2"><span class="post-toc-number">2.2.2.</span> <span class="post-toc-text">BFS广度优先搜索</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Dijkstra%E6%9C%80%E7%9F%AD%E8%B7%AF%E7%AE%97%E6%B3%95"><span class="post-toc-number">2.2.3.</span> <span class="post-toc-text">Dijkstra最短路算法</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#2-%E5%AE%9E%E9%AA%8C%E7%BB%93%E6%9E%9C%E8%AF%B4%E6%98%8E%E4%B8%8E%E5%88%86%E6%9E%90"><span class="post-toc-number">3.</span> <span class="post-toc-text">2 实验结果说明与分析</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#BFS%E4%B8%8EDFS"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">BFS与DFS</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Dijkstra%E6%9C%80%E7%9F%AD%E8%B7%AF%E7%AE%97%E6%B3%95-1"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">Dijkstra最短路算法</span></a></li></ol></li></ol></div>
+                        
+                    
+                    <article id="post-content">
+                        <h2 id="0-概述"><a href="#0-概述" class="headerlink" title="0 概述"></a>0 概述</h2><p>本实验使用C++语言实现了图的遍历与Dijkstra最短路算法，使用邻接表存储图。</p>
+<h2 id="1-实验设计"><a href="#1-实验设计" class="headerlink" title="1 实验设计"></a>1 实验设计</h2><h3 id="1-1-算法实现原理"><a href="#1-1-算法实现原理" class="headerlink" title="1.1 算法实现原理"></a>1.1 算法实现原理</h3><p>定义n为顶点数，m为边数。</p>
+<p>定义二维可变数组graph[u][v]，其中u、v为顶点，代表 u -&gt; v 有一条边，边权为w。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vector&lt;vector&lt;<span class="type">int</span>&gt;&gt; graph;</span><br></pre></td></tr></table></figure>
+
+<h3 id="1-2-算法设计与分析"><a href="#1-2-算法设计与分析" class="headerlink" title="1.2 算法设计与分析"></a>1.2 算法设计与分析</h3><p>定义数组vis[u]，其中u为顶点，代表u是否被访问过。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vector&lt;<span class="type">bool</span>&gt; vis;</span><br></pre></td></tr></table></figure>
+
+<h4 id="DFS深度优先搜索"><a href="#DFS深度优先搜索" class="headerlink" title="DFS深度优先搜索"></a>DFS深度优先搜索</h4><p>从起点顶点u开始，递归遍历这个点的所有邻接点。</p>
+<p>当遍历到这个点的时候，标记该点为已访问，直到所有点都被访问后，遍历结束。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">dfs</span><span class="params">(<span class="type">int</span> u)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (vis[u]) <span class="keyword">return</span>;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d &quot;</span>, u);</span><br><span class="line">    vis[u] = <span class="literal">true</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; graph[u].<span class="built_in">size</span>(); i++) &#123;</span><br><span class="line">        <span class="type">int</span> v = graph[u][i];</span><br><span class="line">        <span class="keyword">if</span> (!vis[v]) &#123;</span><br><span class="line">            <span class="built_in">dfs</span>(v);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="BFS广度优先搜索"><a href="#BFS广度优先搜索" class="headerlink" title="BFS广度优先搜索"></a>BFS广度优先搜索</h4><p>从起点顶点开始，遍历这个点的所有邻接点。</p>
+<p>每遍历一个点，将该点的所有邻接点加入队列，标记该点为已访问，直到队列为空，遍历结束。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">bfs</span><span class="params">(<span class="type">int</span> u)</span> </span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d &quot;</span>, u);</span><br><span class="line">    vis[u] = <span class="literal">true</span>;</span><br><span class="line">    queue&lt;<span class="type">int</span>&gt; q;</span><br><span class="line">    q.<span class="built_in">push</span>(u);</span><br><span class="line">    <span class="keyword">while</span> (!q.<span class="built_in">empty</span>()) &#123;</span><br><span class="line">        <span class="type">int</span> u = q.<span class="built_in">front</span>();</span><br><span class="line">        q.<span class="built_in">pop</span>();</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; graph[u].<span class="built_in">size</span>(); i++) &#123;</span><br><span class="line">            <span class="type">int</span> v = graph[u][i];</span><br><span class="line">            <span class="keyword">if</span> (!vis[v]) &#123;</span><br><span class="line">                <span class="built_in">printf</span>(<span class="string">&quot;%d &quot;</span>, v);</span><br><span class="line">                vis[v] = <span class="literal">true</span>;</span><br><span class="line">                q.<span class="built_in">push</span>(v);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="Dijkstra最短路算法"><a href="#Dijkstra最短路算法" class="headerlink" title="Dijkstra最短路算法"></a>Dijkstra最短路算法</h4><p>在实现Dijkstra最短路算法的过程中，创建了一个结构体edge，其中v是边的终点，w是边的权重。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">struct</span> <span class="title class_">edge</span> &#123;</span><br><span class="line">    <span class="type">int</span> v, w; <span class="comment">// v: 终点， w: 权重</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>每次通过遍历，找到一条没有被访问过的距离最小的顶点，对这个点的所有邻接点更新距离为可能的最短距离。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">dijkstra</span><span class="params">(<span class="type">int</span> s)</span> </span>&#123;</span><br><span class="line">    dis[s] = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++) &#123;</span><br><span class="line">        <span class="type">int</span> u = <span class="number">-1</span>, min = INF;</span><br><span class="line">        <span class="comment">// 找到未访问的、距离最小的顶点</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">1</span>; j &lt;= n; j++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (!vis[j] &amp;&amp; dis[j] &lt; min) &#123;</span><br><span class="line">                u = j;</span><br><span class="line">                min = dis[j];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (u == <span class="number">-1</span>) <span class="keyword">break</span>;</span><br><span class="line">        vis[u] = <span class="literal">true</span>;</span><br><span class="line">        <span class="comment">// 更新距离（松弛）</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt; graph[u].<span class="built_in">size</span>(); j++) &#123;</span><br><span class="line">            <span class="type">int</span> v = graph[u][j].v;</span><br><span class="line">            <span class="type">int</span> w = graph[u][j].w;</span><br><span class="line">            <span class="keyword">if</span> (dis[v] &gt; dis[u] + w) &#123;</span><br><span class="line">                dis[v] = dis[u] + w;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-实验结果说明与分析"><a href="#2-实验结果说明与分析" class="headerlink" title="2 实验结果说明与分析"></a>2 实验结果说明与分析</h2><h3 id="BFS与DFS"><a href="#BFS与DFS" class="headerlink" title="BFS与DFS"></a>BFS与DFS</h3><p>第一行输入点和边的数量。</p>
+<p>接下来每行为一条边的信息，其中第一个数字为起点，第二个数字为终点。</p>
+<p>输入如下：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">5 10</span><br><span class="line">1 2</span><br><span class="line">1 3</span><br><span class="line">2 3</span><br><span class="line">3 2</span><br><span class="line">2 4</span><br><span class="line">3 4</span><br><span class="line">3 5</span><br><span class="line">4 5</span><br><span class="line">5 4</span><br><span class="line">5 1</span><br></pre></td></tr></table></figure>
+
+<p>经过DFS和BFS遍历后，输出结果如下：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">1 2 3 4 5</span><br><span class="line">1 2 3 4 5</span><br></pre></td></tr></table></figure>
+
+<p>代码在<code>homework3/graph.cpp</code>。</p>
+<h3 id="Dijkstra最短路算法-1"><a href="#Dijkstra最短路算法-1" class="headerlink" title="Dijkstra最短路算法"></a>Dijkstra最短路算法</h3><p>第一行输入点和边的数量。</p>
+<p>接下来每行为一条边的信息，其中第一个数字为起点，第二个数字为终点，第三个数字为边权。</p>
+<p>输入如下：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">5 10</span><br><span class="line">1 2 10</span><br><span class="line">1 3 5</span><br><span class="line">2 3 2</span><br><span class="line">3 2 3</span><br><span class="line">2 4 1</span><br><span class="line">3 4 9</span><br><span class="line">3 5 2</span><br><span class="line">4 5 4</span><br><span class="line">5 4 6</span><br><span class="line">5 1 7</span><br></pre></td></tr></table></figure>
+
+<p>输出起点（点1）到其他所有点的最短距离。</p>
+<p>通过更改函数参数，可以设定任意一个起点。</p>
+<p>输出如下：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">node 1 to 1: minimum weight is 0</span><br><span class="line">node 1 to 2: minimum weight is 8</span><br><span class="line">node 1 to 3: minimum weight is 5</span><br><span class="line">node 1 to 4: minimum weight is 9</span><br><span class="line">node 1 to 5: minimum weight is 7</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>代码开源在：<a target="_blank" rel="noopener" href="https://gitee.com/littlebear0729/data-structure-and-algorithm/tree/master/homework3">https://gitee.com/littlebear0729/data-structure-and-algorithm/tree/master/homework3</a></p>
+</blockquote>
+
+                    </article>
+                        
+    <blockquote class="post-license">
+        <p>
+            
+                <strong>本文作者&nbsp;:&nbsp;Littlebear0729</strong>
+            
+            <br>
+            <strong>
+            
+                本文使用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0)</a> 协议
+            </strong>
+            <br>
+            <strong>本文链接&nbsp;:&nbsp;</strong><a href="https://blog.bearxiong.xyz/2022/05/%E5%9B%BE%E7%9A%84%E9%81%8D%E5%8E%86%E4%B8%8EDijkstra%E6%9C%80%E7%9F%AD%E8%B7%AF%E7%AE%97%E6%B3%95%E5%AE%9E%E7%8E%B0/">https://blog.bearxiong.xyz/2022/05/%E5%9B%BE%E7%9A%84%E9%81%8D%E5%8E%86%E4%B8%8EDijkstra%E6%9C%80%E7%9F%AD%E8%B7%AF%E7%AE%97%E6%B3%95%E5%AE%9E%E7%8E%B0/</a>
+        </p>
+    </blockquote>
+
+
+
+    <blockquote id="date-expire-notification" class="post-expired-notify">本文最后更新于 <span id="date-expire-num"></span> 天前，文中所描述的信息可能已发生改变</blockquote>
+    <script>
+    (function() {
+        var dateUpdate = Date.parse("2024-10-06");
+        var nowDate = new Date();
+        var a = nowDate.getTime();
+        var b = a - dateUpdate;
+        var daysUpdateExpire = Math.floor(b/(24*3600*1000));
+        if (daysUpdateExpire >= 120) {
+            document.getElementById('date-expire-num').innerHTML = daysUpdateExpire;
+        } else {
+            document.getElementById('date-expire-notification').style.display = 'none';
+        }
+    })();
+    </script>
+
+
+<p class="post-footer-info mb-0 pt-0">本文发表于&nbsp;<time datetime="2022-05-21T11:38:30.000Z" itemprop="datePublished">2022-05-21</time>
+
+    , 最后修改于&nbsp;<time datetime="2024-10-06T09:45:10.333Z" itemprop="dateModified">2024-10-06</time>
+
+</p>
+<p class="post-footer-info mb-0 pt-2">
+
+<span class="post-categories-list mt-2">
+
+<a class="post-categories-list-item" href='/categories/%E5%AD%A6%E4%B9%A0%E8%AE%B0/'>学习记</a>
+
+</span>
+
+
+
+
+</p>
+
+                </div>
+                <div class="post-nav px-2 bg-gray">
+<ul class="pagination">
+    <!-- Prev Nav -->
+    
+        <li class="page-item page-prev">
+            <a href="/2022/05/%E4%BD%BF%E7%94%A8RSP1-SDR%E6%8E%A5%E6%94%B6NOAA%E5%8D%AB%E6%98%9F%E4%BA%91%E5%9B%BE/" rel="prev">
+                <div class="page-item-title"><i class="icon icon-back" aria-hidden="true"></i></div>
+                <div class="page-item-subtitle">使用RSP1 SDR接收NOAA卫星云图</div>
+            </a>
+        </li>
+    
+
+    <!-- Next Nav -->
+    
+        <li class="page-item page-next">
+            <a href="/2022/05/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E9%81%8D%E5%8E%86%E5%AE%9E%E7%8E%B0/" rel="next">
+                <div class="page-item-title"><i class="icon icon-forward" aria-hidden="true"></i></div>
+                <div class="page-item-subtitle">二叉树的遍历实现</div>
+            </a>
+        </li>
+    
+</ul>
+</div>
+
+                
+                    <!-- # Comment # -->
+                    
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+            <!-- ### Footer ### -->
+            <footer class="text-center">
+    <!-- footer copyright -->
+    
+        <p class="footer-copyright mb-0">Copyright&nbsp;©&nbsp;<span id="copyright-year"></span>
+            <a class="footer-copyright-a" href="https://blog.bearxiong.xyz">小熊の小站</a>
+        </p>
+
+    <!-- footer custom text -->
+    <p class="footer-text mb-0">
+    <a href="https://blog.bearxiong.xyz/atom.xml" rel="nofollow noopener noreferrer">Subscribe my Atom Feed</a>
+    </p>
+    <!-- footer develop info -->
+    <p class="footer-develop mb-0">
+        
+
+        
+        Powered by&nbsp;<!--
+         --><a href="https://hexo.io" target="_blank" class="footer-develop-a" rel="external nofollow noopener noreferrer">Hexo</a><span class="footer-develop-divider"></span>Theme&nbsp;-&nbsp;<!--
+         --><a href="https://github.com/SukkaW/hexo-theme-suka" target="_blank" class="footer-develop-a" rel="external noopener">Suka</a>
+    </p>
+</footer>
+
+
+        <!-- ### Import File ### -->
+        <!-- ### Footer JS Import ### -->
+
+<script>
+
+    
+window.lazyLoadOptions = {
+    elements_selector: ".lazyload",
+    threshold: 50
+};
+
+(function() {
+    var copyrightNow = new Date().getFullYear();
+    var copyrightContent = document.getElementById('copyright-year');
+    var copyrightSince = 2019;
+    if (copyrightSince === copyrightNow) {
+        copyrightContent.textContent = copyrightNow;
+    } else {
+        copyrightContent.textContent = copyrightSince + ' - ' + copyrightNow;
+    }
+})();
+console.log('\n %c Suka Theme (hexo-theme-suka) | © SukkaW | Verision 1.3.3 %c https://github.com/SukkaW/hexo-theme-suka \n', 'color: #fff; background: #444; padding:5px 0;', 'background: #bbb; padding:5px 0;');
+
+</script>
+
+<script src="/lib/vanilla-lazyload/lazyload.min.js" async></script>
+
+
+
+<!-- Comment -->
+
+
+<!-- ### Custom Footer ### -->
+
+    </body>
+
+</html>

@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+    <head>
+    <meta charset="utf-8">
+    <!--
+        hexo-theme-suka © SukkaW
+        GitHub: https://github.com/SukkaW/hexo-theme-suka
+    -->
+
+    <!-- ### Resource Hint ### -->
+
+    <!-- ## DNS Prefetch ## -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+<!-- busuanzi -->
+
+
+<!-- comment -->
+
+
+
+
+
+
+
+<!-- analytics -->
+
+
+    <link rel="dns-prefetch" href="//www.google-analytics.com">
+
+
+    <link rel="dns-prefetch" href="//www.googletagmanager.com">
+    <link rel="dns-prefetch" href="//www.google-analytics.com">
+
+
+
+
+
+    <!-- ## Preload ## -->
+    
+
+
+
+
+    <!-- ### Meta & Title & Info ### -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, maximum-scale=5, viewport-fit=cover">
+    <meta name="renderer" content="webkit">
+
+    <!-- Title -->
+    <title>【聊天记录】关于敏感词、屏蔽词与网络简写词的讨论 | 小熊の小站</title>
+
+    <!-- Favicons -->
+    <link rel="icon" type="image&#x2F;ico" href="/img/favicon.ico"><link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png"><link rel="icon" typt="image&#x2F;png" sizes="32x32" href="/img/favicon-16x16.png"><link rel="icon" typt="image&#x2F;png" sizes="16x16" href="/img/favicon-16x16.png"><link rel="mask-icon" href="/img/safari-pinned-tab.svg" color="">
+
+    <!-- ### Import File ### -->
+    <link rel="stylesheet" href="/lib/spectre/spectre.min.css"><style>
+    body {
+        background-color: #f8f9fa;
+    }
+
+    a, a:visited {
+        color: #0070ff;
+    }
+
+    a:active, a:focus, a:hover {
+        color: #0070ff;
+        opacity: .75;
+    }
+
+    #post-content a,
+    #post-content a:hover,
+    #post-content a:focus,
+    #post-content a:visited {
+        color: #005eb9;
+        opacity: 1;
+    }
+
+    
+
+    .post-entry .card-body a {
+        color: #0070ff;
+    }
+
+    .avatar {
+        background: #444;
+    }
+
+    .navbar-link,
+    .navbar-link:visited,
+    .timeline .timeline-item .timeline-icon.icon-lg {
+        color: #0070ff;
+    }
+
+    .navbar-link:hover {
+        color: #0070ff;
+        opacity: .8;
+    }
+
+    #search-input .btn,
+    #disqus_click_btn,
+    #disqus-switch-to-direct,
+    #disqus-loadmore-button {
+        background: #727e96;
+        border-color: #727e96;
+        color: #fff;
+    }
+
+    #post-toc a.post-toc-link,
+    #post-toc a.post-toc-link:visited,
+    .share-menu.menu .menu-item>a {
+        color: #727e96;
+    }
+
+    .share-menu.menu .menu-item>a:hover,
+    .share-menu.menu .menu-item>a:focus,
+    .share-menu.menu .menu-item>a:visited {
+        color: #50596c;
+        background: #f8f9fa;
+        opacity: .85;
+    }
+</style><link rel="stylesheet" href="/css/style.min.css">
+
+
+
+
+
+
+
+
+    <!-- Prettify Theme -->
+    
+    <link rel="preload" href="/css/highlight/darcula.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="/css/highlight/darcula.min.css"></noscript>
+
+
+
+
+
+<script>
+/*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
+!function(t){"use strict";t.loadCSS||(t.loadCSS=function(){});var e=loadCSS.relpreload={};if(e.support=function(){var e;try{e=t.document.createElement("link").relList.supports("preload")}catch(t){e=!1}return function(){return e}}(),e.bindMediaToggle=function(t){var e=t.media||"all";function a(){t.addEventListener?t.removeEventListener("load",a):t.attachEvent&&t.detachEvent("onload",a),t.setAttribute("onload",null),t.media=e}t.addEventListener?t.addEventListener("load",a):t.attachEvent&&t.attachEvent("onload",a),setTimeout(function(){t.rel="stylesheet",t.media="only x"}),setTimeout(a,3e3)},e.poly=function(){if(!e.support())for(var a=t.document.getElementsByTagName("link"),n=0;n<a.length;n++){var o=a[n];"preload"!==o.rel||"style"!==o.getAttribute("as")||o.getAttribute("data-loadcss")||(o.setAttribute("data-loadcss",!0),e.bindMediaToggle(o))}},!e.support()){e.poly();var a=t.setInterval(e.poly,500);t.addEventListener?t.addEventListener("load",function(){e.poly(),t.clearInterval(a)}):t.attachEvent&&t.attachEvent("onload",function(){e.poly(),t.clearInterval(a)})}"undefined"!=typeof exports?exports.loadCSS=loadCSS:t.loadCSS=loadCSS}("undefined"!=typeof global?global:this);
+</script>
+
+    <!-- ### Site Verification ### -->
+    
+
+
+    <link rel="alternate" type="application/atom+xml" href="/atom.xml"><meta name="mobile-web-app-capable" content="yes"><meta name="application-name" content="小熊の小站"><meta name="msapplication-starturl" content="https://blog.bearxiong.xyz"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="小熊の小站"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <!-- ### The Open Graph & Twitter Card Protocol ### -->
+    <meta property="og:title" content="【聊天记录】关于敏感词、屏蔽词与网络简写词的讨论 | 小熊の小站"><meta property="og:site_name" content="小熊の小站"><meta property="og:type" content="article"><meta property="og:url" content="https://blog.bearxiong.xyz/2022/02/%E5%85%B3%E4%BA%8E%E6%95%8F%E6%84%9F%E8%AF%8D%E3%80%81%E5%B1%8F%E8%94%BD%E8%AF%8D%E4%B8%8E%E7%BD%91%E7%BB%9C%E7%AE%80%E5%86%99%E8%AF%8D%E7%9A%84%E8%AE%A8%E8%AE%BA/"><meta property="og:locale" content="zh-CN"><meta name="description" content="很久没有发过输出自己观点的文章了，主要是很难把自己想的东西整理成形然后把它写出来。这篇文章在经过朋友的同意后，把和朋友的讨论聊天记录发出来，可以一瞥两个人的不同看法和观点。其中，聊天记录有删改。 - Littlebear0729 - 小熊の小站"><meta name="keywords" content="小熊, littlebear, 博客, 小站, littlebear0729"><meta property="article:published_time" content="2022-02-02T08:42:00.000Z"><meta property="article:modified_time" content="2024-10-06T09:45:10.332Z"><meta property="og:updated_time" content="2024-10-06T09:45:10.332Z"><meta property="article:author" content="Littlebear0729"><meta property="article:tag" content="小熊, littlebear, 博客, 小站, littlebear0729"><meta name="twitter:card" content="summary">
+
+    
+
+    <!-- ### Canonical link ### -->
+    <link rel="canonical" href="https://blog.bearxiong.xyz/2022/02/%E5%85%B3%E4%BA%8E%E6%95%8F%E6%84%9F%E8%AF%8D%E3%80%81%E5%B1%8F%E8%94%BD%E8%AF%8D%E4%B8%8E%E7%BD%91%E7%BB%9C%E7%AE%80%E5%86%99%E8%AF%8D%E7%9A%84%E8%AE%A8%E8%AE%BA/">
+
+    <meta name="generator" content="Hexo 6.3.0">
+
+    <!-- ### Analytics ### -->
+    
+    <!-- Google Analytics -->
+<script>
+    window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+    ga('create', '6097140926', 'auto');
+    ga('send', 'pageview');
+</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+
+
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-R9F6KBLL62"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-R9F6KBLL62');
+</script>
+
+
+
+
+
+
+
+
+    <!-- ### Structured Data ### -->
+    
+
+
+
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "url": "https://blog.bearxiong.xyz/2022/02/%E5%85%B3%E4%BA%8E%E6%95%8F%E6%84%9F%E8%AF%8D%E3%80%81%E5%B1%8F%E8%94%BD%E8%AF%8D%E4%B8%8E%E7%BD%91%E7%BB%9C%E7%AE%80%E5%86%99%E8%AF%8D%E7%9A%84%E8%AE%A8%E8%AE%BA/",
+    "@type": "BlogPosting",
+    "logo": "https://blog.bearxiong.xyz/img/apple-touch-icon.png",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://blog.bearxiong.xyz/2022/02/%E5%85%B3%E4%BA%8E%E6%95%8F%E6%84%9F%E8%AF%8D%E3%80%81%E5%B1%8F%E8%94%BD%E8%AF%8D%E4%B8%8E%E7%BD%91%E7%BB%9C%E7%AE%80%E5%86%99%E8%AF%8D%E7%9A%84%E8%AE%A8%E8%AE%BA/"
+    },
+    "headline": "【聊天记录】关于敏感词、屏蔽词与网络简写词的讨论 | 小熊の小站",
+    
+    "image": {
+        "@type": "ImageObject",
+        "url": "https://blog.bearxiong.xyz/img/apple-touch-icon.png"
+    },
+    
+    "datePublished": "2022-02-02T08:42:00.000Z",
+    "dateModified": "2024-10-06T09:45:10.332Z",
+    "author": {
+        "@type": "Person",
+        "name": "Littlebear0729",
+        "image": {
+            "@type": "ImageObject",
+            "url": "https://blog.bearxiong.xyz/img/apple-touch-icon.png"
+        },
+        "description": "Try my best."
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "小熊の小站",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://blog.bearxiong.xyz/img/apple-touch-icon.png"
+        }
+    },
+    
+    "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://blog.bearxiong.xyz/search.html?s={search_term_string}",
+        "query-input": "required name=search_term_string"
+    },
+    
+    "keywords": "小熊, littlebear, 博客, 小站, littlebear0729",
+    "description": "很久没有发过输出自己观点的文章了，主要是很难把自己想的东西整理成形然后把它写出来。这篇文章在经过朋友的同意后，把和朋友的讨论聊天记录发出来，可以一瞥两个人的不同看法和观点。其中，聊天记录有删改。 - Littlebear0729 - 小熊の小站"
+}
+</script>
+
+
+
+    <!-- ### Custom Head ### -->
+    
+</head>
+
+    <body>
+            
+
+            <!-- ### Main content ### -->
+            <!-- ## Header ##-->
+<header>
+    <h1 class="header-title text-center"><a href="/">小熊の小站</a></h1>
+
+    <p class="text-center header-slogan">
+        
+            
+                Try my best.
+            
+        
+    </p>
+
+    <nav class="navbar-section text-center">
+    
+        <a href="/" class="navbar-link">首页</a>
+    
+    
+        <a href="/archives/" class="navbar-link">归档</a>
+    
+    
+        <a href="/search.html" class="navbar-link">搜索</a>
+    
+    
+        <a href="/categories.html" class="navbar-link">分类</a>
+    
+        <a href="/about.html" class="navbar-link">关于</a>
+    
+        <a href="/links.html" class="navbar-link">友链</a>
+    
+        <a href="/QSL.html" class="navbar-link">QSL</a>
+    
+    
+    
+</nav>
+</header>
+
+            
+    <!-- ## Post ## -->
+    <div class="post-container">
+    <div id="post-card" class="card">
+        
+        <div class="card-item-container">
+            <div class="card-inner-cell">
+                <!-- # Post Header Info # -->
+                <div class="card-header">
+                    
+    <h1 class="card-title h3 mb-2">【聊天记录】关于敏感词、屏蔽词与网络简写词的讨论</h1>
+
+
+
+
+<div class="post-header-info">
+    <p class="post-header-info-left text-gray">
+        <img class="author-thumb lazyload" data-src="/img/apple-touch-icon.png" src="/img/suka-lazyload.gif" alt="Littlebear0729's Avatar">
+        <span>2022-02-02</span>
+        
+            <span class="suka-devide-dot"></span>
+            <a class="category-link" href="/categories/%E8%A7%82/">观</a>
+        
+        
+        
+    </p>
+    <div class="post-header-info-right">
+        
+    </div>
+</div>
+                </div>
+                <div class="card-body">
+                    
+                        
+                        
+                            <div id="post-toc"><ol class="post-toc"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E8%81%8A%E5%A4%A9%E8%AE%B0%E5%BD%95"><span class="post-toc-number">1.</span> <span class="post-toc-text">聊天记录</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E4%B8%BB%E8%A6%81%E7%9C%8B%E6%B3%95%E4%B8%8E%E6%80%BB%E7%BB%93"><span class="post-toc-number">2.</span> <span class="post-toc-text">主要看法与总结</span></a></li></ol></div>
+                        
+                    
+                    <article id="post-content">
+                        <p>很久没有发过输出自己观点的文章了，主要是很难把自己想的东西整理成形然后把它写出来。这篇文章在经过朋友的同意后，把和朋友的讨论聊天记录发出来，可以一瞥两个人的不同看法和观点。其中，聊天记录有删改。</p>
+<span id="more"></span>
+
+
+<h4 id="聊天记录"><a href="#聊天记录" class="headerlink" title="聊天记录"></a>聊天记录</h4><p>Littlebear:<br>我想写一篇关于敏感词、屏蔽词与网络简写词的博客 有没有什么好玩的观点？<br>我感觉中文互联网上存在的屏蔽词系统，是别的国家、语言互联网上所不存在的 或者说体量比别的国家大太多了</p>
+<p>朋友:<br>我的观点就是屏蔽词和网络简写词现在已经关系不大了<br>因为外国人也会打plz这样的简写<br>打简写确实效率高啊 尤其是打游戏之类的<br>而且自带梗的效果</p>
+<p>朋友:<br>关于屏蔽词 这更像是互联网公司为了避免被处罚而搞得一刀切<br>因为每个公司的屏蔽词力度都不一样<br>你怎么认为屏蔽词本身就一定是政府的意志<br>所以我对这个事儿没法评论</p>
+<p>Littlebear:<br>我说的简写词的意思是yyds什么的<br>tql, ybb, xmsl, kswl这种</p>
+<p>朋友:<br>啊 这种么<br>那就是一个梗啊<br>这就是母语羞涩<br>听说过这个说法吗</p>
+<p>Littlebear:<br>没有哦</p>
+<p>朋友:<br><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/308116322/answer/803463370">https://www.zhihu.com/question/308116322/answer/803463370</a></p>
+<p>朋友:<br>并非汉语有这个特性<br>似乎是语言的一种共性<br>我觉得这个和缩写词的产生有很大的联系<br>因为你打永远的神 就很夸张<br>打yyds 就好很多 而且还自带梗的效果</p>
+<p>Littlebear:<br>羡慕死了！</p>
+<p>朋友:<br>对吧 你看</p>
+<p>Littlebear:<br>太强了！</p>
+<p>Littlebear:<br>我倒是感觉还可以<br>打有关性方面的词的时候可能会有这种现象<br>比如说羞于打性交 阴道这种词 可能会用sex这样的替代</p>
+<p>朋友:<br>这也是一种母语羞涩<br>这个现象在中国尤其突出</p>
+<p>Littlebear:<br>还有一个就是网文、短视频里面的非常奇怪的自我阉割的现象<br>比如说看病 -&gt; 看B<br>杀人 -&gt; S人<br>赚钱 -&gt; 赚Q<br>不知道是什么用意</p>
+<p>朋友:<br>过度审核的现象并不少见</p>
+<p>Littlebear:<br>现在的情况就是 政府还没说什么呢 互联网企业就自己可以阉割自己<br>现在互联网上产出的都是什么鸡巴东西<br>一点高水平的东西都没有<br>really sad about that</p>
+<p>朋友:<br>确实是这样的<br>但是背后政府的责任是很大的</p>
+<p>Littlebear:<br>那些高水平的东西要么被打压得没有声音了 创作者已经没有创作欲望了</p>
+<p>朋友:<br>建议你读一本书叫社交媒体简史<br>这里面有关于审查制度的历史<br>没有审查制度是绝对不可能的<br>但是模糊的审查规章和尺度就会造成出版垄断企业出于避免麻烦而先进行一个内部的过度审查</p>
+<p>Littlebear:<br>要么就是小圈子的人圈地自嗨 外界接触不到<br>或者是说 现在互联网的信息茧房给我们限制住了<br>至少就我的冲浪体验 在查找技术方面的资料<br>CSDN是内容最多 也是质量最烂的</p>
+<p>朋友:<br>中国互联网的产出在慢慢枯萎<br>但是这不是一个坏现象<br>大而全就意味着不精<br>像少数派和jump这样的高细分领域的媒体<br>在前互联网时代是不可能存在的</p>
+<p>Littlebear:<br>如果刨去那些机翻的内容农场的话<br>真正找到我需要的 那只有用英语在google或者是如果没有翻墙条件的时候就用bing国际</p>
+<p>朋友:<br>我觉得这是搜索引擎的权重问题<br>还有就是 微信公众号之类的<br>不能被搜索引擎索引</p>
+<p>Littlebear:<br>这种普遍存在的问题已经可以放大到简中互联网了</p>
+<p>Littlebear: </p>
+<blockquote>
+<p>还有就是 微信公众号之类的</p>
+</blockquote>
+<p>这个是微信的问题</p>
+<p>朋友: </p>
+<blockquote>
+<p>像少数派和jump这样的高细分领域的媒体</p>
+</blockquote>
+<p>我看这样的媒体的频率高过用搜索引擎的频率</p>
+<p>Littlebear:<br>还是 每一个互联网公司都想打造属于自己的生态闭环 把用户圈在自己的产品内<br>殊不知 吸引用户的方法应该是产出高质量的内容 而不是创造信息壁垒</p>
+<p>朋友:<br>但是你要考虑到<br>用爱发电不可取<br>你产出的高质量内容<br>很快就被机器人剽窃搬运到他的营利性平台上<br>再加上广告</p>
+<p>Littlebear:<br>这个其实也是我想在我博客中涉及到的内容 不过是另外一篇文章了<br>现在想专注于屏蔽词 敏感词上面</p>
+<p>Littlebear: </p>
+<blockquote>
+<p>很快就被机器人剽窃搬运到他的营利性平台上</p>
+</blockquote>
+<p>唉是啊 还有现在的创作自由和版权问题</p>
+<p>Littlebear:<br>所以看不到中文（简体中文）互联网的希望</p>
+<p>朋友:<br>那肯定不至于<br>你愿意付钱的话有很多好内容的<br>只是大家都发现 用爱发电不可取<br>这个问题不解决好 那些创作好内容的人会越来越没动力<br>屏蔽词在这个事情上的影响权重 我觉得并不大…？</p>
+<p>Littlebear:<br>互联网在发展 到现在这个时候就是知识付费了 原来那些免费获得知识的情况也不多了</p>
+<p>Littlebear: </p>
+<blockquote>
+<p>比如说看病 -&gt; 看B</p>
+</blockquote>
+<p>还有这些让我不知道什么目的的自我阉割</p>
+<p>朋友:<br>这你得找个看抖音多的人问问<br>在b站上完全没有这种现象<br>大家都在好好说话</p>
+<p>Littlebear:<br>好像也有一部分</p>
+<p>…</p>
+<p>Littlebear: </p>
+<blockquote>
+<p>这个其实也是我想在我博客中涉及到的内容 不过是另外一篇文章了</p>
+</blockquote>
+<p>还有想讨论的博客议题就是 付费方式的问题 内购 订阅和买断</p>
+<p>Littlebear:<br>我有好多想写的题材 就是没想好怎么写</p>
+<p>朋友:<br>审查制度我不敢随便聊<br>因为我也不敢说我把这个事情想明白了<br>太复杂了</p>
+<p>朋友:<br>等我下学期学完<br>看看能不能把审查制度这个事情形成自己的想法吧</p>
+<p>…</p>
+<h4 id="主要看法与总结"><a href="#主要看法与总结" class="headerlink" title="主要看法与总结"></a>主要看法与总结</h4><p>讨论到这里，基本上已经开始偏题了，总结一下主要看法。</p>
+<ol>
+<li><p>网络屏蔽词、敏感词的表现形式包括但是不仅限于发帖时的屏蔽，搜索时的屏蔽等。</p>
+</li>
+<li><p>目前互联网公司进行的屏蔽词设定，不一定完全代表政府的意志。</p>
+</li>
+<li><p>目前现在的网络流行简写词，与屏蔽词关系不大，更多的是一种流行的梗文化。</p>
+</li>
+<li><p>简写词的普遍存在可能是由于「母语羞涩」现象的存在。</p>
+</li>
+<li><p>中文互联网的封闭和低质量趋势现在尤为突出，但是不乏有高质量的付费小圈子可供选择。</p>
+</li>
+<li><p>中文互联网的未来掌握在我们手中，什么时候可以摆脱流量至上的看法，什么时候才会有起色和转机。</p>
+</li>
+</ol>
+<p>欢迎读者朋友们进行理性讨论。</p>
+
+                    </article>
+                        
+    <blockquote class="post-license">
+        <p>
+            
+                <strong>本文作者&nbsp;:&nbsp;Littlebear0729</strong>
+            
+            <br>
+            <strong>
+            
+                本文使用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0)</a> 协议
+            </strong>
+            <br>
+            <strong>本文链接&nbsp;:&nbsp;</strong><a href="https://blog.bearxiong.xyz/2022/02/%E5%85%B3%E4%BA%8E%E6%95%8F%E6%84%9F%E8%AF%8D%E3%80%81%E5%B1%8F%E8%94%BD%E8%AF%8D%E4%B8%8E%E7%BD%91%E7%BB%9C%E7%AE%80%E5%86%99%E8%AF%8D%E7%9A%84%E8%AE%A8%E8%AE%BA/">https://blog.bearxiong.xyz/2022/02/%E5%85%B3%E4%BA%8E%E6%95%8F%E6%84%9F%E8%AF%8D%E3%80%81%E5%B1%8F%E8%94%BD%E8%AF%8D%E4%B8%8E%E7%BD%91%E7%BB%9C%E7%AE%80%E5%86%99%E8%AF%8D%E7%9A%84%E8%AE%A8%E8%AE%BA/</a>
+        </p>
+    </blockquote>
+
+
+
+    <blockquote id="date-expire-notification" class="post-expired-notify">本文最后更新于 <span id="date-expire-num"></span> 天前，文中所描述的信息可能已发生改变</blockquote>
+    <script>
+    (function() {
+        var dateUpdate = Date.parse("2024-10-06");
+        var nowDate = new Date();
+        var a = nowDate.getTime();
+        var b = a - dateUpdate;
+        var daysUpdateExpire = Math.floor(b/(24*3600*1000));
+        if (daysUpdateExpire >= 120) {
+            document.getElementById('date-expire-num').innerHTML = daysUpdateExpire;
+        } else {
+            document.getElementById('date-expire-notification').style.display = 'none';
+        }
+    })();
+    </script>
+
+
+<p class="post-footer-info mb-0 pt-0">本文发表于&nbsp;<time datetime="2022-02-02T08:42:00.000Z" itemprop="datePublished">2022-02-02</time>
+
+    , 最后修改于&nbsp;<time datetime="2024-10-06T09:45:10.332Z" itemprop="dateModified">2024-10-06</time>
+
+</p>
+<p class="post-footer-info mb-0 pt-2">
+
+<span class="post-categories-list mt-2">
+
+<a class="post-categories-list-item" href='/categories/%E8%A7%82/'>观</a>
+
+</span>
+
+
+
+
+</p>
+
+                </div>
+                <div class="post-nav px-2 bg-gray">
+<ul class="pagination">
+    <!-- Prev Nav -->
+    
+        <li class="page-item page-prev">
+            <a href="/2022/02/%E4%B8%80%E4%B8%AA%E5%8F%AB%E5%81%9A404%E7%9A%84%E4%BA%92%E8%81%94%E7%BD%91/" rel="prev">
+                <div class="page-item-title"><i class="icon icon-back" aria-hidden="true"></i></div>
+                <div class="page-item-subtitle">【转载】一个叫做404的互联网</div>
+            </a>
+        </li>
+    
+
+    <!-- Next Nav -->
+    
+        <li class="page-item page-next">
+            <a href="/2022/01/%E6%9B%B4%E6%96%B0Linux%E5%86%85%E6%A0%B85-14%E5%90%8E%E5%A4%96%E6%8E%A5%E9%94%AE%E7%9B%98Fn%E6%8C%89%E9%94%AE%E8%A1%8C%E4%B8%BA%E9%94%99%E8%AF%AF%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/" rel="next">
+                <div class="page-item-title"><i class="icon icon-forward" aria-hidden="true"></i></div>
+                <div class="page-item-subtitle">更新Linux内核5.14后外接键盘Fn按键行为错误的解决方法</div>
+            </a>
+        </li>
+    
+</ul>
+</div>
+
+                
+                    <!-- # Comment # -->
+                    
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+            <!-- ### Footer ### -->
+            <footer class="text-center">
+    <!-- footer copyright -->
+    
+        <p class="footer-copyright mb-0">Copyright&nbsp;©&nbsp;<span id="copyright-year"></span>
+            <a class="footer-copyright-a" href="https://blog.bearxiong.xyz">小熊の小站</a>
+        </p>
+
+    <!-- footer custom text -->
+    <p class="footer-text mb-0">
+    <a href="https://blog.bearxiong.xyz/atom.xml" rel="nofollow noopener noreferrer">Subscribe my Atom Feed</a>
+    </p>
+    <!-- footer develop info -->
+    <p class="footer-develop mb-0">
+        
+
+        
+        Powered by&nbsp;<!--
+         --><a href="https://hexo.io" target="_blank" class="footer-develop-a" rel="external nofollow noopener noreferrer">Hexo</a><span class="footer-develop-divider"></span>Theme&nbsp;-&nbsp;<!--
+         --><a href="https://github.com/SukkaW/hexo-theme-suka" target="_blank" class="footer-develop-a" rel="external noopener">Suka</a>
+    </p>
+</footer>
+
+
+        <!-- ### Import File ### -->
+        <!-- ### Footer JS Import ### -->
+
+<script>
+
+    
+window.lazyLoadOptions = {
+    elements_selector: ".lazyload",
+    threshold: 50
+};
+
+(function() {
+    var copyrightNow = new Date().getFullYear();
+    var copyrightContent = document.getElementById('copyright-year');
+    var copyrightSince = 2019;
+    if (copyrightSince === copyrightNow) {
+        copyrightContent.textContent = copyrightNow;
+    } else {
+        copyrightContent.textContent = copyrightSince + ' - ' + copyrightNow;
+    }
+})();
+console.log('\n %c Suka Theme (hexo-theme-suka) | © SukkaW | Verision 1.3.3 %c https://github.com/SukkaW/hexo-theme-suka \n', 'color: #fff; background: #444; padding:5px 0;', 'background: #bbb; padding:5px 0;');
+
+</script>
+
+<script src="/lib/vanilla-lazyload/lazyload.min.js" async></script>
+
+
+
+<!-- Comment -->
+
+
+<!-- ### Custom Footer ### -->
+
+    </body>
+
+</html>

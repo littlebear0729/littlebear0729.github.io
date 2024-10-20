@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+    <head>
+    <meta charset="utf-8">
+    <!--
+        hexo-theme-suka © SukkaW
+        GitHub: https://github.com/SukkaW/hexo-theme-suka
+    -->
+
+    <!-- ### Resource Hint ### -->
+
+    <!-- ## DNS Prefetch ## -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+<!-- busuanzi -->
+
+
+<!-- comment -->
+
+
+
+
+
+
+
+<!-- analytics -->
+
+
+    <link rel="dns-prefetch" href="//www.google-analytics.com">
+
+
+    <link rel="dns-prefetch" href="//www.googletagmanager.com">
+    <link rel="dns-prefetch" href="//www.google-analytics.com">
+
+
+
+
+
+    <!-- ## Preload ## -->
+    
+
+
+
+
+    <!-- ### Meta & Title & Info ### -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, maximum-scale=5, viewport-fit=cover">
+    <meta name="renderer" content="webkit">
+
+    <!-- Title -->
+    <title>USTC Hackergame 2023 Writeup | 小熊の小站</title>
+
+    <!-- Favicons -->
+    <link rel="icon" type="image&#x2F;ico" href="/img/favicon.ico"><link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png"><link rel="icon" typt="image&#x2F;png" sizes="32x32" href="/img/favicon-16x16.png"><link rel="icon" typt="image&#x2F;png" sizes="16x16" href="/img/favicon-16x16.png"><link rel="mask-icon" href="/img/safari-pinned-tab.svg" color="">
+
+    <!-- ### Import File ### -->
+    <link rel="stylesheet" href="/lib/spectre/spectre.min.css"><style>
+    body {
+        background-color: #f8f9fa;
+    }
+
+    a, a:visited {
+        color: #0070ff;
+    }
+
+    a:active, a:focus, a:hover {
+        color: #0070ff;
+        opacity: .75;
+    }
+
+    #post-content a,
+    #post-content a:hover,
+    #post-content a:focus,
+    #post-content a:visited {
+        color: #005eb9;
+        opacity: 1;
+    }
+
+    
+
+    .post-entry .card-body a {
+        color: #0070ff;
+    }
+
+    .avatar {
+        background: #444;
+    }
+
+    .navbar-link,
+    .navbar-link:visited,
+    .timeline .timeline-item .timeline-icon.icon-lg {
+        color: #0070ff;
+    }
+
+    .navbar-link:hover {
+        color: #0070ff;
+        opacity: .8;
+    }
+
+    #search-input .btn,
+    #disqus_click_btn,
+    #disqus-switch-to-direct,
+    #disqus-loadmore-button {
+        background: #727e96;
+        border-color: #727e96;
+        color: #fff;
+    }
+
+    #post-toc a.post-toc-link,
+    #post-toc a.post-toc-link:visited,
+    .share-menu.menu .menu-item>a {
+        color: #727e96;
+    }
+
+    .share-menu.menu .menu-item>a:hover,
+    .share-menu.menu .menu-item>a:focus,
+    .share-menu.menu .menu-item>a:visited {
+        color: #50596c;
+        background: #f8f9fa;
+        opacity: .85;
+    }
+</style><link rel="stylesheet" href="/css/style.min.css">
+
+
+
+
+
+
+
+
+    <!-- Prettify Theme -->
+    
+    <link rel="preload" href="/css/highlight/darcula.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="/css/highlight/darcula.min.css"></noscript>
+
+
+
+
+
+<script>
+/*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
+!function(t){"use strict";t.loadCSS||(t.loadCSS=function(){});var e=loadCSS.relpreload={};if(e.support=function(){var e;try{e=t.document.createElement("link").relList.supports("preload")}catch(t){e=!1}return function(){return e}}(),e.bindMediaToggle=function(t){var e=t.media||"all";function a(){t.addEventListener?t.removeEventListener("load",a):t.attachEvent&&t.detachEvent("onload",a),t.setAttribute("onload",null),t.media=e}t.addEventListener?t.addEventListener("load",a):t.attachEvent&&t.attachEvent("onload",a),setTimeout(function(){t.rel="stylesheet",t.media="only x"}),setTimeout(a,3e3)},e.poly=function(){if(!e.support())for(var a=t.document.getElementsByTagName("link"),n=0;n<a.length;n++){var o=a[n];"preload"!==o.rel||"style"!==o.getAttribute("as")||o.getAttribute("data-loadcss")||(o.setAttribute("data-loadcss",!0),e.bindMediaToggle(o))}},!e.support()){e.poly();var a=t.setInterval(e.poly,500);t.addEventListener?t.addEventListener("load",function(){e.poly(),t.clearInterval(a)}):t.attachEvent&&t.attachEvent("onload",function(){e.poly(),t.clearInterval(a)})}"undefined"!=typeof exports?exports.loadCSS=loadCSS:t.loadCSS=loadCSS}("undefined"!=typeof global?global:this);
+</script>
+
+    <!-- ### Site Verification ### -->
+    
+
+
+    <link rel="alternate" type="application/atom+xml" href="/atom.xml"><meta name="mobile-web-app-capable" content="yes"><meta name="application-name" content="小熊の小站"><meta name="msapplication-starturl" content="https://blog.bearxiong.xyz"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="小熊の小站"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <!-- ### The Open Graph & Twitter Card Protocol ### -->
+    <meta property="og:title" content="USTC Hackergame 2023 Writeup | 小熊の小站"><meta property="og:site_name" content="小熊の小站"><meta property="og:type" content="article"><meta property="og:url" content="https://blog.bearxiong.xyz/2023/11/USTC-Hackergame-2023-Writeup/"><meta property="og:locale" content="zh-CN"><meta name="description" content="2022年说：  今年的题更变态了…今年比较忙，时间也很少，难题就没有死磕。现在想来即使死磕应该也做不出来了…  2023年我也要说：今年的题更变态了…也因为今年比较忙，时间也很少，一些简单题花时间的也没有死磕哈哈哈哈。但是玩CTF真的很上头！！有一种非得把它做出来的执着，还有得到flag后的喜悦快感。 这次的Writeup是玩完了之后再写的，有一些解题过程记不清了。。 就简单写一写，也算是有个参 - Littlebear0729 - 小熊の小站"><meta name="keywords" content="小熊, littlebear, 博客, 小站, littlebear0729"><meta property="article:published_time" content="2023-11-07T02:30:58.000Z"><meta property="article:modified_time" content="2024-10-06T09:45:10.328Z"><meta property="og:updated_time" content="2024-10-06T09:45:10.328Z"><meta property="article:author" content="Littlebear0729"><meta property="article:tag" content="小熊, littlebear, 博客, 小站, littlebear0729"><meta name="twitter:card" content="summary">
+
+    
+
+    <!-- ### Canonical link ### -->
+    <link rel="canonical" href="https://blog.bearxiong.xyz/2023/11/USTC-Hackergame-2023-Writeup/">
+
+    <meta name="generator" content="Hexo 6.3.0">
+
+    <!-- ### Analytics ### -->
+    
+    <!-- Google Analytics -->
+<script>
+    window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+    ga('create', '6097140926', 'auto');
+    ga('send', 'pageview');
+</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+
+
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-R9F6KBLL62"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-R9F6KBLL62');
+</script>
+
+
+
+
+
+
+
+
+    <!-- ### Structured Data ### -->
+    
+
+
+
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "url": "https://blog.bearxiong.xyz/2023/11/USTC-Hackergame-2023-Writeup/",
+    "@type": "BlogPosting",
+    "logo": "https://blog.bearxiong.xyz/img/apple-touch-icon.png",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://blog.bearxiong.xyz/2023/11/USTC-Hackergame-2023-Writeup/"
+    },
+    "headline": "USTC Hackergame 2023 Writeup | 小熊の小站",
+    
+    "image": {
+        "@type": "ImageObject",
+        "url": "https://blog.bearxiong.xyz/img/apple-touch-icon.png"
+    },
+    
+    "datePublished": "2023-11-07T02:30:58.000Z",
+    "dateModified": "2024-10-06T09:45:10.328Z",
+    "author": {
+        "@type": "Person",
+        "name": "Littlebear0729",
+        "image": {
+            "@type": "ImageObject",
+            "url": "https://blog.bearxiong.xyz/img/apple-touch-icon.png"
+        },
+        "description": "Try my best."
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "小熊の小站",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://blog.bearxiong.xyz/img/apple-touch-icon.png"
+        }
+    },
+    
+    "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://blog.bearxiong.xyz/search.html?s={search_term_string}",
+        "query-input": "required name=search_term_string"
+    },
+    
+    "keywords": "小熊, littlebear, 博客, 小站, littlebear0729",
+    "description": "2022年说：  今年的题更变态了…今年比较忙，时间也很少，难题就没有死磕。现在想来即使死磕应该也做不出来了…  2023年我也要说：今年的题更变态了…也因为今年比较忙，时间也很少，一些简单题花时间的也没有死磕哈哈哈哈。但是玩CTF真的很上头！！有一种非得把它做出来的执着，还有得到flag后的喜悦快感。 这次的Writeup是玩完了之后再写的，有一些解题过程记不清了。。 就简单写一写，也算是有个参 - Littlebear0729 - 小熊の小站"
+}
+</script>
+
+
+
+    <!-- ### Custom Head ### -->
+    
+</head>
+
+    <body>
+            
+
+            <!-- ### Main content ### -->
+            <!-- ## Header ##-->
+<header>
+    <h1 class="header-title text-center"><a href="/">小熊の小站</a></h1>
+
+    <p class="text-center header-slogan">
+        
+            
+                Try my best.
+            
+        
+    </p>
+
+    <nav class="navbar-section text-center">
+    
+        <a href="/" class="navbar-link">首页</a>
+    
+    
+        <a href="/archives/" class="navbar-link">归档</a>
+    
+    
+        <a href="/search.html" class="navbar-link">搜索</a>
+    
+    
+        <a href="/categories.html" class="navbar-link">分类</a>
+    
+        <a href="/about.html" class="navbar-link">关于</a>
+    
+        <a href="/links.html" class="navbar-link">友链</a>
+    
+        <a href="/QSL.html" class="navbar-link">QSL</a>
+    
+    
+    
+</nav>
+</header>
+
+            
+    <!-- ## Post ## -->
+    <div class="post-container">
+    <div id="post-card" class="card">
+        
+        <div class="card-item-container">
+            <div class="card-inner-cell">
+                <!-- # Post Header Info # -->
+                <div class="card-header">
+                    
+    <h1 class="card-title h3 mb-2">USTC Hackergame 2023 Writeup</h1>
+
+
+
+
+<div class="post-header-info">
+    <p class="post-header-info-left text-gray">
+        <img class="author-thumb lazyload" data-src="/img/apple-touch-icon.png" src="/img/suka-lazyload.gif" alt="Littlebear0729's Avatar">
+        <span>2023-11-07</span>
+        
+        
+        
+    </p>
+    <div class="post-header-info-right">
+        
+    </div>
+</div>
+                </div>
+                <div class="card-body">
+                    
+                        
+                        
+                            <div id="post-toc"><ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Hackergame-%E5%90%AF%E5%8A%A8"><span class="post-toc-number">1.</span> <span class="post-toc-text">Hackergame 启动</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E7%8C%AB%E5%92%AA%E5%B0%8F%E6%B5%8B"><span class="post-toc-number">2.</span> <span class="post-toc-text">猫咪小测</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E7%AC%AC%E4%B8%80%E9%A2%98"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">第一题</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E7%AC%AC%E4%BA%8C%E9%A2%98"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">第二题</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E7%AC%AC%E4%B8%89%E9%A2%98"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">第三题</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E7%AC%AC%E5%9B%9B%E9%A2%98"><span class="post-toc-number">2.4.</span> <span class="post-toc-text">第四题</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E6%9B%B4%E6%B7%B1%E6%9B%B4%E6%9A%97"><span class="post-toc-number">3.</span> <span class="post-toc-text">更深更暗</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E6%97%85%E8%A1%8C%E7%85%A7%E7%89%873-0"><span class="post-toc-number">4.</span> <span class="post-toc-text">旅行照片3.0</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E8%B5%9B%E5%8D%9A%E4%BA%95%E5%AD%97%E6%A3%8B"><span class="post-toc-number">5.</span> <span class="post-toc-text">赛博井字棋</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%A5%B6%E5%A5%B6%E7%9A%84%E7%9D%A1%E5%89%8Dflag%E6%95%85%E4%BA%8B"><span class="post-toc-number">6.</span> <span class="post-toc-text">奶奶的睡前flag故事</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E7%BB%84%E5%A7%94%E4%BC%9A%E6%A8%A1%E6%8B%9F%E5%99%A8"><span class="post-toc-number">7.</span> <span class="post-toc-text">组委会模拟器</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E8%99%AB"><span class="post-toc-number">8.</span> <span class="post-toc-text">虫</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#JSON-%E2%8A%82-YAML"><span class="post-toc-number">9.</span> <span class="post-toc-text">JSON ⊂ YAML?</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#JSON-%E2%8A%84-YAML-1-1"><span class="post-toc-number">9.1.</span> <span class="post-toc-text">JSON ⊄ YAML 1.1</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#JSON-%E2%8A%84-YAML-1-2"><span class="post-toc-number">9.2.</span> <span class="post-toc-text">JSON ⊄ YAML 1.2</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Git-Git"><span class="post-toc-number">10.</span> <span class="post-toc-text">Git?Git!</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#HTTP%E9%9B%86%E9%82%AE%E5%86%8C"><span class="post-toc-number">11.</span> <span class="post-toc-text">HTTP集邮册</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#5%E7%A7%8D%E7%8A%B6%E6%80%81%E7%A0%81"><span class="post-toc-number">11.1.</span> <span class="post-toc-text">5种状态码</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E6%B2%A1%E6%9C%89%E7%8A%B6%E6%80%81"><span class="post-toc-number">11.2.</span> <span class="post-toc-text">没有状态</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Docker-for-Everyone"><span class="post-toc-number">12.</span> <span class="post-toc-text">Docker for Everyone</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E6%83%9C%E5%AD%97%E5%A6%82%E9%87%912-0"><span class="post-toc-number">13.</span> <span class="post-toc-text">惜字如金2.0</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E9%AB%98%E9%A2%91%E7%8E%87%E6%98%9F%E7%90%83"><span class="post-toc-number">14.</span> <span class="post-toc-text">高频率星球</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%B0%8F%E5%9E%8B%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E6%98%9F%E7%90%83"><span class="post-toc-number">15.</span> <span class="post-toc-text">小型大语言模型星球</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#You-Are-Smart"><span class="post-toc-number">15.1.</span> <span class="post-toc-text">You Are Smart</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E6%B5%81%E5%BC%8F%E6%98%9F%E7%90%83"><span class="post-toc-number">16.</span> <span class="post-toc-text">流式星球</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E4%BD%8E%E5%B8%A6%E5%AE%BD%E6%98%9F%E7%90%83"><span class="post-toc-number">17.</span> <span class="post-toc-text">低带宽星球</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E5%B0%8F%E8%AF%95%E7%89%9B%E5%88%80"><span class="post-toc-number">17.1.</span> <span class="post-toc-text">小试牛刀</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%90%8E%E9%9D%A2%E7%9A%84%E9%A2%98"><span class="post-toc-number">18.</span> <span class="post-toc-text">后面的题</span></a></li></ol></div>
+                        
+                    
+                    <article id="post-content">
+                        <p>2022年说：</p>
+<blockquote>
+<p>今年的题更变态了…今年比较忙，时间也很少，难题就没有死磕。现在想来即使死磕应该也做不出来了…</p>
+</blockquote>
+<p>2023年我也要说：今年的题更变态了…也因为今年比较忙，时间也很少，一些简单题花时间的也没有死磕哈哈哈哈。但是玩CTF真的很上头！！有一种非得把它做出来的执着，还有得到flag后的喜悦快感。</p>
+<p>这次的Writeup是玩完了之后再写的，有一些解题过程记不清了。。</p>
+<p>就简单写一写，也算是有个参与感。</p>
+<h3 id="Hackergame-启动"><a href="#Hackergame-启动" class="headerlink" title="Hackergame 启动"></a>Hackergame 启动</h3><p>直接提交，观察url的similarity，改数即可通过</p>
+<h3 id="猫咪小测"><a href="#猫咪小测" class="headerlink" title="猫咪小测"></a>猫咪小测</h3><h4 id="第一题"><a href="#第一题" class="headerlink" title="第一题"></a>第一题</h4><p>找USTC图书馆官网，简单搜索即可得到结果</p>
+<h4 id="第二题"><a href="#第二题" class="headerlink" title="第二题"></a>第二题</h4><p>直接用中文Google，得到一个知乎专栏，里面是别人总结好的文章哈哈哈</p>
+<h4 id="第三题"><a href="#第三题" class="headerlink" title="第三题"></a>第三题</h4><p>使用<code>kernel bbr config</code>为关键词Google一下</p>
+<h4 id="第四题"><a href="#第四题" class="headerlink" title="第四题"></a>第四题</h4><p>忘了当时用的什么关键词了，找到论文发表在ECOOP上</p>
+<p><a target="_blank" rel="noopener" href="https://drops.dagstuhl.de/opus/volltexte/2023/18237/pdf/LIPIcs-ECOOP-2023-44.pdf">https://drops.dagstuhl.de/opus/volltexte/2023/18237/pdf/LIPIcs-ECOOP-2023-44.pdf</a></p>
+<h3 id="更深更暗"><a href="#更深更暗" class="headerlink" title="更深更暗"></a>更深更暗</h3><p>在Chrome Devtool里面直接Ctrl+F搜索flag即可</p>
+<p>虽然他会跳，但是只要不滚动就行了</p>
+<h3 id="旅行照片3-0"><a href="#旅行照片3-0" class="headerlink" title="旅行照片3.0"></a>旅行照片3.0</h3><p>这就是我说的需要花时间的题，懒得弄了（）</p>
+<h3 id="赛博井字棋"><a href="#赛博井字棋" class="headerlink" title="赛博井字棋"></a>赛博井字棋</h3><p>还是借助Chrome Devtool，观察每次的请求，手动更改payload重放请求可以覆盖电脑下棋的位置</p>
+<h3 id="奶奶的睡前flag故事"><a href="#奶奶的睡前flag故事" class="headerlink" title="奶奶的睡前flag故事"></a>奶奶的睡前flag故事</h3><p>原先在网上冲浪的时候，听到过pixel手机截图有bug，即使裁切也会保留原始图片的CVE。</p>
+<p>经过简单搜索之后，发现一个在线网站可以反向处理图片，挨个试一下手机型号就行了。</p>
+<h3 id="组委会模拟器"><a href="#组委会模拟器" class="headerlink" title="组委会模拟器"></a>组委会模拟器</h3><p>写了一个Selenium脚本，有flag就模拟点击一下。</p>
+<p>抓包也可以，一开始有一个getMessage请求，然后设置delay给deleteMessage发请求即可。</p>
+<h3 id="虫"><a href="#虫" class="headerlink" title="虫"></a>虫</h3><p>下载音频第一声就听出来了是SSTV（来自一个HAM的基本素养哈哈哈）</p>
+<p>电脑上正好有MMSSTV软件，用虚拟声卡解出来了。</p>
+<blockquote>
+<p>前几天刚用SSTV接收了来自ISS国际空间站的图片，很巧！</p>
+</blockquote>
+<h3 id="JSON-⊂-YAML"><a href="#JSON-⊂-YAML" class="headerlink" title="JSON ⊂ YAML?"></a>JSON ⊂ YAML?</h3><h4 id="JSON-⊄-YAML-1-1"><a href="#JSON-⊄-YAML-1-1" class="headerlink" title="JSON ⊄ YAML 1.1"></a>JSON ⊄ YAML 1.1</h4><p>第一题做出来了，经过一番搜索json和yaml对于1e2这种科学计数法的parse方法不同。</p>
+<h4 id="JSON-⊄-YAML-1-2"><a href="#JSON-⊄-YAML-1-2" class="headerlink" title="JSON ⊄ YAML 1.2"></a>JSON ⊄ YAML 1.2</h4><p>第二题没做出来，这题有个隐含条件是可以被yaml1.1解析，但是不能被yaml1.2解析。（都不能被解析的方法还是挺多的）</p>
+<p>最后才知道duplicate key是不可以的。（我一直以为duplicate key不行啊啊）</p>
+<h3 id="Git-Git"><a href="#Git-Git" class="headerlink" title="Git?Git!"></a>Git?Git!</h3><p>这题还是挺简单的，原来编译安卓ROM的时候就知道可以用<code>git reflog</code>来看操作记录。</p>
+<p>然后通过<code>git reset --hard</code>来重置到某个commit上，再在vscode里面全局搜索flag即可。</p>
+<h3 id="HTTP集邮册"><a href="#HTTP集邮册" class="headerlink" title="HTTP集邮册"></a>HTTP集邮册</h3><h4 id="5种状态码"><a href="#5种状态码" class="headerlink" title="5种状态码"></a>5种状态码</h4><ul>
+<li><p>200最简单</p>
+</li>
+<li><p>输入一个不存在的url 404</p>
+</li>
+<li><p>使用POST方法 405</p>
+</li>
+<li><p>使用HTTP&#x2F;2.0 505 HTTP Version Not Supported</p>
+</li>
+<li><p>构造超长的URL 414 URI Too Large</p>
+</li>
+<li><p>当时还做出来400了，忘了咋弄的了</p>
+</li>
+</ul>
+<h4 id="没有状态"><a href="#没有状态" class="headerlink" title="没有状态"></a>没有状态</h4><p>把HTTP version删了就行，好像是http 0.9的操作</p>
+<h3 id="Docker-for-Everyone"><a href="#Docker-for-Everyone" class="headerlink" title="Docker for Everyone"></a>Docker for Everyone</h3><p>用docker run -v把flag文件映射出来就行</p>
+<h3 id="惜字如金2-0"><a href="#惜字如金2-0" class="headerlink" title="惜字如金2.0"></a>惜字如金2.0</h3><p>没做出来，脑子不好使没有好好分析</p>
+<h3 id="高频率星球"><a href="#高频率星球" class="headerlink" title="高频率星球"></a>高频率星球</h3><p>下个asciinema然后把他cat出来</p>
+<p>cat到一个文件里面，用vscode把所有控制字符查找替换删干净</p>
+<p>之后用node.js跑一下就行了</p>
+<blockquote>
+<p>我挺好奇这程序是怎么生成出来的。。</p>
+</blockquote>
+<h3 id="小型大语言模型星球"><a href="#小型大语言模型星球" class="headerlink" title="小型大语言模型星球"></a>小型大语言模型星球</h3><h4 id="You-Are-Smart"><a href="#You-Are-Smart" class="headerlink" title="You Are Smart"></a>You Are Smart</h4><p>这玩意儿不如GPT聪明哈哈哈</p>
+<p>GPT是一问一答那种，这个是续写那种</p>
+<p>我对大模型也不是非常了解，也没有下载下来那个模型</p>
+<p>最后输入<code>you are smart you are smart you are smart you are smart you are smart</code>过了</p>
+<h3 id="流式星球"><a href="#流式星球" class="headerlink" title="流式星球"></a>流式星球</h3><p>让GPT写一个反向脚本</p>
+<p>然后枚举视频分辨率的长宽</p>
+<p>因为脚本0-100随机截取了最后的长度，所以就看前面的帧就可以了</p>
+<p>最后枚举出来视频宽度为427</p>
+<p>这题做出来还是非常有成就感的</p>
+<h3 id="低带宽星球"><a href="#低带宽星球" class="headerlink" title="低带宽星球"></a>低带宽星球</h3><h4 id="小试牛刀"><a href="#小试牛刀" class="headerlink" title="小试牛刀"></a>小试牛刀</h4><p>网上找一个在线的png无损压缩网页，直接压缩就行了</p>
+<h3 id="后面的题"><a href="#后面的题" class="headerlink" title="后面的题"></a>后面的题</h3><p>后面的题基本上就没看，只能说简单参与了一下。</p>
+<p>最后的成绩是2400分，排名302&#x2F;2381，前12.6%，对自己挺满意的。</p>
+<p>明年有空还会再玩！</p>
+
+                    </article>
+                        
+    <blockquote class="post-license">
+        <p>
+            
+                <strong>本文作者&nbsp;:&nbsp;Littlebear0729</strong>
+            
+            <br>
+            <strong>
+            
+                本文使用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0)</a> 协议
+            </strong>
+            <br>
+            <strong>本文链接&nbsp;:&nbsp;</strong><a href="https://blog.bearxiong.xyz/2023/11/USTC-Hackergame-2023-Writeup/">https://blog.bearxiong.xyz/2023/11/USTC-Hackergame-2023-Writeup/</a>
+        </p>
+    </blockquote>
+
+
+
+    <blockquote id="date-expire-notification" class="post-expired-notify">本文最后更新于 <span id="date-expire-num"></span> 天前，文中所描述的信息可能已发生改变</blockquote>
+    <script>
+    (function() {
+        var dateUpdate = Date.parse("2024-10-06");
+        var nowDate = new Date();
+        var a = nowDate.getTime();
+        var b = a - dateUpdate;
+        var daysUpdateExpire = Math.floor(b/(24*3600*1000));
+        if (daysUpdateExpire >= 120) {
+            document.getElementById('date-expire-num').innerHTML = daysUpdateExpire;
+        } else {
+            document.getElementById('date-expire-notification').style.display = 'none';
+        }
+    })();
+    </script>
+
+
+<p class="post-footer-info mb-0 pt-0">本文发表于&nbsp;<time datetime="2023-11-07T02:30:58.000Z" itemprop="datePublished">2023-11-07</time>
+
+    , 最后修改于&nbsp;<time datetime="2024-10-06T09:45:10.328Z" itemprop="dateModified">2024-10-06</time>
+
+</p>
+<p class="post-footer-info mb-0 pt-2">
+
+
+
+
+</p>
+
+                </div>
+                <div class="post-nav px-2 bg-gray">
+<ul class="pagination">
+    <!-- Prev Nav -->
+    
+        <li class="page-item page-prev">
+            <a href="/2023/11/%E5%BE%B7%E7%94%9FPL-660%EF%BC%8CPL-330%EF%BC%8C%E5%B0%8FK%E6%94%B6%E9%9F%B3%E6%9C%BA%E5%92%8CSR-286%E2%80%9C%E5%B0%8F%E5%BC%BA%E6%9C%BA%E2%80%9D%E4%BD%BF%E7%94%A8%E6%84%9F%E5%8F%97%E5%92%8C%E4%BD%93%E9%AA%8C/" rel="prev">
+                <div class="page-item-title"><i class="icon icon-back" aria-hidden="true"></i></div>
+                <div class="page-item-subtitle">德生PL-660，PL-330，小K收音机和SR-286“小强机”使用感受和体验</div>
+            </a>
+        </li>
+    
+
+    <!-- Next Nav -->
+    
+        <li class="page-item page-next">
+            <a href="/2023/10/%E6%A0%A1%E5%9B%AD%E7%BD%91%E7%99%BB%E5%85%A5%E4%B8%80%E9%94%AE%E8%84%9A%E6%9C%AC%E5%88%86%E4%BA%AB-1/" rel="next">
+                <div class="page-item-title"><i class="icon icon-forward" aria-hidden="true"></i></div>
+                <div class="page-item-subtitle">校园网登入一键脚本分享</div>
+            </a>
+        </li>
+    
+</ul>
+</div>
+
+                
+                    <!-- # Comment # -->
+                    
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+            <!-- ### Footer ### -->
+            <footer class="text-center">
+    <!-- footer copyright -->
+    
+        <p class="footer-copyright mb-0">Copyright&nbsp;©&nbsp;<span id="copyright-year"></span>
+            <a class="footer-copyright-a" href="https://blog.bearxiong.xyz">小熊の小站</a>
+        </p>
+
+    <!-- footer custom text -->
+    <p class="footer-text mb-0">
+    <a href="https://blog.bearxiong.xyz/atom.xml" rel="nofollow noopener noreferrer">Subscribe my Atom Feed</a>
+    </p>
+    <!-- footer develop info -->
+    <p class="footer-develop mb-0">
+        
+
+        
+        Powered by&nbsp;<!--
+         --><a href="https://hexo.io" target="_blank" class="footer-develop-a" rel="external nofollow noopener noreferrer">Hexo</a><span class="footer-develop-divider"></span>Theme&nbsp;-&nbsp;<!--
+         --><a href="https://github.com/SukkaW/hexo-theme-suka" target="_blank" class="footer-develop-a" rel="external noopener">Suka</a>
+    </p>
+</footer>
+
+
+        <!-- ### Import File ### -->
+        <!-- ### Footer JS Import ### -->
+
+<script>
+
+    
+window.lazyLoadOptions = {
+    elements_selector: ".lazyload",
+    threshold: 50
+};
+
+(function() {
+    var copyrightNow = new Date().getFullYear();
+    var copyrightContent = document.getElementById('copyright-year');
+    var copyrightSince = 2019;
+    if (copyrightSince === copyrightNow) {
+        copyrightContent.textContent = copyrightNow;
+    } else {
+        copyrightContent.textContent = copyrightSince + ' - ' + copyrightNow;
+    }
+})();
+console.log('\n %c Suka Theme (hexo-theme-suka) | © SukkaW | Verision 1.3.3 %c https://github.com/SukkaW/hexo-theme-suka \n', 'color: #fff; background: #444; padding:5px 0;', 'background: #bbb; padding:5px 0;');
+
+</script>
+
+<script src="/lib/vanilla-lazyload/lazyload.min.js" async></script>
+
+
+
+<!-- Comment -->
+
+
+<!-- ### Custom Footer ### -->
+
+    </body>
+
+</html>

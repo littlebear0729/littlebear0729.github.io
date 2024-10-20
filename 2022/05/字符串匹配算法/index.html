@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+    <head>
+    <meta charset="utf-8">
+    <!--
+        hexo-theme-suka © SukkaW
+        GitHub: https://github.com/SukkaW/hexo-theme-suka
+    -->
+
+    <!-- ### Resource Hint ### -->
+
+    <!-- ## DNS Prefetch ## -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+<!-- busuanzi -->
+
+
+<!-- comment -->
+
+
+
+
+
+
+
+<!-- analytics -->
+
+
+    <link rel="dns-prefetch" href="//www.google-analytics.com">
+
+
+    <link rel="dns-prefetch" href="//www.googletagmanager.com">
+    <link rel="dns-prefetch" href="//www.google-analytics.com">
+
+
+
+
+
+    <!-- ## Preload ## -->
+    
+
+
+
+
+    <!-- ### Meta & Title & Info ### -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, maximum-scale=5, viewport-fit=cover">
+    <meta name="renderer" content="webkit">
+
+    <!-- Title -->
+    <title>字符串匹配算法 | 小熊の小站</title>
+
+    <!-- Favicons -->
+    <link rel="icon" type="image&#x2F;ico" href="/img/favicon.ico"><link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png"><link rel="icon" typt="image&#x2F;png" sizes="32x32" href="/img/favicon-16x16.png"><link rel="icon" typt="image&#x2F;png" sizes="16x16" href="/img/favicon-16x16.png"><link rel="mask-icon" href="/img/safari-pinned-tab.svg" color="">
+
+    <!-- ### Import File ### -->
+    <link rel="stylesheet" href="/lib/spectre/spectre.min.css"><style>
+    body {
+        background-color: #f8f9fa;
+    }
+
+    a, a:visited {
+        color: #0070ff;
+    }
+
+    a:active, a:focus, a:hover {
+        color: #0070ff;
+        opacity: .75;
+    }
+
+    #post-content a,
+    #post-content a:hover,
+    #post-content a:focus,
+    #post-content a:visited {
+        color: #005eb9;
+        opacity: 1;
+    }
+
+    
+
+    .post-entry .card-body a {
+        color: #0070ff;
+    }
+
+    .avatar {
+        background: #444;
+    }
+
+    .navbar-link,
+    .navbar-link:visited,
+    .timeline .timeline-item .timeline-icon.icon-lg {
+        color: #0070ff;
+    }
+
+    .navbar-link:hover {
+        color: #0070ff;
+        opacity: .8;
+    }
+
+    #search-input .btn,
+    #disqus_click_btn,
+    #disqus-switch-to-direct,
+    #disqus-loadmore-button {
+        background: #727e96;
+        border-color: #727e96;
+        color: #fff;
+    }
+
+    #post-toc a.post-toc-link,
+    #post-toc a.post-toc-link:visited,
+    .share-menu.menu .menu-item>a {
+        color: #727e96;
+    }
+
+    .share-menu.menu .menu-item>a:hover,
+    .share-menu.menu .menu-item>a:focus,
+    .share-menu.menu .menu-item>a:visited {
+        color: #50596c;
+        background: #f8f9fa;
+        opacity: .85;
+    }
+</style><link rel="stylesheet" href="/css/style.min.css">
+
+
+
+
+
+
+
+
+    <!-- Prettify Theme -->
+    
+    <link rel="preload" href="/css/highlight/darcula.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="/css/highlight/darcula.min.css"></noscript>
+
+
+
+
+
+<script>
+/*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
+!function(t){"use strict";t.loadCSS||(t.loadCSS=function(){});var e=loadCSS.relpreload={};if(e.support=function(){var e;try{e=t.document.createElement("link").relList.supports("preload")}catch(t){e=!1}return function(){return e}}(),e.bindMediaToggle=function(t){var e=t.media||"all";function a(){t.addEventListener?t.removeEventListener("load",a):t.attachEvent&&t.detachEvent("onload",a),t.setAttribute("onload",null),t.media=e}t.addEventListener?t.addEventListener("load",a):t.attachEvent&&t.attachEvent("onload",a),setTimeout(function(){t.rel="stylesheet",t.media="only x"}),setTimeout(a,3e3)},e.poly=function(){if(!e.support())for(var a=t.document.getElementsByTagName("link"),n=0;n<a.length;n++){var o=a[n];"preload"!==o.rel||"style"!==o.getAttribute("as")||o.getAttribute("data-loadcss")||(o.setAttribute("data-loadcss",!0),e.bindMediaToggle(o))}},!e.support()){e.poly();var a=t.setInterval(e.poly,500);t.addEventListener?t.addEventListener("load",function(){e.poly(),t.clearInterval(a)}):t.attachEvent&&t.attachEvent("onload",function(){e.poly(),t.clearInterval(a)})}"undefined"!=typeof exports?exports.loadCSS=loadCSS:t.loadCSS=loadCSS}("undefined"!=typeof global?global:this);
+</script>
+
+    <!-- ### Site Verification ### -->
+    
+
+
+    <link rel="alternate" type="application/atom+xml" href="/atom.xml"><meta name="mobile-web-app-capable" content="yes"><meta name="application-name" content="小熊の小站"><meta name="msapplication-starturl" content="https://blog.bearxiong.xyz"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="小熊の小站"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <!-- ### The Open Graph & Twitter Card Protocol ### -->
+    <meta property="og:title" content="字符串匹配算法 | 小熊の小站"><meta property="og:site_name" content="小熊の小站"><meta property="og:type" content="article"><meta property="og:url" content="https://blog.bearxiong.xyz/2022/05/%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%8C%B9%E9%85%8D%E7%AE%97%E6%B3%95/"><meta property="og:locale" content="zh-CN"><meta name="description" content="0 概述本实验使用C++语言实现了Sunday和KMP两种字符串匹配算法。 1 实验设计1.1 算法实现原理相比朴素的暴力匹配算法，Sunday算法和KMP算法的性能提升有很大的提升，是一种无回溯的算法。 不会反复比较已经比较过的内容，只会比较未比较过的内容，这样可以大大提高算法的效率。 1.2 算法设计与分析Sunday通过创建shift数组，计算匹配串中出现的字母距离模式串最后的位置，即是匹配 - Littlebear0729 - 小熊の小站"><meta name="keywords" content="小熊, littlebear, 博客, 小站, littlebear0729"><meta property="article:published_time" content="2022-05-24T11:40:29.000Z"><meta property="article:modified_time" content="2024-10-06T09:45:10.335Z"><meta property="og:updated_time" content="2024-10-06T09:45:10.335Z"><meta property="article:author" content="Littlebear0729"><meta property="article:tag" content="小熊, littlebear, 博客, 小站, littlebear0729"><meta name="twitter:card" content="summary">
+
+    
+
+    <!-- ### Canonical link ### -->
+    <link rel="canonical" href="https://blog.bearxiong.xyz/2022/05/%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%8C%B9%E9%85%8D%E7%AE%97%E6%B3%95/">
+
+    <meta name="generator" content="Hexo 6.3.0">
+
+    <!-- ### Analytics ### -->
+    
+    <!-- Google Analytics -->
+<script>
+    window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+    ga('create', '6097140926', 'auto');
+    ga('send', 'pageview');
+</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+
+
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-R9F6KBLL62"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-R9F6KBLL62');
+</script>
+
+
+
+
+
+
+
+
+    <!-- ### Structured Data ### -->
+    
+
+
+
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "url": "https://blog.bearxiong.xyz/2022/05/%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%8C%B9%E9%85%8D%E7%AE%97%E6%B3%95/",
+    "@type": "BlogPosting",
+    "logo": "https://blog.bearxiong.xyz/img/apple-touch-icon.png",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://blog.bearxiong.xyz/2022/05/%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%8C%B9%E9%85%8D%E7%AE%97%E6%B3%95/"
+    },
+    "headline": "字符串匹配算法 | 小熊の小站",
+    
+    "image": {
+        "@type": "ImageObject",
+        "url": "https://blog.bearxiong.xyz/img/apple-touch-icon.png"
+    },
+    
+    "datePublished": "2022-05-24T11:40:29.000Z",
+    "dateModified": "2024-10-06T09:45:10.335Z",
+    "author": {
+        "@type": "Person",
+        "name": "Littlebear0729",
+        "image": {
+            "@type": "ImageObject",
+            "url": "https://blog.bearxiong.xyz/img/apple-touch-icon.png"
+        },
+        "description": "Try my best."
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "小熊の小站",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://blog.bearxiong.xyz/img/apple-touch-icon.png"
+        }
+    },
+    
+    "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://blog.bearxiong.xyz/search.html?s={search_term_string}",
+        "query-input": "required name=search_term_string"
+    },
+    
+    "keywords": "小熊, littlebear, 博客, 小站, littlebear0729",
+    "description": "0 概述本实验使用C++语言实现了Sunday和KMP两种字符串匹配算法。 1 实验设计1.1 算法实现原理相比朴素的暴力匹配算法，Sunday算法和KMP算法的性能提升有很大的提升，是一种无回溯的算法。 不会反复比较已经比较过的内容，只会比较未比较过的内容，这样可以大大提高算法的效率。 1.2 算法设计与分析Sunday通过创建shift数组，计算匹配串中出现的字母距离模式串最后的位置，即是匹配 - Littlebear0729 - 小熊の小站"
+}
+</script>
+
+
+
+    <!-- ### Custom Head ### -->
+    
+</head>
+
+    <body>
+            
+
+            <!-- ### Main content ### -->
+            <!-- ## Header ##-->
+<header>
+    <h1 class="header-title text-center"><a href="/">小熊の小站</a></h1>
+
+    <p class="text-center header-slogan">
+        
+            
+                Try my best.
+            
+        
+    </p>
+
+    <nav class="navbar-section text-center">
+    
+        <a href="/" class="navbar-link">首页</a>
+    
+    
+        <a href="/archives/" class="navbar-link">归档</a>
+    
+    
+        <a href="/search.html" class="navbar-link">搜索</a>
+    
+    
+        <a href="/categories.html" class="navbar-link">分类</a>
+    
+        <a href="/about.html" class="navbar-link">关于</a>
+    
+        <a href="/links.html" class="navbar-link">友链</a>
+    
+        <a href="/QSL.html" class="navbar-link">QSL</a>
+    
+    
+    
+</nav>
+</header>
+
+            
+    <!-- ## Post ## -->
+    <div class="post-container">
+    <div id="post-card" class="card">
+        
+        <div class="card-item-container">
+            <div class="card-inner-cell">
+                <!-- # Post Header Info # -->
+                <div class="card-header">
+                    
+    <h1 class="card-title h3 mb-2">字符串匹配算法</h1>
+
+
+
+
+<div class="post-header-info">
+    <p class="post-header-info-left text-gray">
+        <img class="author-thumb lazyload" data-src="/img/apple-touch-icon.png" src="/img/suka-lazyload.gif" alt="Littlebear0729's Avatar">
+        <span>2022-05-24</span>
+        
+            <span class="suka-devide-dot"></span>
+            <a class="category-link" href="/categories/%E5%AD%A6%E4%B9%A0%E8%AE%B0/">学习记</a>
+        
+        
+        
+    </p>
+    <div class="post-header-info-right">
+        
+    </div>
+</div>
+                </div>
+                <div class="card-body">
+                    
+                        
+                        
+                            <div id="post-toc"><ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#0-%E6%A6%82%E8%BF%B0"><span class="post-toc-number">1.</span> <span class="post-toc-text">0 概述</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#1-%E5%AE%9E%E9%AA%8C%E8%AE%BE%E8%AE%A1"><span class="post-toc-number">2.</span> <span class="post-toc-text">1 实验设计</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-1-%E7%AE%97%E6%B3%95%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">1.1 算法实现原理</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-2-%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">1.2 算法设计与分析</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Sunday"><span class="post-toc-number">2.2.1.</span> <span class="post-toc-text">Sunday</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#KMP"><span class="post-toc-number">2.2.2.</span> <span class="post-toc-text">KMP</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#2-%E5%AE%9E%E9%AA%8C%E7%BB%93%E6%9E%9C%E8%AF%B4%E6%98%8E%E4%B8%8E%E5%88%86%E6%9E%90"><span class="post-toc-number">3.</span> <span class="post-toc-text">2 实验结果说明与分析</span></a></li></ol></div>
+                        
+                    
+                    <article id="post-content">
+                        <h2 id="0-概述"><a href="#0-概述" class="headerlink" title="0 概述"></a>0 概述</h2><p>本实验使用C++语言实现了Sunday和KMP两种字符串匹配算法。</p>
+<h2 id="1-实验设计"><a href="#1-实验设计" class="headerlink" title="1 实验设计"></a>1 实验设计</h2><h3 id="1-1-算法实现原理"><a href="#1-1-算法实现原理" class="headerlink" title="1.1 算法实现原理"></a>1.1 算法实现原理</h3><p>相比朴素的暴力匹配算法，Sunday算法和KMP算法的性能提升有很大的提升，是一种无回溯的算法。</p>
+<p>不会反复比较已经比较过的内容，只会比较未比较过的内容，这样可以大大提高算法的效率。</p>
+<h3 id="1-2-算法设计与分析"><a href="#1-2-算法设计与分析" class="headerlink" title="1.2 算法设计与分析"></a>1.2 算法设计与分析</h3><h4 id="Sunday"><a href="#Sunday" class="headerlink" title="Sunday"></a>Sunday</h4><p>通过创建shift数组，计算匹配串中出现的字母距离模式串最后的位置，即是匹配时往后移动的距离。如果没有出现，则默认移动模式串的长度。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> shift[<span class="number">130</span>]; <span class="comment">// shift[i]表示i字符距离最后的长度，即需要往后移动的距离</span></span><br><span class="line"><span class="keyword">for</span> (i = <span class="number">0</span>; i &lt;= <span class="number">128</span>; i++) &#123;</span><br><span class="line">    shift[i] = m + <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; m; i++) &#123;</span><br><span class="line">    shift[pattern[i]] = m - i;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>在shift数组计算后，即可开始匹配过程。</p>
+<p>如果发生失配，则往后移动下一个字母在模式串出现的距离最后的距离（shift已计算）。</p>
+<p>如果下一个字母在模式串中没有出现，则移动模式串整体的长度。</p>
+<p>一直匹配，直到模式串与匹配串中的子串完全匹配。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">sunday</span><span class="params">(<span class="type">char</span> *str, <span class="type">char</span> *pattern)</span> </span>&#123;</span><br><span class="line">    <span class="type">int</span> n = <span class="built_in">strlen</span>(str), m = <span class="built_in">strlen</span>(pattern);</span><br><span class="line">    <span class="type">int</span> shift[<span class="number">130</span>]; <span class="comment">// shift[i]表示i字符距离最后的长度，即需要往后移动的距离</span></span><br><span class="line">    <span class="type">int</span> i, j;</span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt;= <span class="number">128</span>; i++) &#123;</span><br><span class="line">        shift[i] = m + <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; m; i++) &#123;</span><br><span class="line">        shift[pattern[i]] = m - i;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">int</span> s = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (s &lt;= n - m) &#123;</span><br><span class="line">        j = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span> (str[s + j] == pattern[j]) &#123;</span><br><span class="line">            j++;</span><br><span class="line">            <span class="comment">// 匹配成功</span></span><br><span class="line">            <span class="keyword">if</span> (j &gt;= m) &#123;</span><br><span class="line">                <span class="keyword">return</span> s;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 后移</span></span><br><span class="line">        s += shift[str[s + m]];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="KMP"><a href="#KMP" class="headerlink" title="KMP"></a>KMP</h4><p>创建next数组，计算公共前缀长度。next数组仅与模式串有关，与匹配串无关。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> next[m];</span><br><span class="line">next[<span class="number">0</span>] = <span class="number">-1</span>;</span><br><span class="line"><span class="keyword">for</span> (i = <span class="number">1</span>; i &lt; m; i++) &#123;</span><br><span class="line">    j = next[i - <span class="number">1</span>];</span><br><span class="line">    <span class="keyword">while</span> (j != <span class="number">-1</span> &amp;&amp; pattern[j + <span class="number">1</span>] != pattern[i]) &#123;</span><br><span class="line">        j = next[j];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (pattern[j + <span class="number">1</span>] == pattern[i]) &#123;</span><br><span class="line">        next[i] = j + <span class="number">1</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        next[i] = <span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>前缀函数</p>
+<p>举例来说，对于字符串 abcabcd</p>
+<p>next[0] &#x3D; -1，因为 a 没有真前缀和真后缀，根据规定为 0</p>
+<p>next[1] &#x3D; -1，因为 ab 无相等的真前缀和真后缀</p>
+<p>next[2] &#x3D; -1，因为 abc 无相等的真前缀和真后缀</p>
+<p>next[3] &#x3D; 0，因为 abca 只有一对相等的真前缀和真后缀：a，长度为 1</p>
+<p>next[4] &#x3D; 1，因为 abcab 相等的真前缀和真后缀只有 ab，长度为 2</p>
+<p>next[5] &#x3D; 2，因为 abcabc 相等的真前缀和真后缀只有 abc，长度为 3</p>
+<p>next[6] &#x3D; -1，因为 abcabcd 无相等的真前缀和真后缀</p>
+<p>同理可以计算字符串 aabaaab 的next函数为 [-1, 0, -1, 0, 1, 1, 2]。</p>
+<p>因为next函数代表往后移动的距离，所以是前缀函数的值 - 1</p>
+</blockquote>
+<p>在next函数计算完成后，即可开始匹配。匹配方式与Sunday算法类似，只是在失配时，需要往后移动next函数中的值。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">kmp</span><span class="params">(<span class="type">char</span> *str, <span class="type">char</span> *pattern)</span> </span>&#123;</span><br><span class="line">    <span class="type">int</span> n = <span class="built_in">strlen</span>(str), m = <span class="built_in">strlen</span>(pattern);</span><br><span class="line">    <span class="type">int</span> i, j;</span><br><span class="line">    <span class="type">int</span> next[m];</span><br><span class="line">    <span class="comment">// 计算next函数</span></span><br><span class="line">    next[<span class="number">0</span>] = <span class="number">-1</span>;</span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">1</span>; i &lt; m; i++) &#123;</span><br><span class="line">        j = next[i - <span class="number">1</span>];</span><br><span class="line">        <span class="keyword">while</span> (j != <span class="number">-1</span> &amp;&amp; pattern[j + <span class="number">1</span>] != pattern[i]) &#123;</span><br><span class="line">            j = next[j];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (pattern[j + <span class="number">1</span>] == pattern[i]) &#123;</span><br><span class="line">            next[i] = j + <span class="number">1</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            next[i] = <span class="number">-1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">int</span> s = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (s &lt;= n - m) &#123;</span><br><span class="line">        j = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span> (str[s + j] == pattern[j]) &#123;</span><br><span class="line">            j++;</span><br><span class="line">            <span class="comment">// 匹配成功</span></span><br><span class="line">            <span class="keyword">if</span> (j &gt;= m) &#123;</span><br><span class="line">                <span class="keyword">return</span> s;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 后移</span></span><br><span class="line">        <span class="keyword">if</span> (next[j] == <span class="number">-1</span>) &#123;</span><br><span class="line">            s += <span class="number">1</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            s += next[j];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>KMP算法在模式串中有重复的序列时，节省时间的效果更加显著。</p>
+<p>将Sunday和KMP算法进行结合，可以获得更好的效果。</p>
+<h2 id="2-实验结果说明与分析"><a href="#2-实验结果说明与分析" class="headerlink" title="2 实验结果说明与分析"></a>2 实验结果说明与分析</h2><p>输入两行，分别是匹配串与模式串。</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ababac</span><br><span class="line">abab</span><br></pre></td></tr></table></figure>
+
+<p>输出两行，分别是Sunday和KMP算法的匹配结果。返回值是模式车在匹配串中第一次出现的位置。-1表示没有匹配。</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">0</span><br><span class="line">0</span><br></pre></td></tr></table></figure>
+
+<p>代码在<code>homework4/stringMatch.cpp</code>。</p>
+<blockquote>
+<p>代码开源在：<a target="_blank" rel="noopener" href="https://gitee.com/littlebear0729/data-structure-and-algorithm/tree/master/homework4">https://gitee.com/littlebear0729/data-structure-and-algorithm/tree/master/homework4</a></p>
+</blockquote>
+
+                    </article>
+                        
+    <blockquote class="post-license">
+        <p>
+            
+                <strong>本文作者&nbsp;:&nbsp;Littlebear0729</strong>
+            
+            <br>
+            <strong>
+            
+                本文使用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0)</a> 协议
+            </strong>
+            <br>
+            <strong>本文链接&nbsp;:&nbsp;</strong><a href="https://blog.bearxiong.xyz/2022/05/%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%8C%B9%E9%85%8D%E7%AE%97%E6%B3%95/">https://blog.bearxiong.xyz/2022/05/%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%8C%B9%E9%85%8D%E7%AE%97%E6%B3%95/</a>
+        </p>
+    </blockquote>
+
+
+
+    <blockquote id="date-expire-notification" class="post-expired-notify">本文最后更新于 <span id="date-expire-num"></span> 天前，文中所描述的信息可能已发生改变</blockquote>
+    <script>
+    (function() {
+        var dateUpdate = Date.parse("2024-10-06");
+        var nowDate = new Date();
+        var a = nowDate.getTime();
+        var b = a - dateUpdate;
+        var daysUpdateExpire = Math.floor(b/(24*3600*1000));
+        if (daysUpdateExpire >= 120) {
+            document.getElementById('date-expire-num').innerHTML = daysUpdateExpire;
+        } else {
+            document.getElementById('date-expire-notification').style.display = 'none';
+        }
+    })();
+    </script>
+
+
+<p class="post-footer-info mb-0 pt-0">本文发表于&nbsp;<time datetime="2022-05-24T11:40:29.000Z" itemprop="datePublished">2022-05-24</time>
+
+    , 最后修改于&nbsp;<time datetime="2024-10-06T09:45:10.335Z" itemprop="dateModified">2024-10-06</time>
+
+</p>
+<p class="post-footer-info mb-0 pt-2">
+
+<span class="post-categories-list mt-2">
+
+<a class="post-categories-list-item" href='/categories/%E5%AD%A6%E4%B9%A0%E8%AE%B0/'>学习记</a>
+
+</span>
+
+
+
+
+</p>
+
+                </div>
+                <div class="post-nav px-2 bg-gray">
+<ul class="pagination">
+    <!-- Prev Nav -->
+    
+        <li class="page-item page-prev">
+            <a href="/2022/05/%E3%80%8A%E5%85%B3%E4%BA%8E%E6%AD%A3%E7%A1%AE%E8%AE%A4%E8%AF%86%E7%94%B5%E5%AD%90%E8%AE%BE%E5%A4%87%E5%86%85%E5%AD%98%E5%A4%A7%E5%B0%8F%E4%B8%8E%E5%AD%98%E5%82%A8%E7%A9%BA%E9%97%B4%E7%9A%84%E9%80%9A%E7%9F%A5%E3%80%8B/" rel="prev">
+                <div class="page-item-title"><i class="icon icon-back" aria-hidden="true"></i></div>
+                <div class="page-item-subtitle">《关于正确认识电子设备内存大小与存储空间的通知》</div>
+            </a>
+        </li>
+    
+
+    <!-- Next Nav -->
+    
+        <li class="page-item page-next">
+            <a href="/2022/05/%E4%BD%BF%E7%94%A8RSP1-SDR%E6%8E%A5%E6%94%B6NOAA%E5%8D%AB%E6%98%9F%E4%BA%91%E5%9B%BE/" rel="next">
+                <div class="page-item-title"><i class="icon icon-forward" aria-hidden="true"></i></div>
+                <div class="page-item-subtitle">使用RSP1 SDR接收NOAA卫星云图</div>
+            </a>
+        </li>
+    
+</ul>
+</div>
+
+                
+                    <!-- # Comment # -->
+                    
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+            <!-- ### Footer ### -->
+            <footer class="text-center">
+    <!-- footer copyright -->
+    
+        <p class="footer-copyright mb-0">Copyright&nbsp;©&nbsp;<span id="copyright-year"></span>
+            <a class="footer-copyright-a" href="https://blog.bearxiong.xyz">小熊の小站</a>
+        </p>
+
+    <!-- footer custom text -->
+    <p class="footer-text mb-0">
+    <a href="https://blog.bearxiong.xyz/atom.xml" rel="nofollow noopener noreferrer">Subscribe my Atom Feed</a>
+    </p>
+    <!-- footer develop info -->
+    <p class="footer-develop mb-0">
+        
+
+        
+        Powered by&nbsp;<!--
+         --><a href="https://hexo.io" target="_blank" class="footer-develop-a" rel="external nofollow noopener noreferrer">Hexo</a><span class="footer-develop-divider"></span>Theme&nbsp;-&nbsp;<!--
+         --><a href="https://github.com/SukkaW/hexo-theme-suka" target="_blank" class="footer-develop-a" rel="external noopener">Suka</a>
+    </p>
+</footer>
+
+
+        <!-- ### Import File ### -->
+        <!-- ### Footer JS Import ### -->
+
+<script>
+
+    
+window.lazyLoadOptions = {
+    elements_selector: ".lazyload",
+    threshold: 50
+};
+
+(function() {
+    var copyrightNow = new Date().getFullYear();
+    var copyrightContent = document.getElementById('copyright-year');
+    var copyrightSince = 2019;
+    if (copyrightSince === copyrightNow) {
+        copyrightContent.textContent = copyrightNow;
+    } else {
+        copyrightContent.textContent = copyrightSince + ' - ' + copyrightNow;
+    }
+})();
+console.log('\n %c Suka Theme (hexo-theme-suka) | © SukkaW | Verision 1.3.3 %c https://github.com/SukkaW/hexo-theme-suka \n', 'color: #fff; background: #444; padding:5px 0;', 'background: #bbb; padding:5px 0;');
+
+</script>
+
+<script src="/lib/vanilla-lazyload/lazyload.min.js" async></script>
+
+
+
+<!-- Comment -->
+
+
+<!-- ### Custom Footer ### -->
+
+    </body>
+
+</html>
